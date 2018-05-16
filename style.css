@@ -1971,6 +1971,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     justify-content: flex-start;
   }
 }
+/*custom css*/
 .coicon>div {
   width: 48%;
   float: left;
@@ -1980,4 +1981,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   filter: grayscale(100%);
   max-width: 91px;
     margin: 13% 0;
+}
+.section-connect:before{
+    background: none !important;
 }

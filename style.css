@@ -1979,4 +1979,5 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .coicon img{
   filter: grayscale(100%);
   max-width: 91px;
+    margin: 13% 0;
 }

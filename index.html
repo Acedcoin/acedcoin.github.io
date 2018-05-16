@@ -205,7 +205,7 @@
   data-spy="scroll" data-target="#mainnav" data-offset="80">
 <a id="popuplink" href="#inline" style="display:none;"></a>
 <div id="inline" style="display:none;text-align:center;">
-    <img src="https://thebeachfurniture.co.nz/newbeach-logo.png" alt="" id="logo">
+    <img src="logo-white.png" alt="" id="logo">
     <h3 style="margin-top:20px;">The Beach Furniture has changed its name to Urban & Beach Furniture</h3>
     <p>But we will continue providing the same beautifully crafted character furniture</p>
     <p><a href="javascript:;" onclick="jQuery.fancybox.close();" style="background-color:#333;padding:5px 10px;color:#fff;border-radius:5px;text-decoration:none;">Close</a></p>
@@ -1879,6 +1879,25 @@ var mc4wp_forms_config = [];
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        function openFancybox() {
+            setTimeout(function () {
+                jQuery('#popuplink').trigger('click');
+            }, 500);
+        };
+        var visited = jQuery.cookie('visited');
+        if (visited == 'yes') {
+            // second page load, cookie active
+        } else {
+            openFancybox(); // first page load, launch fancybox
+        }
+        jQuery.cookie('visited', 'yes', {
+            expires: 365 // the number of days cookie  will be effective
+        });
+        jQuery("#popuplink").fancybox({modal:true, maxWidth: 600, overlay : {closeClick : true}});
+    });
+</script>
 
 
 <!--

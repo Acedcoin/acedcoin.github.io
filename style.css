@@ -1971,3 +1971,12 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     justify-content: flex-start;
   }
 }
+.coicon>div {
+  width: 48%;
+  float: left;
+  text-align: center;
+}
+.coicon img{
+  filter: grayscale(100%);
+  max-width: 91px;
+}

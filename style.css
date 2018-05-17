@@ -1985,3 +1985,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .section-connect:before{
     background: none !important;
 }
+@media(max-width: 991px){
+  .faq_img{
+    position: relative !important;
+  }
+}

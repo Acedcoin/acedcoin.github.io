@@ -1988,8 +1988,3 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .team-circle .team-title{
   min-height: 51px;
 }
-@media(max-width: 991px){
-  .faq_img{
-    position: relative !important;
-  }
-}

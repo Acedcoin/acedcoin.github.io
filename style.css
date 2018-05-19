@@ -1994,9 +1994,39 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   width: 80%;
   margin: auto;
 }
+
+#particles {
+  background: #000;
+}
+.subparticle{
+  position: absolute;
+  top: 21%;
+  left: 20%;
+}
+#intro{
+  margin-top: 0px !important;
+}
+@media(max-width: 1550px){
+  .subparticle{
+    left: 12%;
+  }
+}
+@media (max-width: 1310px){
+  .subparticle {
+    left: 5%;
+  }
+}
+@media(max-width: 991px){
+  .subparticle{
+    top:7%;
+  }
+}
 @media(max-width: 768px){
   .cotwitter{
     height: 631px;
+  }
+  .subparticle {
+    left: 0%;
   }
 }
 @media(max-width: 475px){

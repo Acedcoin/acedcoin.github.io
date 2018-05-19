@@ -171,7 +171,8 @@
     }</style>
 </noscript>
 <link rel="stylesheet" href="css(1)" media="all">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+<link rel="stylesheet" href="particle_style.css">
 </head>
 
 <body class="home page-template page-template-page-templates page-template-template-onepage page-template-page-templatestemplate-onepage-php page page-id-29 wpb-js-composer js-comp-ver-5.4.5 vc_responsive icos-theme-ver-1.0 wordpress-version-4.9.5  no-touch loaded"
@@ -266,8 +267,8 @@
 <!-- End Header -->
 <!-- End Header -->
 
-<section style="background:#000;"
-         class="vc_rows wpb_row vc_row-fluid mobile-center banner-particle banner-curb vc_row-o-equal-height vc_row-o-content-middle vc_row-flex banner d-flex align-items-center">
+<section id="particles" class="vc_rows wpb_row vc_row-fluid mobile-center banner-particle banner-curb vc_row-o-equal-height vc_row-o-content-middle vc_row-flex banner d-flex align-items-center">
+    <div class="subparticle">
     <div class="container">
         <div class="banner-content">
             <div class="row">
@@ -313,8 +314,10 @@
             </div>
         </div>
     </div>
+    </div>
     <div class="clearfix"></div>
 </section>
+
 <section id="intro"
          class="vc_rows wpb_row vc_row-fluid section section-pad section-bg-blend nopb vc_row-o-equal-height vc_row-o-content-middle vc_row-flex">
     <div class="container">
@@ -1584,5 +1587,7 @@ var mc4wp_forms_config = [];
         jQuery("#popuplink").fancybox({modal:true, maxWidth: 600, overlay : {closeClick : true}});
     });
 </script>
+<script type="text/javascript" src="jquery.particleground.js"></script>
+<script type="text/javascript" src="particle_demo.js"></script>
 </body>
 </html>

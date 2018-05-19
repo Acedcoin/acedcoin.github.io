@@ -1988,3 +1988,19 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .team-circle .team-title{
   min-height: 51px;
 }
+.cotwitter  {
+  height: 731px;
+  overflow: auto;
+  width: 80%;
+  margin: auto;
+}
+@media(max-width: 768px){
+  .cotwitter{
+    height: 631px;
+  }
+}
+@media(max-width: 475px){
+  .cotwitter{
+    height: 523px;
+  }
+}

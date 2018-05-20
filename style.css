@@ -2006,6 +2006,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 #intro{
   margin-top: 0px !important;
 }
+.coroadmap img{
+  display: none;
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;
@@ -2027,6 +2030,12 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   }
   .subparticle {
     left: 0%;
+  }
+  .coroadmap img{
+    display: block;
+  }
+  .coroadmap video{
+    display: none;
   }
 }
 @media(max-width: 475px){

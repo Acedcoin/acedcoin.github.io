@@ -774,7 +774,7 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
 .site-header .logo-light { display: none; }
 
 .navbar .navbar-nav > li:hover > a { color: #46bdf4; background: transparent; }
-.navbar .navbar-nav > li > a { background: transparent; text-transform: uppercase; color: inherit; font-size: 13px; font-weight: 500; line-height: 38px; margin: 0 8.5px; transition: all .35s ease; }
+.navbar .navbar-nav > li > a { background: transparent; text-transform: uppercase; color: inherit; font-size: 13px; font-weight: 500; line-height: 38px; margin: 0 5.5px; transition: all .35s ease; }
 .navbar .navbar-nav > li > a { padding-left: 0; padding-right: 0; padding: .5rem 0; display: block;}
 .navbar .navbar-nav > li > a.nav-link.btn { min-width: auto; padding: 0 23px; }
 .navbar .navbar-nav > li > a.nav-link.btn.active { color: #fff; }
@@ -853,7 +853,7 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
 .header-txt { position: relative; z-index: 3; }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) { .site-header .navbar-btns { margin-left: 30px; }
-  .navbar .navbar-nav > li > a { font-size: 12px; margin: 0 6.5px; }
+  .navbar .navbar-nav > li > a { font-size: 11px; margin: 0 3.5px; }
   .header-image .left-icon { margin-left: -3px; }
   .header-image .right-icon { margin-right: -7px; } }
 @media only screen and (max-width: 991px) { 

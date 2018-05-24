@@ -1,0 +1,40 @@
+{
+  "name": "bitcoinprices",
+  "version": "0.2.2",
+  "description": "bitcoinprices.js is a JavaScript library for presenting Bitcoin prices with currency conversion",
+  "main": "bitcoinprices.js",
+  "scripts": {
+    "test": "mocha-phantomjs tests/tests.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/miohtama/bitcoin-prices.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "exchange rate",
+    "market data",
+    "currency",
+    "bitcoinaverage"
+  ],
+  "author": "Mikko Ohtamaa <mikko@opensourcehacker.com> (http://opensourcehacker.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "2.1.0-beta3",
+    "mocha": "~1.16.2",
+    "chai": "~1.8.1",
+    "mocha-phantomjs": "~3.3.1",
+    "phantomjs": "~1.9.2-6",
+    "uglify-js": "~2.4.8",
+    "npm-release": "0.0.4-3"
+  },
+  "npmName": "bitcoinprices",
+  "npmFileMap": [
+    {
+      "basePath": "/dist/",
+      "files": [
+        "*.js"
+      ]
+    }
+  ]
+}

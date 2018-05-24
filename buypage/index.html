@@ -1,220 +1,230 @@
-	
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+
+    <title>bitcoin-prices.js - show bitcoin prices on web and mobile HTML pages</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="bitcoinprices.js"></script>
+    <script>
+        $(document).ready(function() {
+            bitcoinprices.init({
+
+                // Where we get bitcoinaverage data
+                // or null if we run headless (not in browser)
+                url: "https://api.bitcoinaverage.com/ticker/all",
+
+                // Which of bitcoinaverages value we use to present prices
+                marketRateVariable: "24h_avg",
+
+                // Which currencies are in shown to the user
+                currencies: ["BTC", "USD", "EUR", "CNY"],
+
+                // Special currency symbol artwork
+                symbols: {
+                    "BTC": "<i class='fa fa-btc'></i>"
+                },
+
+                // Which currency we show user by the default if
+                // no currency is selected
+                defaultCurrency: "BTC",
+
+                // How the user is able to interact with the prices
+                ux : {
+                    // Make everything with data-btc-price HTML attribute clickable
+                    clickPrices : true,
+
+                    // Build Bootstrap dropdown menu for currency switching
+                    menu : true
+                },
+
+                // Allows passing the explicit jQuery version to bitcoinprices.
+                // This is useful if you are using modular javascript (AMD/UMD/require()),
+                // but for most normal usage you don't need this
+                jQuery: jQuery
+            });
+        });
+    </script>
 
 
-    <title>Loading..</title>
+    <script>
+        // Manual conversion example
+        $(document).on("marketdataavailable", function() {
+            var inputAmount = $("#input-amount");
+            var outputAmount = $("#output-amount");
+            var inputCurrency = $("#input-currency");
+            var outputCurrency = $("#output-currency");
 
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
-	
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	
-	<link rel="icon" 
-      type="image/ico" 
-      href="http://www.bitcoin-exchange-berlin.com/favicon.ico">
+            function updateConversion() {
+
+                // Reset output in the case we run into exception
+                outputAmount.val("");
+
+                var input = inputCurrency.val();
+                var output = outputCurrency.val();
+                var amount = parseFloat(inputAmount.val(), 10);
+                try {
+                    var val = bitcoinprices.convert(amount, input, output);
+                    val = bitcoinprices.formatPrice(val, output, false);
+                    outputAmount.val(val);
+                } catch(e) {
+                    throw e;
+                }
+            }
+
+            inputAmount.change(updateConversion);
+            inputAmount.on("keyup", updateConversion);
+            inputCurrency.change(updateConversion);
+            outputCurrency.change(updateConversion);
+
+            // Initial take off
+            updateConversion();
+
+        });
+    </script>
 
 
-  </head>
-  <body>
-	<div class="container">
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-			<div class="navbar-header">
-			  <a class="navbar-brand" href="#">
-				<p><i class="fa fa-btc"></i>itcoin Live Price</p>
-			  </a>
-			  <p class="navbar-text navbar-right"><a href="https://github.com/mrpappas" target="_blank">by Ben Pappas <i class="fa fa-github"></i></a></p>
-			</div>
-			 <ul class="nav navbar-nav navbar-right">
-				<p class="navbar-text hidden-xs"><a href="calculator.html">Exchange Calculator <i class="fa fa-calculator"></i></a></p>
-			 </ul>
-		  </div>
-		</nav>
-		
-	<br />
-	
-	
-	
-	<div class="row" align="center">
-		<div class="col-md-4 col-md-offset-4">
-		
-			<!--USD,EUR,GBP, and CNY-->
-		
-			<div class="btn-group btn-group-lg" data-toggle="buttons">
-			  <label class="btn btn-primary active" id="usd">
-				<input type="checkbox" name="options" autocomplete="off" checked> USD
-			  </label>
-			  <label class="btn btn-primary" data-toggle="collapse" href="#eur-data" aria-expanded="false" aria-controls="eur-data">
-				<input type="checkbox" name="options" id="eur" autocomplete="off"> EUR
-			  </label>
-			  <label class="btn btn-primary" data-toggle="collapse" href="#gbp-data" aria-expanded="false" aria-controls="gbp-data">
-				<input type="checkbox" name="options" id="gbp" autocomplete="off"> GBP
-			  </label>
-			  <label class="btn btn-primary" data-toggle="collapse" href="#cny-data" aria-expanded="false" aria-controls="cny-data">
-				<input type="checkbox" name="options" id="cny" autocomplete="off"> CNY
-			  </label>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row" align="center">
-		<div class="col-md-6 col-md-offset-3">
-			<!--JPY,CAD,AUD,CHF-->
-			
-			<div class="btn-group btn-group-justified btn-group-sm" data-toggle="buttons">
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#jpy-data" aria-expanded="false" aria-controls="eur-data">
-				<input type="checkbox" name="options" id="jpy" autocomplete="off"> JPY
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#cad-data" aria-expanded="false" aria-controls="cad-data">
-				<input type="checkbox" name="options" id="cad" autocomplete="off"> CAD
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#aud-data" aria-expanded="false" aria-controls="aud-data">
-				<input type="checkbox" name="options" id="aud" autocomplete="off"> AUD
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#chf-data" aria-expanded="false" aria-controls="chf-data">
-				<input type="checkbox" name="options" id="chf" autocomplete="off"> CHF
-			  </label>
-			</div>
-			<div class="btn-group btn-group-justified btn-group-sm" data-toggle="buttons">
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#nzd-data" aria-expanded="false" aria-controls="nzd-data">
-				<input type="checkbox" name="options" id="nzd" autocomplete="off"> NZD
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#sek-data" aria-expanded="false" aria-controls="sek-data">
-				<input type="checkbox" name="options" id="sek" autocomplete="off"> SEK
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#rub-data" aria-expanded="false" aria-controls="rub-data">
-				<input type="checkbox" name="options" id="rub" autocomplete="off"> RUB
-			  </label>
-			  <label class="btn btn-sm btn-default" data-toggle="collapse" href="#brl-data" aria-expanded="false" aria-controls="brl-data">
-				<input type="checkbox" name="options" id="brl" autocomplete="off"> BRL
-			  </label>
-			</div>
-		
-		</div>
-		<div class="col-md-12 visible-sm visible-xs">
-			<br>
-			<h4><a href="calculator.html">New! Exchange Calculator <i class="fa fa-calculator"></i></a></h4>
-		</div>
-		<div class="col-md-4 col-md-offset-4">
-		
-			<h1>1 <i class="fa fa-btc"></i>itcoin :</h1>
-			
-			<!--usd-->
-			<div id="usd-data" class="panel panel-default">
-				
-				<h2 class="usd-result"></h2>
-				
-			
-				 <h3><small>US Dollar</small></h3> 
-				 
+    <style type="text/css">
 
-			</div>	 
-			<!--euro-->	 
-			<div id="eur-data"  class="collapse panel panel-default">	 
-				 
-				<h2 class="eur-result"></h2>	 
-				
-				 <h3><small>Euro</small></h3>
+        body {
+            padding-top: 60px;
+        }
 
-			</div>	 
-			<!--GBP-->	 
-			<div id="gbp-data"  class="collapse panel panel-default">	 
-				 
-				<h2 class="gbp-result"></h2>	 
-				
-				 <h3><small>Pound Sterling</small></h3>
+        .clickable-price {
+            cursor: pointer;
+            border-bottom: 1px #888 dashed;
+        }
 
-			</div>	 
-			<!--CNY-->	 
-			<div id="cny-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="cny-result"></h2>	 
-				
-				 <h3><small>Chinese Yuan</small></h3>
-			</div>
-			<!--JPY-->	 
-			<div id="jpy-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="jpy-result"></h2>	 
-				
-				 <h3><small>Japanese Yen</small></h3>
-			</div>
-			<!--CAD-->	 
-			<div id="cad-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="cad-result"></h2>	 
-				
-				 <h3><small>Canadian Dollar</small></h3>
-			</div>
-			<!--AUD-->	 
-			<div id="aud-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="aud-result"></h2>	 
-				
-				 <h3><small>Australian Dollar</small></h3>
-			</div>
-			<!--CHF-->	 
-			<div id="chf-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="chf-result"></h2>	 
-				
-				 <h3><small>Swiss Franc</small></h3>
-			</div>
-			<!--NZD-->	 
-			<div id="nzd-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="nzd-result"></h2>	 
-				
-				 <h3><small>New Zealand Dollar</small></h3>
-			</div>
-			<!--SEK-->	 
-			<div id="sek-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="sek-result"></h2>	 
-				
-				 <h3><small>Swedish Krona</small></h3>
-			</div>
-			<!--RUB-->	 
-			<div id="rub-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="rub-result"></h2>	 
-				
-				 <h3><small>Russian Ruble</small></h3>
-			</div>
-			<!--BRL-->	 
-			<div id="brl-data" class="collapse panel panel-default">	 
-				 
-				<h2 class="brl-result"></h2>	 
-				
-				 <h3><small>Brazilian Real</small></h3>
-			</div>
+        .label[data-btc-price] {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
 
-			
-			
-		</div>
-		
-		<div class="col-md-12 hidden-sm hidden-xs">
-			<h4><a href="calculator.html">New! Exchange Calculator <i class="fa fa-calculator"></i></a></h4>
-		</div>
-	</div>
-	<div class="row" align="center">
-		<footer>
-			Data from <a href="https://blockchain.info/api" target="_blank">Blockchain.info/api</a>
-		</footer>	
-	</div>
-	</div>
-	
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="scripts.js"></script>
+    <div class="navbar navbar-fixed-top navbar-default" id="navbar-site">
+        <div class="navbar-inner">
+            <div class="container">
 
-  </body>
-</html>
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">bitcoinprices.js</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                  <li class="dropdown currency-dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-money"></i> <span class="currency-symbol">BTC</span><b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                  </li>
+                </ul>
+
+                <div class="nav navbar-nav navbar-right">
+                    <a class="navbar-brand" href="http://opensourcehacker.com"><i class="fa fa-star"></i> By Mikko Ohtamaa</a>
+                    <a class="navbar-brand" href="http://opensourcehacker.com"><i class="fa fa-rss"></i></a>
+                    <a class="navbar-brand" href="http://twitter.com/moo9000"><i class="fa fa-twitter"></i></a>
+                    <a class="navbar-brand" href="https://www.facebook.com/pages/Open-Source-Hacker/181710458567630"><i class="fa fa-facebook"></i></a>
+                </div>
+
+             </div>
+         </div>
+    </div>
+
+
+    <div class="container" style="min-height:480px;">
+
+        <div class="jumbotron">
+          <h1>bitcoinprices.js</h1>
+          <p>JavaScript library for human-friendly Bitcoin price presentation and conversion</p>
+          <p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/miohtama/bitcoin-prices"><i class="fa fa-github"></i> View on Github</a></p>
+        </div>
+
+        <p>
+            <code>bitcoinprices.js</code> is a JavaScript library which you can drop on your web page.
+            It presents the Bitcoin prices in the fiat currency chosen by the user, making prices
+            friendly to read.
+            <code>bitcoinprices.js</code> works on any HTML page.
+        </p>
+
+        <h2>Price example</h2>
+
+        <p class="text text-muted">
+            Click the price to convert between BTC and fiat currency or choose from the menu above.
+        </p>
+
+        <p>
+            Selected currency: <strong class="current-currency-symbol text-primary"><i class="fa fa-btc"></i></strong>
+        </p>
+
+        <p>
+            <div>Example price: <span data-btc-price="1.0">1.0 BTC</span></div>
+        </p>
+
+        <p>
+            <span class="label label-danger">Example special price: <span data-btc-price="0.1">1.0 BTC</span></span>
+        </p>
+
+        <p>
+            Another Example special price: <span class="label label-warning" data-btc-price="0.1">1.0 BTC</span>
+        </p>
+
+        <p>
+            Price without currency symbols: <span class="label label-info" data-btc-price="0.1" data-price-symbol="off">1.0</span>
+        </p>
+
+        <h2>Manual currency conversion</h2>
+
+        <p class="text text-muted">
+            Demostrate <code>bitcoinprices.convert()</code> to convert between currencies.
+        </p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Input</h2>
+                <h4>Amount</h4>
+                <p>
+                    <input id="input-amount" value="1.0">
+                </p>
+                <h4>Currency</h4>
+                <select id="input-currency">
+                    <option selected value="BTC">BTC</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <h2>Output</h2>
+
+                <h4>Amount</h4>
+                <p>
+                    <input id="output-amount" readonly>
+                </p>
+
+                <h4>Currency</h4>
+                <select id="output-currency">
+                    <option value="BTC">BTC</option>
+                    <option selected value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <p class="text text-success lead text-center" style="margin-top: 3em">
+                <a href="https://github.com/miohtama/bitcoin-prices"><i class="fa fa-github"></i> Visit Github repository for more information</a>
+            </p>
+        </div>
+
+    </div>
+</body>

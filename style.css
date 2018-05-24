@@ -820,7 +820,6 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
 .site-header .navbar.is-transparent .navbar-brand .logo-light { display: block; }
 .site-header.has-fixed .navbar { position: fixed; width: 100%; z-index: 9; top: 0; background: #020207; border-bottom-color: rgba(0, 0, 0, 0.04); }
 .admin-bar .site-header.has-fixed .navbar{ top: 32px; }
-.banner .banner-content { padding-top: 50px; }
 .site-header .navbar-brand { margin-top: 20px; margin-bottom: 20px; margin-left: 0; z-index: 6; }
 
 .theme-light .navbar-nav > li:hover a { color: #46bdf4; }
@@ -2023,6 +2022,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .subparticle{
     top:7%;
   }
+    .banner .banner-content { padding-top: 50px; }
 }
 @media(max-width: 768px){
   .cotwitter{

@@ -2023,6 +2023,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     top:7%;
   }
     .banner .banner-content { padding-top: 50px; }
+    .banner{
+        min-height: 1147px;
+    }
 }
 @media(max-width: 768px){
   .cotwitter{
@@ -2038,8 +2041,11 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     display: none;
   }
 }
-@media(max-width: 475px){
+@media(max-width: 480px){
   .cotwitter{
     height: 523px;
   }
+    .banner{
+        min-height: 907px;
+    }
 }

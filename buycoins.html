@@ -1,12 +1,88 @@
-<html>
-<head>
-<title>
-A Simple HTML Document
-</title>
-</head>
-<body>
-<p>This is a very simple HTML document</p>
-<p>It only has two paragraphs</p>
-</body>
-</html>
 
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+
+    <title>Payment Box</title>
+
+
+
+
+
+    <!-- Bootstrap4 CSS - -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">   
+
+      
+
+    <!-- Note - If your website not use Bootstrap4 CSS as main style, please use custom css style below and delete css line above. 
+
+    It isolate Bootstrap CSS to a particular class 'bootstrapiso' to avoid css conflicts with your site main css style -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrapcustom.min.css" crossorigin="anonymous"> -->
+
+
+
+	                       
+
+    <!-- JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" crossorigin="anonymous"></script>
+
+    <script src="js/support.min.js" crossorigin="anonymous"></script> 
+
+
+
+    <!-- CSS for Payment Box -->
+
+    <style>
+
+            html { font-size: 14px; }
+
+            @media (min-width: 768px) { html { font-size: 16px; } .tooltip-inner { max-width: 350px; } }
+
+            .mncrpt .container { max-width: 980px; }
+
+            .mncrpt .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+            img.radioimage-select { padding: 7px; border: solid 2px #ffffff; margin: 7px 1px; cursor: pointer; box-shadow: none; }
+
+            img.radioimage-select:hover { border: solid 2px #a5c1e5; }
+
+            img.radioimage-select.radioimage-checked { border: solid 2px #7db8d9; background-color: #f4f8fb; }
+
+    </style>
+
+  </head>
+
+
+
+  <body>
+
+
+
+  <div class='bootstrapiso'><div id='hacrypto' class='acrypto_cryptobox_area mncrpt'><script>jQuery(document).ready(function(){ cryptobox_update_page("eyJzdGF0dXMiOiJwYXltZW50X25vdF9yZWNlaXZlZCIsImVyciI6IiIsImJveCI6IjI1NjU0IiwiYm94dHlwZSI6InBheW1lbnRib3giLCJvcmRlciI6Imludm9pY2UyIiwidXNlciI6IjExNzE1MzQzOF9fYjFlYzU2MTk0YiIsInVzZXJmb3JtYXQiOiJDT09LSUUiLCJ1c2VyY291bnRyeSI6IiIsInBlcmlvZCI6IiIsImFtb3VudCI6IjAuMDAwMTcwMjkiLCJhbW91bnR1c2QiOiIwLjc0Iiwid2FsbGV0X3VybCI6ImJpdGNvaW46MTdUYzlqYXBYeUtXUnZ2eFRXS21tb3FpaExGNk4xNlJ1TD9hbW91bnQ9MC4wMDAxNzAyOSZhbXA7bGFiZWw9UGF5bWVudCIsImNvaW5sYWJlbCI6IkJUQyIsImNvaW5uYW1lIjoiQml0Y29pbiIsImFkZHIiOiIxN1RjOWphcFh5S1dSdnZ4VFdLbW1vcWloTEY2TjE2UnVMIiwidHgiOiIiLCJ0eF91cmwiOiIiLCJjb25maXJtZWQiOiIwIiwidGltZXN0YW1wIjoiIiwiZGF0ZSI6IiIsImRhdGV0aW1lIjoiIiwianNvbiI6IjEiLCJ0ZXh0cyI6eyJsYW5ndWFnZSI6ImVuIiwidGl0bGUiOiJCaXRjb2luIFBheW1lbnQgU3lzdGVtIiwidG90YWwiOiJUb3RhbCIsImFkZHJlc3MiOiJCaXRjb2luIFdhbGxldCBBZGRyZXNzIGlzIHVuaXF1ZSBpZGVudGlmaWVyIHdoaWNoIGFsbG93cyB1c2VycyB0byByZWNlaXZlIGFuZCBzZW5kIEJpdGNvaW5zLiIsInFyY29kZSI6IlFSIENvZGUgLSBCaXRjb2luIGFkZHJlc3MgYW5kIHN1bSB5b3UgY2FuIHNjYW4gd2l0aCBhIG1vYmlsZSBwaG9uZSBjYW1lcmEuIE9wZW4gQml0Y29pbiBXYWxsZXQsIGNsaWNrIG9uIGNhbWVyYSBpY29uLCBwb2ludCB0aGUgY2FtZXJhIGF0IHRoZSBjb2RlLCBhbmQgeW91XHUwMDI3cmUgZG9uZSIsInJlZnJlc2giOiJSZWZyZXNoIiwicGF5bWVudF93YWl0IjoiQXdhaXRpbmcgUGF5bWVudCBGcm9tIFlvdSIsInBheW1lbnRfc3VjY2Vzc2Z1bCI6IlBheW1lbnQgU3VjY2Vzc2Z1bGx5IFJlY2VpdmVkISIsInJlY2VpdmVkX29uIjoiUmVjZWl2ZWQgb24iLCJjYXB0Y2hhX3dhaXQiOiJBd2FpdGluZyBCaXRjb2luIFRyYW5zZmVyIiwiY2FwdGNoYV9zdWNjZXNzZnVsIjoiU3VjY2Vzc2Z1bCBSZXN1bHQhIiwiY2FwdGNoYV9wYXNzZWQiOiJDYXB0Y2hhIFZlcmlmaWNhdGlvbiBQYXNzZWQgb24iLCJzZW5kIjoiU2VuZCAwLjAwMDE3MDI5IEJUQyAoaW4gT05FIHBheW1lbnQpIHRvOiIsIndhbGxldCI6IlVzZXJzIHNlbmQgYW5kIHJlY2VpdmUgQml0Y29pbnMgZWxlY3Ryb25pY2FsbHkgdXNpbmcgd2FsbGV0IHNvZnR3YXJlIG9uIGEgcGVyc29uYWwgY29tcHV0ZXIsIG1vYmlsZSBkZXZpY2UuIiwiYnRuX3dhbGxldCI6Ik9wZW4gV2FsbGV0IiwiYnRuX3dhbGxldF9oaW50IjoiSXQgd2lsbCBvcGVuIHlvdXIgQml0Y29pbiB3YWxsZXQgd2l0aCBhZGRyZXNzIGFuZCBzdW0gd2hpY2ggeW91IG5lZWQgdG8gc2VuZCBcXG5hbmQgeW91IHdpbGwgbmVlZCB0byBzaW1wbHkgY2xpY2sgU2VuZCBidXR0b24gaW4gd2FsbGV0IG9ubHkuIElmIHlvdXIgYnJvd3NlciBkb2VzIG5vdCByZWNvZ25pc2UgdGhlIEJpdGNvaW4gbGluaywgc2ltcGx5IHVzZSBcIkNvcHkgQWRkcmVzc1wiIGJ1dHRvbiBiZWxvdyBhbmQgbWFudWFsbHkgY29weSBhZGRyZXNzIGFuZCB0aGUgYW1vdW50IHRvIHBheSBpbiB5b3VyIEJpdGNvaW4gd2FsbGV0LiIsImJ0bl9jb3B5IjoiQ29weSBBZGRyZXNzIiwiYnRuX2NvcHlfaGludCI6IkNvcHkgQWRkcmVzcyB0byBCaXRjb2luIFdhbGxldCBtYW51YWxseSIsImJ0bl93YWl0X2hpbnQiOiJQbGVhc2Ugc2VuZCB0aGUgZXhhY3QgQml0Y29pbiBzdW0gYXMgc2hvd24gLSAwLjAwMDE3MDI5IEJUQyAoaW4gb25lIHBheW1lbnQpISBJZiB5b3Ugc2VuZCBhbnkgb3RoZXIgc3VtLCBwYXltZW50IHN5c3RlbSB3aWxsIGlnbm9yZSB0aGUgdHJhbnNhY3Rpb24gYW5kIHlvdSB3aWxsIG5lZWQgdG8gc2VuZCB0aGUgY29ycmVjdCBzdW0gYWdhaW4sIG9yIGNvbnRhY3QgdGhlIHNpdGUgb3duZXIgZm9yIGFzc2lzdGFuY2UuIElmIHlvdSBoYXZlIGFscmVhZHkgc2VudCBCaXRjb2lucyB0byB0aGUgYWRkcmVzcyBhYm92ZSwgcGxlYXNlIHdhaXQgMS0yIG1pbiB0byByZWNlaXZlIHRoZW0gYnkgQml0Y29pbiBwYXltZW50IHN5c3RlbSIsImJ0bl9yZXMiOiJWaWV3IFRyYW5zYWN0aW9uIERldGFpbHMiLCJidG5fcmVzX2hpbnQiOiJCaXRjb2luIHRyYW5zYWN0aW9ucyBhcmUgc2VudCBmcm9tIGFuZCB0byBlbGVjdHJvbmljIEJpdGNvaW4gd2FsbGV0cywgYW5kIGFyZSBkaWdpdGFsbHkgc2lnbmVkIGZvciBzZWN1cml0eS4gRXZlcnlvbmUgb24gdGhlIG5ldHdvcmsga25vd3MgYWJvdXQgYSB0cmFuc2FjdGlvbiwgYW5kIHRoZSBoaXN0b3J5IG9mIGEgdHJhbnNhY3Rpb24gY2FuIGJlIHRyYWNlZCBiYWNrIHRvIHRoZSBwb2ludCB3aGVyZSB0aGUgQml0Y29pbiB3ZXJlIHByb2R1Y2VkLiIsImludHJvMSI6IkdldCBCaXRjb2lucyAoQlRDKSBhdCBsb2NhbGJpdGNvaW5zLmNvbSBpZiB5b3UgZG9uXHUwMDI3dCBhbHJlYWR5IGhhdmUgYW55LiIsImludHJvMWIiOiJHZXQgQml0Y29pbnMgKEJUQykgYXQgX19fIGlmIHlvdSBkb25cdTAwMjd0IGFscmVhZHkgaGF2ZSBhbnkuIiwiaW50cm8yIjoiU2VuZCAwLjAwMDE3MDI5IEJUQyAoZG9uXHUwMDI3dCBpbmNsdWRlIHRyYW5zYWN0aW9uIGZlZSBpbiB0aGlzIGFtb3VudCEpLiIsImludHJvMyI6IklmIHlvdSBzZW5kIGFueSBvdGhlciBiaXRjb2luIGFtb3VudCwgcGF5bWVudCBzeXN0ZW0gd2lsbCBpZ25vcmUgaXQhIiwibm90X3JlY2VpdmVkIjoiLSBOb3QgUmVjZWl2ZWQgLSIsImZlZXMiOiJ0cmFuc2FjdGlvbiBmZWVzIiwiaW5zdHJ1Y3Rpb24iOiJJbnN0cnVjdGlvbiIsImNvaW5fYWRkcmVzcyI6IkJpdGNvaW4gQWRkcmVzcyIsInBheW1lbnRfYW1vdW50IjoiUGF5bWVudCBBbW91bnQiLCJjYXB0Y2hhX2Ftb3VudCI6IkNhcHRjaGEgQW1vdW50IiwicGF5bWVudF9zdGF0dXMiOiJQYXltZW50IFN0YXR1cyIsImNhcHRjaGFfc3RhdHVzIjoiQ2FwdGNoYSBTdGF0dXMiLCJwYXlfbm93IjoiUGF5IE5vdyIsImNvcHlfYW1vdW50IjoiQ29weSBBbW91bnQiLCJjb3BpZWQiOiJDb3BpZWQhIiwibm9faW5jbHVkZV9mZWUiOiJkb25cdTAwMjd0IGluY2x1ZGUgdHJhbnNhY3Rpb24gZmVlIGluIHRoaXMgYW1vdW50In19", "aW1hZ2VzLw==", "aW1hZ2VzL3lvdXJfbG9nby5wbmc=", "YWNyeXB0b18=") })</script><div class='acrypto_header px-3 py-3 pt-md-5 pb-md-4 mx-auto my-4 text-center' style='max-width:700px'><h1 class='display-4 acrypto_texts_pay_now'><span class='acrypto_texts_pay_now'>&#160;</span></h1><br><p class='lead'>Demo Text - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p class='lead'>Please contact us for any questions on aaa@example.com</p></div><div class='acrypto_loader' style='height:700px'><form action='//gourl.io/lib/examples/box_only.php#hacrypto' method='post'><div class='container text-center acrypto_loader_button pt-5 mt-5'><br><br><br><br><br><button type='submit' title='Click to Reload Page' class='btn btn-outline-secondary btn-lg'><i class='fas fa-spinner fa-spin'></i> &#160; Bitcoin Loading ...</button></div><div class='container'><div class='row'><div class='col-12 text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2'><div class='acrypto_cryptobox_error' style='display:none'><div class='container acrypto_coins_list'><div class='row'><div class='col-12 text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2 text-center'><div style="margin: 20px 0 80px 0; text-align:center"><div style="margin-bottom:15px"><b>Select Payment Method -</b></div><input type='radio' class='aradioimage' data-title='Payment in Bitcoin' checked data-url='//gourl.io/lib/examples/box_only.php?acoin=bitcoin#hacrypto' data-width='70' data-alt='Payment in bitcoin' data-image='images/bitcoin.png' name='aradioname' value='bitcoin'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Bitcoincash'  data-url='//gourl.io/lib/examples/box_only.php?acoin=bitcoincash#hacrypto' data-width='70' data-alt='Payment in bitcoincash' data-image='images/bitcoincash.png' name='aradioname' value='bitcoincash'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Litecoin'  data-url='//gourl.io/lib/examples/box_only.php?acoin=litecoin#hacrypto' data-width='70' data-alt='Payment in litecoin' data-image='images/litecoin.png' name='aradioname' value='litecoin'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Dash'  data-url='//gourl.io/lib/examples/box_only.php?acoin=dash#hacrypto' data-width='70' data-alt='Payment in dash' data-image='images/dash.png' name='aradioname' value='dash'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Speedcoin'  data-url='//gourl.io/lib/examples/box_only.php?acoin=speedcoin#hacrypto' data-width='70' data-alt='Payment in speedcoin' data-image='images/speedcoin.png' name='aradioname' value='speedcoin'>&#160; </div></div></div></div><div class='card box-shadow'><div class='card-header'><h4 class='my-0 font-weight-normal'>Error Message<span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-laptop'></i></span><span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-sync-alt fa-spin'></i></span></h4></div><div class='card-body'><h1 class='card-title'>Bitcoin Loading ...</h1><br><div class='lead acrypto_error_message'></div><br><br><button type='submit' class='acrypto_button_error btn btn-outline-primary btn-block btn-lg'><i class='fas fa-sync'></i> &#160; Reload Page</button><br></div></div><br><br><br><br><br></div></div></div></div></form></div><div class='acrypto_cryptobox_top' style='display:none'><div class='container acrypto_coins_list'><div class='row'><div class='col-12 text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2 text-center'><div style="margin: 20px 0 80px 0; text-align:center"><div style="margin-bottom:15px"><b>Select Payment Method -</b></div><input type='radio' class='aradioimage' data-title='Payment in Bitcoin' checked data-url='//gourl.io/lib/examples/box_only.php?acoin=bitcoin#hacrypto' data-width='70' data-alt='Payment in bitcoin' data-image='images/bitcoin.png' name='aradioname' value='bitcoin'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Bitcoincash'  data-url='//gourl.io/lib/examples/box_only.php?acoin=bitcoincash#hacrypto' data-width='70' data-alt='Payment in bitcoincash' data-image='images/bitcoincash.png' name='aradioname' value='bitcoincash'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Litecoin'  data-url='//gourl.io/lib/examples/box_only.php?acoin=litecoin#hacrypto' data-width='70' data-alt='Payment in litecoin' data-image='images/litecoin.png' name='aradioname' value='litecoin'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Dash'  data-url='//gourl.io/lib/examples/box_only.php?acoin=dash#hacrypto' data-width='70' data-alt='Payment in dash' data-image='images/dash.png' name='aradioname' value='dash'>&#160; <input type='radio' class='aradioimage' data-title='Payment in Speedcoin'  data-url='//gourl.io/lib/examples/box_only.php?acoin=speedcoin#hacrypto' data-width='70' data-alt='Payment in speedcoin' data-image='images/speedcoin.png' name='aradioname' value='speedcoin'>&#160; </div></div></div></div><div class='container'><div class='row'><div class='acrypto_box_language col-12 col-sm-4 offset-sm-1 text-sm-left col-md-4 offset-md-2 text-md-left mt-sm-4 text-center mb-2'><div class='btn-group'><button type='button' class='btn btn-outline-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Language - English</button><div class='dropdown-menu'><a href='//gourl.io/lib/examples/box_only.php?alang=en#hacrypto' class='dropdown-item  active'>English</a><a href='//gourl.io/lib/examples/box_only.php?alang=es#hacrypto' class='dropdown-item'>Spanish</a><a href='//gourl.io/lib/examples/box_only.php?alang=fr#hacrypto' class='dropdown-item'>French</a><a href='//gourl.io/lib/examples/box_only.php?alang=de#hacrypto' class='dropdown-item'>German</a><a href='//gourl.io/lib/examples/box_only.php?alang=nl#hacrypto' class='dropdown-item'>Dutch</a><a href='//gourl.io/lib/examples/box_only.php?alang=it#hacrypto' class='dropdown-item'>Italian</a><a href='//gourl.io/lib/examples/box_only.php?alang=ru#hacrypto' class='dropdown-item'>Russian</a><a href='//gourl.io/lib/examples/box_only.php?alang=pl#hacrypto' class='dropdown-item'>Polish</a><a href='//gourl.io/lib/examples/box_only.php?alang=pt#hacrypto' class='dropdown-item'>Portuguese</a><a href='//gourl.io/lib/examples/box_only.php?alang=fa#hacrypto' class='dropdown-item'>Persian</a><a href='//gourl.io/lib/examples/box_only.php?alang=ko#hacrypto' class='dropdown-item'>Korean</a><a href='//gourl.io/lib/examples/box_only.php?alang=ja#hacrypto' class='dropdown-item'>Japanese</a><a href='//gourl.io/lib/examples/box_only.php?alang=id#hacrypto' class='dropdown-item'>Indonesian</a><a href='//gourl.io/lib/examples/box_only.php?alang=tr#hacrypto' class='dropdown-item'>Turkish</a><a href='//gourl.io/lib/examples/box_only.php?alang=ar#hacrypto' class='dropdown-item'>Arabic</a><a href='//gourl.io/lib/examples/box_only.php?alang=cn#hacrypto' class='dropdown-item'>Chinese Simplified</a><a href='//gourl.io/lib/examples/box_only.php?alang=zh#hacrypto' class='dropdown-item'>Chinese Traditional</a><a href='//gourl.io/lib/examples/box_only.php?alang=hi#hacrypto' class='dropdown-item'>Hindi</a></div></div></div><div class='acrypto_box_logo col-12 col-sm-6 col-md-4 mt-4 '><div class='text-right'><img class='acrypto_logo_image' alt='logo' src='#'></div><br></div></div></div></div><div class='container acrypto_cryptobox_unpaid' style='display:none'><div class='row'><div class='col-12 text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2'><form action='//gourl.io/lib/examples/box_only.php#hacrypto' method='post'><div class='card box-shadow'><div class='card-header'><h4 class='my-0 font-weight-normal acrypto_addr_title'><span class='acrypto_texts_coin_address'>&#160;</span><button type='submit' class='acrypto_refresh btn btn-sm btn-outline-secondary float-right'><i class='fas fa-sync-alt'></i></button><span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-laptop'></i></span><span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-sync-alt fa-spin'></i></span></h4></div><div class='card-body'><div class='acrypto_copy_address'><a href='#a'><img class='acrypto_qrcode_image' style='max-width:100%; height:auto; width:auto\9;' alt='qrcode' data-size='200' src='#'></a></div><h1 class='mt-3 mb-4 pb-1 card-title acrypto_copy_amount'><span class='acrypto_amount'>&#160;</span> <small class='text-muted'><span class='acrypto_coinlabel'></span></small></h1><div class='lead acrypto_copy_amount acrypto_texts_send'></div><div class='lead acrypto_texts_no_include_fee'></div><br><h4 class='card-title'><a class='acrypto_wallet_address' style='line-height:1.5;' href='#a'></a> &#160;&#160;<a class='acrypto_copy_address' href='#a'><i class='fas fa-copy'></i></a> &#160;&#160;<a class='acrypto_wallet_open' href='#a'><i class='fas fa-external-link-alt'></i></a></h4><br><button type='submit' class='acrypto_button_wait btn btn-lg btn-block btn-outline-primary' style='white-space:normal'></button><br><p class='lead acrypto_texts_intro3'></p></div></div><input type='hidden' id='acrypto_refresh_' name='acrypto_refresh_' value='1'><button type='submit' class='acrypto_button_refresh btn btn-lg btn-block btn-primary mt-3' style='display:none'></button></form></div><div class='col-12 text-center col-sm-10 offset-sm-1 col-md-8 offset-md-2'><form action='//gourl.io/lib/examples/box_only.php#hacrypto' method='post'><input type='hidden' id='acrypto_refresh2_' name='acrypto_refresh2_' value='1'><br><button type='submit' class='acrypto_button_confirm btn btn-lg btn-block btn-primary my-2' style='white-space:normal'><i class='fas fa-angle-double-right'></i> &#160; Click Here if you have already sent Bitcoins &#160; <i class='fas fa-angle-double-right'></i></button></form></div></div></div><div class='container acrypto_cryptobox_paid' style='display:none'><div class='row'><div class='col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 text-center'><div class='card box-shadow'><div class='card-header'><h4 class='my-0 font-weight-normal acrypto_addr_title'><span class='acrypto_texts_title'>&#160;</span><span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-laptop'></i></span><span class='acrypto_loading_icon mr-3 float-left' style='display:none'> <i class='fas fa-sync-alt fa-spin'></i></span></h4></div><div class='card-body'><div class='acrypto_paid_total'><h1 style='margin-top:10px' class='card-title acrypto_copy_amount'><span class='acrypto_amount'>&#160;</span> <small class='text-muted'><span class='acrypto_coinlabel'></span></small></h1></div><br><div class='acrypto_copy_transaction'><img class='acrypto_paidimg' style='max-width: 100%; width: 250px; height: auto;' src='images/paid.png' alt='Paid'></div><br><br><h1 class='display-4 acrypto_paymentcaptcha_successful' style='line-height:1.5;'>.</h1><br><div class='lead acrypto_paymentcaptcha_date'></div><br><br><a href='#a' class='acrypto_button_details btn btn-lg btn-block btn-outline-primary' style='white-space:normal'></a></div></div></div></div></div><br><br><br></div></div>
+
+  <div><a target="_blank" href="https://validator.w3.org/nu/?showsource=yes&amp;doc=https://gourl.io%2Flib%2Fexamples%2Fbox_only.php"><img title="Markup Validation Service" src="https://gourl.io/images/w3c.png" alt="Valid HTML 5"></a></div>
+
+  <br>
+
+  </body>    
+
+</html>

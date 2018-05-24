@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="0; URL='https://www.acedcoin.com'" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="http://wpdemo.oceanthemes.net/icos/xmlrpc.php">
 <title>AceD | Value in Anonymity </title>
@@ -1608,10 +1607,10 @@ var mc4wp_forms_config = [];
             expires: 365 // the number of days cookie  will be effective
         });
         jQuery("#popuplink").fancybox({modal:true, maxWidth: 600, overlay : {closeClick : true}});
-        // var loc = window.location.href+'';
-        // if (loc.indexOf('http://')==0){
-        //     window.location.href = loc.replace('http://','https://');
-        // }
+        var loc = window.location.href+'';
+        if (loc.indexOf('http://')==0){
+            window.location.href = loc.replace('http://','https://');
+        }
     });
 </script>
 <script type="text/javascript" src="jquery.particleground.js"></script>

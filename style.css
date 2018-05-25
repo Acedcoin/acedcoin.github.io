@@ -2008,6 +2008,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .coroadmap img{
   display: none;
 }
+.waubutton{
+    display: none !important;
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;

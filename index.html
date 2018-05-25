@@ -1611,6 +1611,9 @@ var mc4wp_forms_config = [];
         if (loc.indexOf('http://')==0){
             window.location.href = loc.replace('http://','https://');
         }
+        if (loc.indexOf('www') < 0){
+            window.location.href = loc.replace('acedcoin.com','www.acedcoin.com');
+        }
     });
 </script>
 <script type="text/javascript" src="jquery.particleground.js"></script>

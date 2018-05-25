@@ -2027,6 +2027,14 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .subparticle {
     left: 5%;
   }
+  .cosubparticle{
+    left: 9%;
+  }
+}
+@media (max-width: 1100px){
+  .cosubparticle{
+    left: 7%;
+  }
 }
 @media(max-width: 991px){
   .subparticle{
@@ -2034,7 +2042,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     left:7%;
   }
   .cosubparticle{
-    top: 13%;
+    top: 17%;
+    left: 13%;
   }
     .banner .banner-content { padding-top: 50px; }
   .mobile-center {

@@ -2002,6 +2002,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   top: 21%;
   left: 20%;
 }
+.cosubparticle{
+  top:27%;
+}
 #intro{
   margin-top: 0px !important;
 }
@@ -2026,6 +2029,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .subparticle{
     top:7%;
     left:7%;
+  }
+  .cosubparticle{
+    top: 13%;
   }
     .banner .banner-content { padding-top: 50px; }
   .mobile-center {

@@ -2083,3 +2083,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     height: 523px;
   }
 }
+@media(max-width: 480px){
+  .banner{
+    min-height: 713px;
+  }
+}

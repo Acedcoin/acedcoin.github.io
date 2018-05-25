@@ -2010,8 +2010,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 }
 .waubutton{
     /*display: none !important;*/
-    position: absolute;
-    bottom: -7px;
+    position: absolute !important;
+    bottom: 7px;
 }
 @media(max-width: 1550px){
   .subparticle{

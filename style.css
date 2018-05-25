@@ -2018,6 +2018,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .topbuycoin{
   background: #000000;
 }
+.co_buybutton{
+  margin-top:-10%;
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;
@@ -2029,6 +2032,12 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   }
   .cosubparticle{
     left: 9%;
+  }
+}
+@media(max-width: 1200px){
+  .co_buybutton {
+    margin-top: -12%;
+    margin-right: 5%;
   }
 }
 @media (max-width: 1100px){
@@ -2051,6 +2060,10 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   }
   .topbuycoin{
     min-height: 791px;
+  }
+  .co_buybutton{
+    margin-right: auto;
+    margin-top: 3%;
   }
 }
 @media(max-width: 901px){

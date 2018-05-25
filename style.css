@@ -2009,7 +2009,6 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   display: none;
 }
 .waubutton{
-    /*display: none !important;*/
     position: absolute !important;
     bottom: 7px;
 }
@@ -2026,13 +2025,15 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 @media(max-width: 991px){
   .subparticle{
     top:7%;
+    left:7%;
   }
     .banner .banner-content { padding-top: 50px; }
-    .banner{
-        min-height: 1147px;
-    }
+  .mobile-center {
+    text-align: center !important;
+  }
 }
 @media(max-width: 768px){
+
   .cotwitter{
     height: 631px;
   }
@@ -2050,7 +2051,4 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .cotwitter{
     height: 523px;
   }
-    .banner{
-        min-height: 907px;
-    }
 }

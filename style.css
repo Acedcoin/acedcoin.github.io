@@ -2008,9 +2008,11 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 .coroadmap img{
   display: none;
 }
-/*.waubutton{*/
+.waubutton{
     /*display: none !important;*/
-/*}*/
+    position: absolute;
+    bottom: 0;
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;

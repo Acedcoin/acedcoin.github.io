@@ -2015,6 +2015,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     position: absolute !important;
     bottom: 7px;
 }
+#topbuycoin{
+  background: #000000;
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;
@@ -2036,6 +2039,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     .banner .banner-content { padding-top: 50px; }
   .mobile-center {
     text-align: center !important;
+  }
+  #topbuycoin{
+    min-height: 721px;
   }
 }
 @media(max-width: 768px){

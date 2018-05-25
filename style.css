@@ -2053,6 +2053,16 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     min-height: 721px;
   }
 }
+@media(max-width: 901px){
+  .cosubparticle{
+    left: 11%;
+  }
+}
+@media(max-width: 851px){
+  .cosubparticle{
+    left: 7%;
+  }
+}
 @media(max-width: 768px){
 
   .cotwitter{

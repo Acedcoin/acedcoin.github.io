@@ -2015,7 +2015,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
     position: absolute !important;
     bottom: 7px;
 }
-#topbuycoin{
+.topbuycoin{
   background: #000000;
 }
 @media(max-width: 1550px){
@@ -2040,7 +2040,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .mobile-center {
     text-align: center !important;
   }
-  #topbuycoin{
+  .topbuycoin{
     min-height: 721px;
   }
 }

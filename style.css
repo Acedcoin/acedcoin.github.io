@@ -2020,7 +2020,6 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   min-height: 871px;
 }
 .co_buybutton{
-  margin-top:-10%;
   position: relative;
   z-index: 9;
 }
@@ -2039,7 +2038,6 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 }
 @media(max-width: 1200px){
   .co_buybutton {
-    margin-top: -12%;
     margin-right: 5%;
   }
 }

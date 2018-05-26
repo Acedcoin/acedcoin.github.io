@@ -2017,6 +2017,7 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 }
 .topbuycoin{
   background: #000000;
+  min-height: 871px;
 }
 .co_buybutton{
   margin-top:-10%;

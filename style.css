@@ -2020,6 +2020,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 }
 .co_buybutton{
   margin-top:-10%;
+  position: relative;
+  z-index: 9;
 }
 @media(max-width: 1550px){
   .subparticle{

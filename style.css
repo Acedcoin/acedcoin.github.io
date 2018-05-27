@@ -971,7 +971,7 @@ hr:last-child, .hr:last-child { margin-bottom: 0; }
   form.mc4wp-form { margin: 0; }
 }
 /** 07.0 - FEATURES SECTION */
-.text-block p:not(.lead) { color: #a2b4d2; }
+/*.text-block p:not(.lead) { color: #a2b4d2; }*/
 .text-block ul:not(.btns) { margin-bottom: 20px; }
 .text-block ul:not(.btns) li { position: relative; line-height: 2; padding-left: 22px; color: #a2b4d2; }
 .text-block ul:not(.btns) li:before { content: ""; background: #46bdf4; height: 5px; width: 5px; border-radius: 50%; position: absolute; top: 13px; left: 0; }

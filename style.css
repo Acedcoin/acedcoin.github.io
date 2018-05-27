@@ -2091,6 +2091,11 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   .coroadmap video{
     display: none;
   }
+  #intro .wpb_text_column,
+  #specification .wpb_text_column p,
+  #specification .wpb_text_column h2{
+    text-align: center;
+  }
 }
 @media(max-width: 480px){
   .cotwitter{

@@ -2021,6 +2021,11 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   position: relative;
   z-index: 9;
 }
+@media(min-width: 1200px) {
+  .contact-info li {
+     margin: 0 91px;
+  }
+}
 @media(max-width: 1550px){
   .subparticle{
     left: 12%;

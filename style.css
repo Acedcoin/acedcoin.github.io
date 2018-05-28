@@ -2096,6 +2096,10 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   #specification .wpb_text_column h2{
     text-align: center;
   }
+  h2, h4{
+    color: #d9b169;
+    margin: 3% 0 11%;
+  }
 }
 @media(max-width: 480px){
   .cotwitter{

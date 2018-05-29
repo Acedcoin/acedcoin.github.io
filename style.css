@@ -2109,6 +2109,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   #roadmap{
     background: #0f102c;
   }
+  .topbuycoin{
+    min-height: 877px;
+  }
 }
 @media(max-width: 480px){
   .cotwitter{
@@ -2118,5 +2121,8 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 @media(max-width: 480px){
   .banner{
     min-height: 713px;
+  }
+  .topbuycoin{
+    min-height: 779px;
   }
 }

@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyrax Admin dashboard Template</title>
+<meta name="description" content="" />
+<meta name="keywords" content="admin, admin dashboard, admin template" />
+<meta name="author" content="SRGIT"/>
+<!-- Favicon -->
+<link rel="shortcut icon" href="plugins/assets/img/favicon/favicon.png">
+<link rel="icon" href="plugins/assets/img/favicon/favicon.png" type="image/x-icon">
+<!-- Custom CSS -->
+<link href="plugins/assets/css/default.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Preloader -->
+<div class="preloader-it">
+  <div class="preloader">
+    <div class="circles-1">
+      <div class="circles-1-center"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+    </div>
+  </div>
+</div>
+<!-- //Preloader --> 
+<!-- Begin page -->
+<div class="wrapper light-theme"> 
+  <!-- Top Header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="mobile-only-brand pull-left">
+      <div class="nav-header pull-left">
+        <div class="logo-wrap"> <a href="index.html"> <img class="brand-img" src="plugins/assets/img/logo.png" alt="brand"/> <span class="brand-text">[ Hyrax<strong>UX</strong> ]</span> </a> </div>
+      </div>
+      <a id="toggle-btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="mdi mdi-format-list-bulleted"></i></a> <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-search"></i></a> <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-more"></i></a>
+      <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+        <div class="input-group">
+          <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+          <button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
+          </span> </div>
+      </form>
+    </div>
+    <div id="mobile_right_sidebar" class="mobile-right-sidebar pull-right">
+      <ul class="nav navbar-right top-nav pull-right">
+        <li> <a id="open_right_sidebar" href="#"><i class="pe-7s-chat top-nav-icon"></i></a> </li>
+        <li class="dropdown app-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-edit top-nav-icon"></i></a>
+          <ul class="dropdown-menu app-dropdown"  data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="app-nicescroll-bar">
+                <ul class="app-icon-wrap pa-10">
+                  <li> <a href="weather.html" class="connection-item"> <i class="pe-7s-sun txt-info"></i> <span class="block">weather</span> </a> </li>
+                  <li> <a href="vector-map.html" class="connection-item"> <i class="pe-7s-way txt-danger"></i> <span class="block">map</span> </a> </li>
+                  <li> <a href="chats.html" class="connection-item"> <i class="pe-7s-chat txt-warning"></i> <span class="block">chat</span> </a> </li>
+                  <li> <a href="calendar.html" class="connection-item"> <i class="pe-7s-date txt-primary"></i> <span class="block">calendar</span> </a> </li>
+                  <li> <a href="email-inbox.html" class="connection-item"> <i class="pe-7s-mail-open-file txt-success"></i> <span class="block">e-mail</span> </a> </li>
+                  <li> <a href="contact-card.html" class="connection-item"> <i class="pe-7s-config"></i> <span class="block">configure</span> </a> </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown alert-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-alarm top-nav-icon"></i><span class="top-nav-icon-badge btn-sonar">1</span></a>
+          <ul class="dropdown-menu alert-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="notification-box-head-wrap"> <span class="notification-box-head pull-left inline-block">notifications</span> <a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)"> clear all </a>
+                <div class="clearfix"></div>
+                <hr class="light-grey-hr ma-0"/>
+              </div>
+            </li>
+            <li>
+              <div class="streamline message-nicescroll-bar">
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-green"> <i class="mdi mdi-alarm-check"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11  pull-right notifications-time">5pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-yellow"> <i class="mdi mdi-video-input-antenna"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">Neque porro quisquam est</span> <span class="inline-block font-11 pull-right notifications-time">12pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-blue"> <i class="mdi mdi-comment-text"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">61 new messages</span> <span class="inline-block font-11  pull-right notifications-time">6am</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate"> Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="sl-avatar"> <img class="img-responsive" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">Vivian Rox</span> <span class="inline-block font-11  pull-right notifications-time">3pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-red"> <i class="mdi mdi-storage"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-danger">99% server space occupied.</span> <span class="inline-block font-11  pull-right notifications-time">1pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">consectetur, adipisci velit.</p>
+                  </div>
+                  </a> </div>
+              </div>
+            </li>
+            <li>
+              <div class="notification-box-bottom-wrap">
+                <hr class="light-grey-hr ma-0"/>
+                <a class="block text-center read-all" href="javascript:void(0)"> read all </a>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown auth-drp"> <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="http://via.placeholder.com/128x128" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+          <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li> <a href="profile.html"><i class="mdi mdi-account"></i><span>Profile</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-credit-card"></i><span>my balance</span></a> </li>
+            <li> <a href="email-inbox.html"><i class="mdi mdi-email"></i><span>Inbox</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-settings"></i><span>Settings</span></a> </li>
+            <li class="divider"></li>
+            <li class="sub-menu show-on-hover"> <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="mdi mdi-check text-success"></i> available</a>
+              <ul class="dropdown-menu open-left-side">
+                <li> <a href="#"><i class="mdi mdi-check text-success"></i><span>available</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-circle-o text-warning"></i><span>busy</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-minus-circle-outline text-danger"></i><span>offline</span></a> </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li> <a href="#"><i class="mdi mdi-power"></i><span>Log Out</span></a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /Top Menu Items --> 
+  <!-- Left Sidebar Menu -->
+  <div class="fixed-sidebar-left">
+    <ul class="nav navbar-nav side-nav nicescroll-bar">
+      <li class="navigation-header"> <span>Main</span> <i class="mdi mdi-more"></i> </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#admin-dash">
+        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="admin-dash" class="collapse collapse-level-1">
+          <li><a href="index.html">Dashboard V1</a></li>
+          <li><a href="index-dark.html">Dashboard V2</a></li>
+          <li><a href="index-stock-data.html">Dashboard V3</a></li>
+          <li><a href="index-boxed.html">Dashboard Boxed</a></li>
+        </ul>
+      </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#admin-uir">
+        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Admin UI</span></div>
+        <div class="pull-right"><span class="label label-primary">new</span></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="admin-uir" class="collapse collapse-level-1">
+          <li><a href="admin-grid.html">Grid system</a></li>
+          <li><a href="admin-sweet-alert.html">Sweet Alert</a></li>
+          <li><a href="admin-rangeslider.html">Range Slider</a></li>
+          <li><a href="admin-lightbox.html">Lightbox</a></li>
+          <li><a href="admin-scrollbar.html">Scroll bar</a></li>
+          <li><a href="admin-slider.html">Slider</a></li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li class="navigation-header"> <span>component</span> <i class="mdi mdi-more"></i> </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#ui_element">
+        <div class="pull-left"><i class="mdi mdi-puzzle mr-20"></i><span class="right-nav-text">UI Elements</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="ui_element" class="collapse collapse-level-1">
+          <li><a href="ui-bootstrap.html">Bootstrap UI</a></li>
+          <li><a href="ui-typography.html">Typography</a></li>
+          <li><a href="ui-panels.html">Panels</a></li>
+          <li><a href="ui-buttons.html">Buttons</a></li>
+          <li><a href="ui-modals.html">Modals</a></li>
+          <li><a href="ui-checkbox-radio.html">Checkboxes-Radios</a></li>
+          <li><a href="ui-spinners.html">Spinners</a></li>
+          <li><a href="ui-accordions.html">Accordions/Toggles</a></li>
+          <li><a href="ui-progressbars.html">Progress Bars</a></li>
+          <li><a href="ui-notifications.html">Notification</a></li>
+          <li><a href="ui-carousel.html">Carousel</a></li>
+          <li><a href="ui-tooltips-popovers.html">Tooltips & Popovers</a></li>
+          <li><a href="ui-calendar.html">Calendar</a></li>
+        </ul>
+      </li>
+      <li> <a class="active-page" href="javascript:void(0);" data-toggle="collapse" data-target="#icon_list">
+        <div class="pull-left"><i class="mdi mdi-cube-outline mr-20"></i><span class="right-nav-text">Icons</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="icon_list" class="collapse collapse-level-1 in">
+          <li><a href="icons-colored.html">Colored Icons</a></li>
+          <li><a href="icons-materialdesign.html">Material Design</a></li>
+          <li><a href="icons-dripicons.html">Dripicons</a></li>
+          <li><a href="icons-fontawesome.html">Font awesome</a></li>
+          <li><a href="icons-flags.html">Flag Icons</a></li>
+          <li><a href="icons-file.html" >File Icons</a></li>
+          <li><a href="icons-folders.html">Folder Icons</a></li>
+          <li><a href="icons-pe7.html">PE7 Icons</a></li>
+          <li><a href="icons-typicons.html" class="active">Typicons</a></li>
+        </ul>
+      </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#form_main">
+        <div class="pull-left"><i class="mdi mdi-format-align-left mr-20"></i><span class="right-nav-text">Forms</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="form_main" class="collapse collapse-level-1">
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#form_elements">Form elements
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="form_elements" class="collapse collapse-level-2">
+              <li> <a href="form-element.html">Basic Forms</a> </li>
+              <li> <a href="form-elements-add-on.html">Add on</a> </li>
+              <li> <a href="form-elements-advance.html">Forms Advanced</a> </li>
+              <li> <a href="form-elements-validation.html">Forms Validation</a> </li>
+            </ul>
+          </li>
+          <li> <a href="form-pickers.html">Form pickers</a> </li>
+          <li> <a href="form-masking.html">Form Masking</a> </li>
+          <li> <a href="form-wizards.html">Form Wizards</a> </li>
+          <li> <a href="form-x-editable.html">X-Editable</a> </li>
+          <li> <a href="file-upload.html">File upload</a> </li>
+          <li> <a href="file-summernote.html">Form Summernote</a> </li>
+        </ul>
+      </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#chart_list">
+        <div class="pull-left"><i class="mdi mdi-chart-donut-variant mr-20"></i><span class="right-nav-text">Charts </span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="chart_list" class="collapse collapse-level-1 two-col-list">
+          <li> <a href="flot-chart.html">Flot Chart</a> </li>
+          <li> <a href="echart.html">Echart Chart</a> </li>
+          <li> <a href="morris-chart.html">Morris Chart</a> </li>
+          <li> <a href="chart.js.html">chartjs</a> </li>
+          <li> <a href="sparkline.html">Sparkline</a> </li>
+          <li> <a href="peity-chart.html">Peity Chart</a> </li>
+        </ul>
+      </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#table_list">
+        <div class="pull-left"><i class="mdi mdi-view-dashboard mr-20"></i><span class="right-nav-text">Tables</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="table_list" class="collapse collapse-level-1 two-col-list">
+          <li> <a href="basic-table.html">Basic Table</a> </li>
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#data_tables">Data Table
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="data_tables" class="collapse collapse-level-2">
+              <li> <a href="dt-basic.html">Basic Initialization</a> </li>
+              <li> <a href="dt-advance.html">Advance Initialization</a> </li>
+              <li> <a href="dt-styling.html">Table Styling</a> </li>
+            </ul>
+          </li>
+          <li> <a href="editable-table.html">Editable Table</a> </li>
+          <li> <a href="foo-table.html">Foo Table</a> </li>
+          <li> <a href="jsgrid-table.html">Jsgrid Table</a> </li>
+        </ul>
+      </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#maps_list">
+        <div class="pull-left"><i class="mdi mdi-compass mr-20"></i><span class="right-nav-text">maps</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="maps_list" class="collapse collapse-level-1">
+          <li> <a href="vector-map.html">Vector Map</a> </li>
+          <li> <a href="google-map.html">Google Map</a> </li>
+        </ul>
+      </li>
+      <!-- ecommerce -->
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li class="navigation-header"> <span>Ecommerce</span> <i class="mdi mdi-more"></i> </li>
+      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#pages_ecommerce">
+        <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Ecommerce Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="pages_ecommerce" class="collapse collapse-level-2">
+          <li> <a href="ecommerce-dashboard.html">Shop dashboard</a> </li>
+          <li> <a href="ecommerce-products-details.html">Products List</a> </li>
+          <li> <a href="ecommerce-add-product.html">Add Product</a> </li>
+          <li> <a  href="ecommerce-order-details.html">Order Details</a> </li>
+        </ul>
+      </li>
+      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
+        <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="invoice_list" class="collapse collapse-level-2">
+          <li> <a href="invoice.html">Invoice</a> </li>
+          <li> <a href="invoice-list.html">Invoice List</a> </li>
+          <li> <a href="invoice-archive.html">Invoice Archive</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <!-- ecommerce -->
+      <li class="navigation-header"> <span>featured</span> <i class="mdi mdi-more"></i> </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#pages_dr">
+        <div class="pull-left"><i class="mdi mdi-star-circle mr-20"></i><span class="right-nav-text">Sample Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="pages_dr" class="collapse collapse-level-1 two-col-list">
+          <li> <a href="blank.html">Blank Page</a> </li>
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">Authentication pages
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="authentication_list" class="collapse collapse-level-2">
+              <li> <a href="login.html" target="_blank">Login</a> </li>
+              <li> <a href="signup.html" target="_blank">Register</a> </li>
+              <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
+              <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
+            </ul>
+          </li>
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">Mailbox
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="mailbox" class="collapse collapse-level-2">
+              <li> <a href="email-inbox.html">Email Inbox</a> </li>
+              <li> <a href="email-detail.html">Email Detail</a> </li>
+              <li> <a href="email-compose.html">Email Compose</a> </li>
+            </ul>
+          </li>
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#error_pages">error pages
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="error_pages" class="collapse collapse-level-2">
+              <li> <a href="404.html">Error 404</a> </li>
+              <li> <a href="500.html">Error 500</a> </li>
+            </ul>
+          </li>
+          <li> <a href="gallery.html">Gallery</a> </li>
+          <li> <a href="profile.html">Profile</a> </li>
+          <li> <a href="faq.html">FAQ</a> </li>
+        </ul>
+      </li>
+      <li> <a href="documentation/index.html">
+        <div class="pull-left"><i class="mdi mdi-book mr-20"></i><span class="right-nav-text">documentation</span></div>
+        <div class="clearfix"></div>
+        </a> </li>
+      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#dropdown_lvl1">
+        <div class="pull-left"><i class="mdi mdi-chart-timeline mr-20"></i><span class="right-nav-text">multilevel</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="dropdown_lvl1" class="collapse collapse-level-1">
+          <li> <a href="#">Item level 1</a> </li>
+          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#dropdown_lvl2">Dropdown level 2
+            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+            <div class="clearfix"></div>
+            </a>
+            <ul id="dropdown_lvl2" class="collapse collapse-level-2">
+              <li> <a href="#">Item level 2</a> </li>
+              <li> <a href="#">Item level 2</a> </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- /Left Sidebar Menu --> 
+  <!-- Right Sidebar Menu -->
+  <div class="fixed-sidebar-right">
+    <ul class="right-sidebar">
+      <li>
+        <div  class="tab-struct user-tabs">
+          <ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
+            <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="chat_tab_btn" href="#chat_tab"><i class="pe-7s-chat"></i></a></li>
+            <li role="presentation" class=""><a  data-toggle="tab" id="messages_tab_btn" role="tab" href="#messages_tab" aria-expanded="false"><i class="pe-7s-mail"></i></a></li>
+            <li role="presentation" class=""><a  data-toggle="tab" id="settings_tab_btn" role="tab" href="#settings_tab" aria-expanded="false"><i class="pe-7s-keypad"></i></a></li>
+          </ul>
+          <div class="tab-content" id="right_sidebar_content">
+            <div  id="chat_tab" class="tab-pane fade active in" role="tabpanel">
+              <div class="chat-cmplt-wrap">
+                <div class="chat-box-wrap">
+                  <div class="add-friend"> <span class="inline-block txt-dark">Recent Chats</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-plus"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div id="chat_list_scroll">
+                    <div class="nicescroll-bar">
+                      <ul class="chat-list-wrap">
+                        <li class="chat-list">
+                          <div class="chat-body"> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Peter Wyatt</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Vivian Rox</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status offline"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Mr. Danielle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Suzi Cole</span> <span class="time block truncate txt-grey">Neque porro quisquam est..</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Tom Taylor</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status offline"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Mitch Blue</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Jason Rudd</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Michelle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Ludacris Stack</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-chat-box-wrap">
+                  <div class="recent-chat-wrap">
+                    <div class="panel-heading ma-0">
+                      <div class="goto-back"> <a  id="goto_back" href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-chevron-left"></i> </a> <span class="inline-block txt-dark">Max</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-more"></i></a>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                      <div class="panel-body pa-0">
+                        <div class="chat-content">
+                          <ul class="nicescroll-bar pt-20">
+                            <li class="friend">
+                              <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                <div class="msg pull-left">
+                                  <p class="msng-name">Sam Wrote:</p>
+                                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet?</p>
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-grey">5:01 PM</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="self mb-10">
+                              <div class="self-msg-wrap">
+                                <div class="msg block pull-right"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:01 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="self">
+                              <div class="self-msg-wrap">
+                                <div class="msg block pull-right"> Consectetur, adipisci velit.
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:13 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="friend">
+                              <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                <div class="msg pull-left">
+                                  <p class="msng-name">Sam Wrote:</p>
+                                  <p>Neque porro quisquam.</p>
+                                  <div class="msg-per-detail  text-right"> <span class="msg-time txt-grey">6:35 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="input-group">
+                          <input type="text" id="input_msg_send" name="send-msg" class="input-msg-send form-control" placeholder="Type something">
+                          <div class="input-group-btn emojis">
+                            <div class="dropup">
+                              <button type="button" class="btn  btn-default  dropdown-toggle" data-toggle="dropdown" ><i class="mdi mdi-mood"></i></button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="javascript:void(0)">Action</a></li>
+                                <li><a href="javascript:void(0)">Another action</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:void(0)">Separated link</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="input-group-btn attachment">
+                            <div class="fileupload btn  btn-default"><i class="mdi mdi-attachment-alt"></i>
+                              <input type="file" class="upload">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="messages_tab" class="tab-pane fade" role="tabpanel">
+              <div class="message-box-wrap">
+                <div class="add-friend"> <span class="inline-block txt-dark">messages</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-search"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="set-height-wrap">
+                  <div class="streamline message-box nicescroll-bar"> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Peter Wyatt</span> <span class="inline-block font-11  pull-right message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Vivian Rox</span> <span class="inline-block font-11  pull-right message-time">1 Feb</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mr. Danielle</span> <span class="inline-block font-11  pull-right message-time">31 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur nominees</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Tom Taylor</span> <span class="inline-block font-11  pull-right message-time">29 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mitch Blue</span> <span class="inline-block font-11  pull-right message-time">27 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Michelle</span> <span class="inline-block font-11  pull-right message-time">19 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam es.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Linda Stack</span> <span class="inline-block font-11  pull-right message-time">13 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> </div>
+                </div>
+              </div>
+            </div>
+            <div id="settings_tab" class="tab-pane fade" role="tabpanel">
+              <div class="settings-box-wrap">
+                <div class="add-settings text-center txt-dark pt-15"> General Settings
+                  <div class="clearfix"></div>
+                </div>
+                <div class="set-height-wrap"> 
+                  <!-- settings-List -->
+                  <ul class="settings-list nicescroll-bar">
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Email Notifications</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Site Tracking</div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">SMS Alerts </div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Backup Storage</div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Audit Logs</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="add-settings text-center txt-dark pt-15"> SYSTEM SETTINGS
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">System Logs </div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Error Reporting </div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Applications Logs </div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Backup Servers</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Audit Logs</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- /settings-List --> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- /Right Sidebar Menu --> 
+  <!-- Main Content -->
+  <div class="page-wrapper">
+    <div class="container-fluid"> 
+      <!-- Title -->
+      <div class="row heading-bg">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+          <h5 class="txt-dark">PE7 Icons</h5>
+        </div>
+        <!-- Breadcrumb -->
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="#"><span>Icons</span></a></li>
+            <li class="active"><span>PE7 Icons</span></li>
+          </ol>
+        </div>
+        <!-- /Breadcrumb --> 
+      </div>
+      <!-- /Title --> 
+      <!-- Row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left"> <code>&lt;span class=&quot;typcn typcn-...&quot;&gt;&lt;&frasl;span&gt;</code> </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+              <div  class="panel-body">
+                <ul class="glyphs character-mapping">
+                  <li>
+                    <div data-name="adjust-brightness" data-code="0xe000" data-match="sun adjust brightness " class="font-icon-detail"><span class="typcn typcn-adjust-brightness"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="adjust-contrast" data-code="0xe001" data-match="half adjust contrast " class="font-icon-detail"><span class="typcn typcn-adjust-contrast"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="anchor-outline" data-code="0xe002" data-match=" anchor outline" class="font-icon-detail"><span class="typcn typcn-anchor-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="anchor" data-code="0xe003" data-match=" anchor " class="font-icon-detail"><span class="typcn typcn-anchor"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="archive" data-code="0xe004" data-match=" archive " class="font-icon-detail"><span class="typcn typcn-archive"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-back-outline" data-code="0xe005" data-match=" arrow back outline" class="font-icon-detail"><span class="typcn typcn-arrow-back-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-back" data-code="0xe006" data-match=" arrow back " class="font-icon-detail"><span class="typcn typcn-arrow-back"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-down-outline" data-code="0xe007" data-match=" arrow down outline" class="font-icon-detail"><span class="typcn typcn-arrow-down-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-down-thick" data-code="0xe008" data-match=" arrow down thick " class="font-icon-detail"><span class="typcn typcn-arrow-down-thick"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-down" data-code="0xe009" data-match=" arrow down " class="font-icon-detail"><span class="typcn typcn-arrow-down"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-forward-outline" data-code="0xe00a" data-match=" arrow forward outline" class="font-icon-detail"><span class="typcn typcn-arrow-forward-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-forward" data-code="0xe00b" data-match=" arrow forward " class="font-icon-detail"><span class="typcn typcn-arrow-forward"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-left-outline" data-code="0xe00c" data-match=" arrow left outline" class="font-icon-detail"><span class="typcn typcn-arrow-left-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-left-thick" data-code="0xe00d" data-match=" arrow left thick " class="font-icon-detail"><span class="typcn typcn-arrow-left-thick"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-left" data-code="0xe00e" data-match=" arrow left " class="font-icon-detail"><span class="typcn typcn-arrow-left"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-loop-outline" data-code="0xe00f" data-match=" arrow loop outline" class="font-icon-detail"><span class="typcn typcn-arrow-loop-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-loop" data-code="0xe010" data-match=" arrow loop " class="font-icon-detail"><span class="typcn typcn-arrow-loop"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-maximise-outline" data-code="0xe011" data-match=" arrow maximise outline" class="font-icon-detail"><span class="typcn typcn-arrow-maximise-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-maximise" data-code="0xe012" data-match=" arrow maximise " class="font-icon-detail"><span class="typcn typcn-arrow-maximise"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-minimise-outline" data-code="0xe013" data-match=" arrow minimise outline" class="font-icon-detail"><span class="typcn typcn-arrow-minimise-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-minimise" data-code="0xe014" data-match=" arrow minimise " class="font-icon-detail"><span class="typcn typcn-arrow-minimise"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-move-outline" data-code="0xe015" data-match=" arrow move outline" class="font-icon-detail"><span class="typcn typcn-arrow-move-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-move" data-code="0xe016" data-match=" arrow move " class="font-icon-detail"><span class="typcn typcn-arrow-move"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-repeat-outline" data-code="0xe017" data-match=" arrow repeat outline" class="font-icon-detail"><span class="typcn typcn-arrow-repeat-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-repeat" data-code="0xe018" data-match=" arrow repeat " class="font-icon-detail"><span class="typcn typcn-arrow-repeat"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-right-outline" data-code="0xe019" data-match=" arrow right outline" class="font-icon-detail"><span class="typcn typcn-arrow-right-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-right-thick" data-code="0xe01a" data-match=" arrow right thick " class="font-icon-detail"><span class="typcn typcn-arrow-right-thick"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-right" data-code="0xe01b" data-match=" arrow right " class="font-icon-detail"><span class="typcn typcn-arrow-right"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-shuffle" data-code="0xe01c" data-match=" arrow shuffle " class="font-icon-detail"><span class="typcn typcn-arrow-shuffle"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-sorted-down" data-code="0xe01d" data-match=" arrow sorted down " class="font-icon-detail"><span class="typcn typcn-arrow-sorted-down"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-sorted-up" data-code="0xe01e" data-match=" arrow sorted up " class="font-icon-detail"><span class="typcn typcn-arrow-sorted-up"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-sync-outline" data-code="0xe01f" data-match=" arrow sync outline" class="font-icon-detail"><span class="typcn typcn-arrow-sync-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-sync" data-code="0xe020" data-match=" arrow sync " class="font-icon-detail"><span class="typcn typcn-arrow-sync"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-unsorted" data-code="0xe021" data-match=" arrow unsorted " class="font-icon-detail"><span class="typcn typcn-arrow-unsorted"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-up-outline" data-code="0xe022" data-match=" arrow up outline" class="font-icon-detail"><span class="typcn typcn-arrow-up-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-up-thick" data-code="0xe023" data-match=" arrow up thick " class="font-icon-detail"><span class="typcn typcn-arrow-up-thick"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="arrow-up" data-code="0xe024" data-match=" arrow up " class="font-icon-detail"><span class="typcn typcn-arrow-up"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="at" data-code="0xe025" data-match=" at " class="font-icon-detail"><span class="typcn typcn-at"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="attachment-outline" data-code="0xe026" data-match=" attachment outline" class="font-icon-detail"><span class="typcn typcn-attachment-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="attachment" data-code="0xe027" data-match=" attachment " class="font-icon-detail"><span class="typcn typcn-attachment"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="backspace-outline" data-code="0xe028" data-match="delete backspace outline" class="font-icon-detail"><span class="typcn typcn-backspace-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="backspace" data-code="0xe029" data-match="delete backspace " class="font-icon-detail"><span class="typcn typcn-backspace"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="battery-charge" data-code="0xe02a" data-match="power battery charge " class="font-icon-detail"><span class="typcn typcn-battery-charge"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="battery-full" data-code="0xe02b" data-match="power battery full " class="font-icon-detail"><span class="typcn typcn-battery-full"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="battery-high" data-code="0xe02c" data-match="power battery high " class="font-icon-detail"><span class="typcn typcn-battery-high"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="battery-low" data-code="0xe02d" data-match="power battery low " class="font-icon-detail"><span class="typcn typcn-battery-low"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="battery-mid" data-code="0xe02e" data-match="power battery mid " class="font-icon-detail"><span class="typcn typcn-battery-mid"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="beaker" data-code="0xe02f" data-match="lab,beta,experiment beaker " class="font-icon-detail"><span class="typcn typcn-beaker"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="beer" data-code="0xe030" data-match="ale,lager beer " class="font-icon-detail"><span class="typcn typcn-beer"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="bell" data-code="0xe031" data-match="tone,alarm bell " class="font-icon-detail"><span class="typcn typcn-bell"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="book" data-code="0xe032" data-match=" book " class="font-icon-detail"><span class="typcn typcn-book"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="bookmark" data-code="0xe033" data-match="banner,flag bookmark " class="font-icon-detail"><span class="typcn typcn-bookmark"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="briefcase" data-code="0xe034" data-match=" briefcase " class="font-icon-detail"><span class="typcn typcn-briefcase"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="brush" data-code="0xe035" data-match=" brush " class="font-icon-detail"><span class="typcn typcn-brush"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="business-card" data-code="0xe036" data-match="id business card " class="font-icon-detail"><span class="typcn typcn-business-card"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="calculator" data-code="0xe037" data-match=" calculator " class="font-icon-detail"><span class="typcn typcn-calculator"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="calendar-outline" data-code="0xe038" data-match=" calendar outline" class="font-icon-detail"><span class="typcn typcn-calendar-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="calendar" data-code="0xe039" data-match=" calendar " class="font-icon-detail"><span class="typcn typcn-calendar"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="camera-outline" data-code="0xe03a" data-match=" camera outline" class="font-icon-detail"><span class="typcn typcn-camera-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="camera" data-code="0xe03b" data-match="photo camera " class="font-icon-detail"><span class="typcn typcn-camera"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cancel-outline" data-code="0xe03c" data-match="photo cancel outline" class="font-icon-detail"><span class="typcn typcn-cancel-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cancel" data-code="0xe03d" data-match=" cancel " class="font-icon-detail"><span class="typcn typcn-cancel"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-area-outline" data-code="0xe03e" data-match="graph chart area outline" class="font-icon-detail"><span class="typcn typcn-chart-area-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-area" data-code="0xe03f" data-match="graph chart area " class="font-icon-detail"><span class="typcn typcn-chart-area"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-bar-outline" data-code="0xe040" data-match="graph chart bar outline" class="font-icon-detail"><span class="typcn typcn-chart-bar-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-bar" data-code="0xe041" data-match="graph chart bar " class="font-icon-detail"><span class="typcn typcn-chart-bar"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-line-outline" data-code="0xe042" data-match="graph chart line outline" class="font-icon-detail"><span class="typcn typcn-chart-line-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-line" data-code="0xe043" data-match="graph chart line " class="font-icon-detail"><span class="typcn typcn-chart-line"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-pie-outline" data-code="0xe044" data-match="graph chart pie outline" class="font-icon-detail"><span class="typcn typcn-chart-pie-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chart-pie" data-code="0xe045" data-match="graph chart pie " class="font-icon-detail"><span class="typcn typcn-chart-pie"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chevron-left-outline" data-code="0xe046" data-match="less than chevron left outline" class="font-icon-detail"><span class="typcn typcn-chevron-left-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chevron-left" data-code="0xe047" data-match="less than chevron left " class="font-icon-detail"><span class="typcn typcn-chevron-left"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chevron-right-outline" data-code="0xe048" data-match="greater than chevron right outline" class="font-icon-detail"><span class="typcn typcn-chevron-right-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="chevron-right" data-code="0xe049" data-match="greater than chevron right " class="font-icon-detail"><span class="typcn typcn-chevron-right"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="clipboard" data-code="0xe04a" data-match="copy clipboard " class="font-icon-detail"><span class="typcn typcn-clipboard"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cloud-storage" data-code="0xe04b" data-match="data,upload cloud storage " class="font-icon-detail"><span class="typcn typcn-cloud-storage"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cloud-storage-outline" data-code="0xe054" data-match="data,upload cloud storage outline" class="font-icon-detail"><span class="typcn typcn-cloud-storage-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="code-outline" data-code="0xe04c" data-match="tag code outline" class="font-icon-detail"><span class="typcn typcn-code-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="code" data-code="0xe04d" data-match="tag code " class="font-icon-detail"><span class="typcn typcn-code"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="coffee" data-code="0xe04e" data-match="beverage coffee " class="font-icon-detail"><span class="typcn typcn-coffee"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cog-outline" data-code="0xe04f" data-match="settings cog outline" class="font-icon-detail"><span class="typcn typcn-cog-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="cog" data-code="0xe050" data-match="settings cog " class="font-icon-detail"><span class="typcn typcn-cog"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="compass" data-code="0xe051" data-match="safari compass " class="font-icon-detail"><span class="typcn typcn-compass"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="contacts" data-code="0xe052" data-match="address,book contacts " class="font-icon-detail"><span class="typcn typcn-contacts"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="credit-card" data-code="0xe053" data-match="payment credit card " class="font-icon-detail"><span class="typcn typcn-credit-card"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="css3" data-code="0xe055" data-match=" css3 " class="font-icon-detail"><span class="typcn typcn-css3"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="database" data-code="0xe056" data-match="db database " class="font-icon-detail"><span class="typcn typcn-database"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="delete-outline" data-code="0xe057" data-match="cross,close delete outline" class="font-icon-detail"><span class="typcn typcn-delete-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="delete" data-code="0xe058" data-match="cross,close delete " class="font-icon-detail"><span class="typcn typcn-delete"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="device-desktop" data-code="0xe059" data-match="pc,mac device desktop " class="font-icon-detail"><span class="typcn typcn-device-desktop"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="device-laptop" data-code="0xe05a" data-match="notebook,macbook device laptop " class="font-icon-detail"><span class="typcn typcn-device-laptop"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="device-phone" data-code="0xe05b" data-match="iphone device phone " class="font-icon-detail"><span class="typcn typcn-device-phone"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="device-tablet" data-code="0xe05c" data-match="ipad device tablet " class="font-icon-detail"><span class="typcn typcn-device-tablet"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="directions" data-code="0xe05d" data-match=" directions " class="font-icon-detail"><span class="typcn typcn-directions"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="divide-outline" data-code="0xe05e" data-match="division divide outline" class="font-icon-detail"><span class="typcn typcn-divide-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="divide" data-code="0xe05f" data-match="division divide " class="font-icon-detail"><span class="typcn typcn-divide"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="document-add" data-code="0xe060" data-match="file document add " class="font-icon-detail"><span class="typcn typcn-document-add"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="document-delete" data-code="0xe061" data-match="file document delete " class="font-icon-detail"><span class="typcn typcn-document-delete"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="document-text" data-code="0xe062" data-match="file document text " class="font-icon-detail"><span class="typcn typcn-document-text"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="document" data-code="0xe063" data-match="file document " class="font-icon-detail"><span class="typcn typcn-document"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="download-outline" data-code="0xe064" data-match=" download outline" class="font-icon-detail"><span class="typcn typcn-download-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="download" data-code="0xe065" data-match=" download " class="font-icon-detail"><span class="typcn typcn-download"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="dropbox" data-code="0xe066" data-match=" dropbox " class="font-icon-detail"><span class="typcn typcn-dropbox"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="edit" data-code="0xe067" data-match="pencil edit " class="font-icon-detail"><span class="typcn typcn-edit"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="eject-outline" data-code="0xe068" data-match="export,log,off,out eject outline" class="font-icon-detail"><span class="typcn typcn-eject-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="eject" data-code="0xe069" data-match="export,log,off,out eject " class="font-icon-detail"><span class="typcn typcn-eject"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="equals-outline" data-code="0xe06a" data-match=" equals outline" class="font-icon-detail"><span class="typcn typcn-equals-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="equals" data-code="0xe06b" data-match=" equals " class="font-icon-detail"><span class="typcn typcn-equals"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="export-outline" data-code="0xe06c" data-match="share export outline" class="font-icon-detail"><span class="typcn typcn-export-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="export" data-code="0xe06d" data-match="share export " class="font-icon-detail"><span class="typcn typcn-export"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="eye-outline" data-code="0xe06e" data-match="view eye outline" class="font-icon-detail"><span class="typcn typcn-eye-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="eye" data-code="0xe06f" data-match="view eye " class="font-icon-detail"><span class="typcn typcn-eye"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="feather" data-code="0xe070" data-match=" feather " class="font-icon-detail"><span class="typcn typcn-feather"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="film" data-code="0xe071" data-match="strip film " class="font-icon-detail"><span class="typcn typcn-film"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="filter" data-code="0xe072" data-match="funnel,refine filter " class="font-icon-detail"><span class="typcn typcn-filter"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flag-outline" data-code="0xe073" data-match=" flag outline" class="font-icon-detail"><span class="typcn typcn-flag-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flag" data-code="0xe074" data-match=" flag " class="font-icon-detail"><span class="typcn typcn-flag"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flash-outline" data-code="0xe075" data-match="power,lightning flash outline" class="font-icon-detail"><span class="typcn typcn-flash-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flash" data-code="0xe076" data-match="power,lightning flash " class="font-icon-detail"><span class="typcn typcn-flash"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flow-children" data-code="0xe077" data-match=" flow children " class="font-icon-detail"><span class="typcn typcn-flow-children"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flow-merge" data-code="0xe078" data-match=" flow merge " class="font-icon-detail"><span class="typcn typcn-flow-merge"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flow-parallel" data-code="0xe079" data-match=" flow parallel " class="font-icon-detail"><span class="typcn typcn-flow-parallel"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="flow-switch" data-code="0xe07a" data-match=" flow switch " class="font-icon-detail"><span class="typcn typcn-flow-switch"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="folder-add" data-code="0xe07b" data-match="directory folder add " class="font-icon-detail"><span class="typcn typcn-folder-add"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="folder-delete" data-code="0xe07c" data-match="directory folder delete " class="font-icon-detail"><span class="typcn typcn-folder-delete"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="folder-open" data-code="0xe07d" data-match="directory folder open " class="font-icon-detail"><span class="typcn typcn-folder-open"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="folder" data-code="0xe07e" data-match="directory folder " class="font-icon-detail"><span class="typcn typcn-folder"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="gift" data-code="0xe07f" data-match="present gift " class="font-icon-detail"><span class="typcn typcn-gift"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="globe-outline" data-code="0xe080" data-match=" globe outline" class="font-icon-detail"><span class="typcn typcn-globe-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="globe" data-code="0xe081" data-match=" globe " class="font-icon-detail"><span class="typcn typcn-globe"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="group-outline" data-code="0xe082" data-match="users group outline" class="font-icon-detail"><span class="typcn typcn-group-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="group" data-code="0xe083" data-match="users group " class="font-icon-detail"><span class="typcn typcn-group"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="headphones" data-code="0xe084" data-match=" headphones " class="font-icon-detail"><span class="typcn typcn-headphones"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="heart-full-outline" data-code="0xe085" data-match="like,favourite,love heart full outline" class="font-icon-detail"><span class="typcn typcn-heart-full-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="heart-half-outline" data-code="0xe086" data-match="like,favourite,love heart half outline" class="font-icon-detail"><span class="typcn typcn-heart-half-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="heart-outline" data-code="0xe087" data-match="like,favourite,love heart outline" class="font-icon-detail"><span class="typcn typcn-heart-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="heart" data-code="0xe088" data-match="like,favourite,love heart " class="font-icon-detail"><span class="typcn typcn-heart"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="home-outline" data-code="0xe089" data-match=" home outline" class="font-icon-detail"><span class="typcn typcn-home-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="home" data-code="0xe08a" data-match=" home " class="font-icon-detail"><span class="typcn typcn-home"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="html5" data-code="0xe08b" data-match=" html5 " class="font-icon-detail"><span class="typcn typcn-html5"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="image-outline" data-code="0xe08c" data-match="picture,photo image outline" class="font-icon-detail"><span class="typcn typcn-image-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="image" data-code="0xe08d" data-match="picture,photo image " class="font-icon-detail"><span class="typcn typcn-image"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="infinity-outline" data-code="0xe08e" data-match=" infinity outline" class="font-icon-detail"><span class="typcn typcn-infinity-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="infinity" data-code="0xe08f" data-match=" infinity " class="font-icon-detail"><span class="typcn typcn-infinity"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="info-large-outline" data-code="0xe090" data-match=" info large outline" class="font-icon-detail"><span class="typcn typcn-info-large-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="info-large" data-code="0xe091" data-match=" info large " class="font-icon-detail"><span class="typcn typcn-info-large"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="info-outline" data-code="0xe092" data-match=" info outline" class="font-icon-detail"><span class="typcn typcn-info-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="info" data-code="0xe093" data-match=" info " class="font-icon-detail"><span class="typcn typcn-info"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="input-checked-outline" data-code="0xe094" data-match="tick,correct input checked outline" class="font-icon-detail"><span class="typcn typcn-input-checked-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="input-checked" data-code="0xe095" data-match="tick,correct input checked " class="font-icon-detail"><span class="typcn typcn-input-checked"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="key-outline" data-code="0xe096" data-match="password,login key outline" class="font-icon-detail"><span class="typcn typcn-key-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="key" data-code="0xe097" data-match="password,login key " class="font-icon-detail"><span class="typcn typcn-key"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="keyboard" data-code="0xe098" data-match=" keyboard " class="font-icon-detail"><span class="typcn typcn-keyboard"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="leaf" data-code="0xe099" data-match=" leaf " class="font-icon-detail"><span class="typcn typcn-leaf"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="lightbulb" data-code="0xe09a" data-match="idea lightbulb " class="font-icon-detail"><span class="typcn typcn-lightbulb"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="link-outline" data-code="0xe09b" data-match="chain link outline" class="font-icon-detail"><span class="typcn typcn-link-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="link" data-code="0xe09c" data-match="chain link " class="font-icon-detail"><span class="typcn typcn-link"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="location-arrow-outline" data-code="0xe09d" data-match="direction location arrow outline" class="font-icon-detail"><span class="typcn typcn-location-arrow-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="location-arrow" data-code="0xe09e" data-match="direction location arrow " class="font-icon-detail"><span class="typcn typcn-location-arrow"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="location-outline" data-code="0xe09f" data-match="map,pin location outline" class="font-icon-detail"><span class="typcn typcn-location-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="location" data-code="0xe0a0" data-match="map,pin location " class="font-icon-detail"><span class="typcn typcn-location"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="lock-closed-outline" data-code="0xe0a1" data-match="locked lock closed outline" class="font-icon-detail"><span class="typcn typcn-lock-closed-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="lock-closed" data-code="0xe0a2" data-match="locked lock closed " class="font-icon-detail"><span class="typcn typcn-lock-closed"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="lock-open-outline" data-code="0xe0a3" data-match=" lock open outline" class="font-icon-detail"><span class="typcn typcn-lock-open-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="lock-open" data-code="0xe0a4" data-match=" lock open " class="font-icon-detail"><span class="typcn typcn-lock-open"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="mail" data-code="0xe0a5" data-match="email mail " class="font-icon-detail"><span class="typcn typcn-mail"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="map" data-code="0xe0a6" data-match="brochure,pamphlet map " class="font-icon-detail"><span class="typcn typcn-map"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-eject-outline" data-code="0xe0a7" data-match=" media eject outline" class="font-icon-detail"><span class="typcn typcn-media-eject-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-eject" data-code="0xe0a8" data-match=" media eject " class="font-icon-detail"><span class="typcn typcn-media-eject"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-fast-forward-outline" data-code="0xe0a9" data-match=" media fast forward outline" class="font-icon-detail"><span class="typcn typcn-media-fast-forward-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-fast-forward" data-code="0xe0aa" data-match=" media fast forward " class="font-icon-detail"><span class="typcn typcn-media-fast-forward"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-pause-outline" data-code="0xe0ab" data-match=" media pause outline" class="font-icon-detail"><span class="typcn typcn-media-pause-outline"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-pause" data-code="0xe0ac" data-match=" media pause " class="font-icon-detail"><span class="typcn typcn-media-pause"></span></div>
+                  </li>
+                  <li>
+                    <div data-name="media-play-outline" data-code="0xe0ad" data-match=" media play outline" class="font-icon-detail"><span class="typcn typcn-media-play-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-play-reverse-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-play-reverse"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-play"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-record-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-record"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-rewind-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-rewind"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-stop-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-media-stop"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-message-typing"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-message"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-messages"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-microphone-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-microphone"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-minus-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-minus"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-mortar-board"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-news"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-notes-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-notes"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pen"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pencil"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-phone-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-phone"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pi-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pi"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pin-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pin"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-pipette"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-plane-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-plane"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-plug"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-plus-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-plus"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-point-of-interest-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-point-of-interest"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-power-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-power"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-printer"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-puzzle-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-puzzle"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-radar-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-radar"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-refresh-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-refresh"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-rss-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-rss"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-scissors-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-scissors"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-shopping-bag"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-shopping-cart"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-at-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-dribbble-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-dribbble"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-facebook-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-facebook"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-flickr-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-flickr"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-github-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-github"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-google-plus-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-google-plus"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-instagram-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-instagram"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-last-fm-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-last-fm"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-linkedin-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-linkedin"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-pinterest-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-pinterest"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-skype-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-skype"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-tumbler-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-tumbler"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-twitter-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-twitter"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-vimeo-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-vimeo"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-youtube-circular"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-social-youtube"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-sort-alphabetically-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-sort-alphabetically"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-sort-numerically-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-sort-numerically"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-spanner-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-spanner"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-spiral"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-star-full-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-star-half-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-star-half"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-star-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-star"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-starburst-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-starburst"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-stopwatch"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-support"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tabs-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tag"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tags"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-large-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-large"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-list-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-list"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-menu-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-menu"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-small-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-th-small"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-thermometer"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-thumbs-down"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-thumbs-ok"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-thumbs-up"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tick-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tick"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-ticket"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-time"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-times-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-times"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-trash"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-tree"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-upload-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-upload"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user-add-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user-add"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user-delete-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user-delete"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-user"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-vendor-android"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-vendor-apple"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-vendor-microsoft"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-video-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-video"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-volume-down"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-volume-mute"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-volume-up"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-volume"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-warning-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-warning"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-watch"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-waves"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-cloudy"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-downpour"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-night"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-partly-sunny"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-shower"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-snow"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-stormy"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-sunny"></span></div>
+                  </li>
+                  <li>
+                    <div  class="font-icon-detail"><span class="typcn typcn-weather-windy-cloudy"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-weather-windy"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-wi-fi-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-wi-fi"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-wine"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-world-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-world"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom-in-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom-in"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom-out-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom-out"></span></div>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom-outline"></span></div>
+                  </li>
+                  <li>
+                    <div class="font-icon-detail"><span class="typcn typcn-zoom"></span></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row --> 
+    </div>
+    <!-- Footer -->
+    <footer class="footer container-fluid pt-10 pb-10  pl-30 pr-30">
+      <div class="row">
+        <div class="col-sm-12 ">
+          <div class="pull-left text-dark pt-5 small">Copyright @ 2018  Hyrax UX  Panel. All Rights Reserved</div>
+          <div class="pull-right">Created with by <img src="plugins/assets/img/heartbeat.svg" alt="srgit" class="heart"> <a href="http://www.srgit.com/" target="_blank">SRGIT</a></div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer --> 
+  </div>
+  <!-- /Main Content --> 
+</div>
+<!-- /Main Content --> 
+<!-- /#wrapper --> 
+<!-- jQuery --> 
+<script src="plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script> 
+<!-- Bootstrap Core JavaScript --> 
+<script src="plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+<!-- Slimscroll JavaScript --> 
+<script src="plugins/assets/js/jquery.slimscroll.js"></script> 
+<!-- Fancy Dropdown JS --> 
+<script src="plugins/assets/js/dropdown-bootstrap-extended.js"></script> 
+<!-- Switchery JavaScript --> 
+<script src="plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script> 
+<!-- Init JavaScript --> 
+<script src="plugins/assets/js/init.js"></script>
+</body>
+</html>

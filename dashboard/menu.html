@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyrax Admin dashboard Template</title>
+<meta name="description" content="" />
+<meta name="keywords" content="admin, admin dashboard, admin template" />
+<meta name="author" content="SRGIT"/>
+<!-- Favicon -->
+<link rel="shortcut icon" href="plugins/assets/img/favicon/favicon.png">
+<link rel="icon" href="plugins/assets/img/favicon/favicon.png" type="image/x-icon">
+<!-- Data table CSS -->
+<link href="plugins/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<link href="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+<!-- Custom CSS -->
+<link href="plugins/assets/css/default.css" rel="stylesheet" type="text/css">
+<link href="plugins/assets/css/mega-menu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="wrapper light-theme wrapper-boxed"> 
+  <!-- Top Header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="mobile-only-brand pull-left">
+      <div class="nav-header pull-left">
+        <div class="logo-wrap"> <a href="index.html"> <img class="brand-img" src="plugins/assets/img/logo.png" alt="brand"/> <span class="brand-text">[ Hyrax<strong>UX</strong> ]</span> </a> </div>
+      </div>
+      <a id="toggle-btn" class="hidden-lg-menu toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="mdi mdi-format-list-bulleted"></i></a> <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-search"></i></a> <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-more"></i></a>
+      <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+        <div class="input-group">
+          <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+          <button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
+          </span> </div>
+      </form>
+      <div class="mega-menu-main hidden-xs collapse navbar-collapse justify-content-end" id="navbarNavMenuMain">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink-mainNav-33" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Main </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-mainNav-33"> <a class="dropdown-item" href="index.html">Dashboard V1</a> <a class="dropdown-item" href="index-dark.html">Dashboard V2</a> <a class="dropdown-item" href="index-stock-data.html">Dashboard V3</a> <a class="dropdown-item" href="index-boxed.html">Dashboard Boxed</a> </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink-mainNav-33" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Admin UI </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-mainNav-33"> <a href="admin-grid.html">Grid system</a> <a href="admin-sweet-alert.html">Sweet Alert</a> <a href="admin-rangeslider.html">Range Slider</a> <a href="admin-lightbox.html">Lightbox</a> <a href="admin-scrollbar.html">Scroll bar</a> <a href="admin-slider.html">Slider</a> </div>
+          </li>
+          <li class="nav-item dropdown mega-menu"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink-mainNav-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> COMPONENTS </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-mainNav-2">
+              <ul class="drop-mega-menu">
+                <li> <a class="dropdown-header">UI ELEMENTS</a> <a href="ui-bootstrap.html">Bootstrap UI</a> <a href="ui-typography.html">Typography</a> <a href="ui-panels.html">Panels</a> <a href="ui-buttons.html">Buttons</a> <a href="ui-modals.html">Modals</a> <a href="ui-checkbox-radio.html">Checkboxs-Radios</a><a href="ui-spinners.html">Spinners</a> <a href="ui-accordions.html">Accordions/Toggles</a> <a href="ui-progressbars.html">Progress Bars</a> <a href="ui-notifications.html">Notification</a> <a href="ui-carousel.html">Carousel</a> <a href="ui-tooltips-popovers.html">Tooltips &amp; Popovers</a> <a href="ui-calendar.html">Calendar</a> </li>
+                <li> <a class="dropdown-header">Icons</a> <a href="icons-colored.html">Colored Icons</a> <a href="icons-materialdesign.html">Material Design</a> <a href="icons-dripicons.html">Dripicons</a> <a href="icons-fontawesome.html">Font awesome</a> <a href="icons-flags.html">Flag Icons</a> <a href="icons-file.html">File Icons</a> <a href="icons-folders.html">Folder Icons</a> <a href="icons-pe7.html">PE7 Icons</a> <a href="icons-typicons.html">Typicons</a>
+                  <hr>
+                  <a class="dropdown-header">Error Pages</a> <a href="404.html">Error 404</a> <a href="500.html">Error 500</a> </li>
+                <li class="pb-30"> <a class="dropdown-header">Form Elements</a> <a href="form-element.html">Basic Forms</a> <a href="form-elements-add-on.html">Add ons</a>
+                  <hr>
+                  <a class="dropdown-header">Dynamic Forms</a> <a href="form-elements-advance.html">Forms Advanced</a> <a href="form-elements-validation.html">Forms Validation</a> <a href="form-pickers.html">Form pickers</a> <a href="form-masking.html">Form Masking</a> <a href="form-wizards.html">Form Wizards</a> <a href="form-x-editable.html">X-Editable</a> <a href="file-upload.html">File upload</a> <a href="file-summernote.html">Form Summernote</a> </li>
+                <li class="pb-50"> <a class="dropdown-header">Tables</a> <a href="basic-table.html">Basic Table</a> <a href="dt-basic.html">Basic Initialization</a> <a href="dt-advance.html">Advance Initialization</a> <a href="dt-styling.html">Table Styling</a> <a href="editable-table.html">Editable Table</a> <a href="foo-table.html">Foo Table</a> <a href="jsgrid-table.html">Jsgrid Table</a>
+                  <hr>
+                  <a class="dropdown-header">Maps</a> <a href="vector-map.html">Vector Map</a> <a href="google-map.html">Google Map</a> </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle __mPS2id" href="#" id="navbarDropdownMenuLink-mainNav-33" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ecommerce </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-mainNav-33">
+              <div class="sub-menu-wrap"> <a class="dropdown-item" href="#">Ecommerce Pages</a>
+                <ul class="sub-menu right background-white">
+                  <li> <a href="ecommerce-dashboard.html">Shop dashboard</a> </li>
+                  <li> <a href="ecommerce-products-details.html">Products List</a> </li>
+                  <li> <a href="ecommerce-add-product.html">Add Product</a> </li>
+                  <li> <a href="ecommerce-order-details.html">Order Details</a> </li>
+                </ul>
+              </div>
+              <div class="sub-menu-wrap"> <a class="dropdown-item" href="#">Invoice Pages</a>
+                <ul class="sub-menu right background-white">
+                  <li> <a href="invoice.html">Invoice</a> </li>
+                  <li> <a href="invoice-list.html">Invoice List</a> </li>
+                  <li> <a href="invoice-archive.html">Invoice Archive</a> </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle __mPS2id" href="#" id="navbarDropdownMenuLink-mainNav-33" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> FEATURED </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink-mainNav-33"> <a href="blank.html">Blank Page</a>
+              <div class="sub-menu-wrap"> <a class="dropdown-item" href="#">Authentication </a>
+                <ul class="sub-menu right background-white">
+                  <li> <a href="login.html" target="_blank">Login</a> </li>
+                  <li> <a href="signup.html" target="_blank">Register</a> </li>
+                  <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
+                  <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
+                </ul>
+              </div>
+              <div class="sub-menu-wrap"> <a class="dropdown-item" href="#">Mailbox</a>
+                <ul class="sub-menu right background-white">
+                  <li> <a href="email-inbox.html">Email Inbox</a> </li>
+                  <li> <a href="email-detail.html">Email Detail</a> </li>
+                  <li> <a href="email-compose.html">Email Compose</a> </li>
+                </ul>
+              </div>
+              <a href="gallery.html">Gallery</a> <a href="profile.html">Profile</a> <a href="faq.html">FAQ</a> </div>
+          </li>
+          <li class="nav-item"><a target="_blank" class="nav-link" href="documentation/index.html"> documentation </a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="mobile_right_sidebar" class="mobile-right-sidebar pull-right">
+      <ul class="nav navbar-right top-nav pull-right">
+        <li> <a id="open_right_sidebar" href="#"><i class="pe-7s-chat top-nav-icon"></i></a> </li>
+        <li class="dropdown app-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-edit top-nav-icon"></i></a>
+          <ul class="dropdown-menu app-dropdown"  data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="app-nicescroll-bar">
+                <ul class="app-icon-wrap pa-10">
+                  <li> <a href="weather.html" class="connection-item"> <i class="pe-7s-sun txt-info"></i> <span class="block">weather</span> </a> </li>
+                  <li> <a href="vector-map.html" class="connection-item"> <i class="pe-7s-way txt-danger"></i> <span class="block">map</span> </a> </li>
+                  <li> <a href="chats.html" class="connection-item"> <i class="pe-7s-chat txt-warning"></i> <span class="block">chat</span> </a> </li>
+                  <li> <a href="calendar.html" class="connection-item"> <i class="pe-7s-date txt-primary"></i> <span class="block">calendar</span> </a> </li>
+                  <li> <a href="email-inbox.html" class="connection-item"> <i class="pe-7s-mail-open-file txt-success"></i> <span class="block">e-mail</span> </a> </li>
+                  <li> <a href="contact-card.html" class="connection-item"> <i class="pe-7s-config"></i> <span class="block">configure</span> </a> </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown alert-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-alarm top-nav-icon"></i><span class="top-nav-icon-badge btn-sonar">1</span></a>
+          <ul class="dropdown-menu alert-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="notification-box-head-wrap"> <span class="notification-box-head pull-left inline-block">notifications</span> <a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)"> clear all </a>
+                <div class="clearfix"></div>
+                <hr class="light-grey-hr ma-0"/>
+              </div>
+            </li>
+            <li>
+              <div class="streamline message-nicescroll-bar">
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-green"> <i class="mdi mdi-alarm-check"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11  pull-right notifications-time">5pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-yellow"> <i class="mdi mdi-video-input-antenna"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">Neque porro quisquam est</span> <span class="inline-block font-11 pull-right notifications-time">12pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-blue"> <i class="mdi mdi-comment-text"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">61 new messages</span> <span class="inline-block font-11  pull-right notifications-time">6am</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate"> Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="sl-avatar"> <img class="img-responsive" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">Vivian Rox</span> <span class="inline-block font-11  pull-right notifications-time">3pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-red"> <i class="mdi mdi-storage"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-danger">99% server space occupied.</span> <span class="inline-block font-11  pull-right notifications-time">1pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">consectetur, adipisci velit.</p>
+                  </div>
+                  </a> </div>
+              </div>
+            </li>
+            <li>
+              <div class="notification-box-bottom-wrap">
+                <hr class="light-grey-hr ma-0"/>
+                <a class="block text-center read-all" href="javascript:void(0)"> read all </a>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown auth-drp"> <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="http://via.placeholder.com/128x128" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+          <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li> <a href="profile.html"><i class="mdi mdi-account"></i><span>Profile</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-credit-card"></i><span>my balance</span></a> </li>
+            <li> <a href="email-inbox.html"><i class="mdi mdi-email"></i><span>Inbox</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-settings"></i><span>Settings</span></a> </li>
+            <li class="divider"></li>
+            <li class="sub-menu show-on-hover"> <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="mdi mdi-check text-success"></i> available</a>
+              <ul class="dropdown-menu open-left-side">
+                <li> <a href="#"><i class="mdi mdi-check text-success"></i><span>available</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-circle-o text-warning"></i><span>busy</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-minus-circle-outline text-danger"></i><span>offline</span></a> </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li> <a href="#"><i class="mdi mdi-power"></i><span>Log Out</span></a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /Top Menu Items --> 
+  <!-- /Right Sidebar Menu --> 
+</div>
+<!-- /Main Content --> 
+<!-- /#wrapper --> 
+<!-- JavaScript --> 
+<!-- jQuery --> 
+<script src="plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script> 
+<!-- Bootstrap Core JavaScript --> 
+<script src="plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+<!-- Data table JavaScript --> 
+<script src="plugins/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script> 
+<!-- Slimscroll JavaScript --> 
+<script src="plugins/assets/js/jquery.slimscroll.js"></script> 
+<!-- Owl JavaScript --> 
+<script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> 
+<script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> 
+<!-- Progressbar Animation JavaScript --> 
+<script src="plugins/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script> 
+<script src="plugins/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script> 
+<!-- Fancy Dropdown JS --> 
+<script src="plugins/assets/js/dropdown-bootstrap-extended.js"></script> 
+<!-- FlotChart JavaScript --> 
+<script src="plugins/vendors/bower_components/flot/jquery.flot.js"></script> 
+<script src="plugins/assets/js/flot-data-dashboard.js"></script> 
+<script src="plugins/vendors/bower_components/skycons/skycons.js"></script> 
+<!-- Sparkline JavaScript --> 
+<script src="plugins/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> 
+<!-- Switchery JavaScript --> 
+<script src="plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script> 
+<!-- EChartJS JavaScript --> 
+<script src="plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script> 
+<!-- Toast JavaScript --> 
+<script src="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> 
+<!-- Init JavaScript --> 
+<script src="plugins/assets/js/init.js"></script> 
+<script src="plugins/assets/js/dashboard.init.js"></script>
+</body>
+</html>

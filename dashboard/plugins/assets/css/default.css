@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*-----------------
+[Master Stylesheet]
+Project:	Hyrax UX Admin Template
+-----------------*/
+
+/** Imports **/
+/*-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
+@import url('../../vendors/bower_components/bootstrap/dist/css/bootstrap.min.css');
+@import url('animate.css');
+
+@import url('filter.css');
+@import url('../../vendors/bower_components/switchery/dist/switchery.min.css');
+@import url('../../vendors/bower_components/owl.carousel/dist/assets/owl.carousel.min.css');
+@import url('../../vendors/bower_components/owl.carousel/dist/assets/owl.theme.default.min.css');
+@import url('lightgallery.css');
+@import url('../../vendors/bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css');
+
+/** Hyrax UX Default **/
+@import url('main.css');
+@import url('basic.css');
+@import url('basic-admin.css');
+@import url('icons.css');
+@import url('media-queries.css');
+
+
+/** font icons **/
+@import url('font-icons/font-awesome.min.css');
+@import url('font-icons/pe-icon-7.css');
+@import url('font-icons/materialdesignicons.min.css');
+@import url('font-icons/dripicons.css');
+@import url('font-icons/typicons.css');
+
+
+/** Hyrax UX Responsive **/
+@import url('responsive.css');
+
+

@@ -2024,6 +2024,29 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
 #roadmap{
   background: #12132f;
 }
+.carousel-indicators li{
+  width:10px;
+  height:10px;
+  margin: 1px 11px;
+}
+.carousel-indicators .active{
+  margin: 1px 11px;
+}
+.carousel-indicators{
+  margin-left: 21%;
+}
+.carousel-inner>.item{
+  min-height: 49em;
+}
+div.item h2 {
+  margin-top: 3%;
+}
+
+
+
+
+
+
 @media(min-width: 1200px) {
   .contact-info li {
      margin: 0 91px;
@@ -2084,7 +2107,9 @@ div.vc_toggle.vc_toggle_arrow.vc_toggle_active h4{
   }
 }
 @media(max-width: 768px){
-
+  div.item p {
+    margin: 0px 7px;
+  }
   .cotwitter{
     height: 631px;
   }

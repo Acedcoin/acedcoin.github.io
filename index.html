@@ -1701,7 +1701,17 @@
                     }
                 }
             });
-            clock.setTime(182600);
+            var dt = new Date(1458619200000);
+            dt.setTime(dt.getTime()+dt.getTimezoneOffset()*60*1000);
+            var offset = -300;
+            var d = new Date(dt.getTime() + offset*60*1000);
+            var date = d.getDate();
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var dif_seconds = (23-date)*24*3600 +(0-hours)*3600 + (0-minutes)*60 -seconds
+
+            clock.setTime(dif_seconds);
             clock.setCountdown(true);
             clock.start();
 

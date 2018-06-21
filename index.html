@@ -178,6 +178,12 @@
     <link rel="stylesheet" href="css(1)" media="all">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="particle_style.css">
+
+    <!--countdown library-->
+    <link rel="stylesheet"  href="flipclock.css" type="text/css">
+    <script src="flipclock.js" type="text/javascript" defer=""></script>
+    <script src="flipclock.min.js" type="text/javascript" defer=""></script>
+
 </head>
 
 <body class="home page-template page-template-page-templates page-template-template-onepage page-template-page-templatestemplate-onepage-php page page-id-29 wpb-js-composer js-comp-ver-5.4.5 vc_responsive icos-theme-ver-1.0 wordpress-version-4.9.5  no-touch loaded"
@@ -311,7 +317,11 @@
                                 <div class="wpb_wrapper">
                                     <div class="wpb_text_column wpb_content_element  header-image">
                                         <div class="wpb_wrapper" style="text-align: center;">
-                                            <p><img src="AceD-01.png" alt="header" style="width: 87%;max-width: 401px;"><br>
+                                            <img src="AceD-01.png" alt="header" style="width: 87%;max-width: 401px;"><br>
+                                            <div style="text-align: center; max-width: 451px; margin:auto;">
+                                                <div class="clock"></div>
+                                                <div class="message"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -321,6 +331,7 @@
                 </div>
                 <div class="text-center co_buybutton">
                     <a class="btn btn-alt btn-sm" style="font-size: 23px; padding: 5px 47px;" href="/buycoin.html" target="_self">Buy Coins</a>
+
                 </div>
             </div>
         </div>
@@ -671,12 +682,8 @@
                                             <div class="wpb_single_image wpb_content_element vc_align_center">
 
                                                 <figure class="wpb_wrapper vc_figure">
-                                                    <div class="vc_single_image-wrapper   vc_box_border_grey"><img style="    border-radius: 17px;"
-                                                                                                                   width="675" height="653" src="3_Image-02.jpg"
-                                                                                                                   class="vc_single_image-img attachment-full" alt=""
-                                                                                                                   srcset="3_Image-02.jpg 675w, 3_Image-02.jpg 300w"
-                                                                                                                   sizes="(max-width: 675px) 100vw, 675px"></div>
-
+                                                    <div class="vc_single_image-wrapper   vc_box_border_grey">
+                                                        <img style="border-radius: 17px;"  width="675" height="653" src="3_Image-02.jpg"  class="vc_single_image-img attachment-full" alt="" srcset="3_Image-02.jpg 675w, 3_Image-02.jpg 300w"  sizes="(max-width: 675px) 100vw, 675px"></div>
                                                 </figure>
                                             </div>
                                         </div>
@@ -1679,6 +1686,27 @@
         if (loc.indexOf('www') < 0){
             window.location.href = loc.replace('acedcoin.com','www.acedcoin.com');
         }
+
+        // start countdown script
+        var clock;
+        $(document).ready(function() {
+            var clock;
+            clock = $('.clock').FlipClock({
+                clockFace: 'DailyCounter',
+                autoStart: false,
+                callbacks: {
+                    stop: function() {
+                        $('.message').html('The clock has stopped!')
+                    }
+                }
+            });
+            clock.setTime(420880);
+            clock.setCountdown(true);
+            clock.start();
+
+        });
+        // end countdown script
+
     });
 </script>
 <script type="text/javascript" src="jquery.particleground.js"></script>

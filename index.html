@@ -1689,29 +1689,31 @@
         }
 
         // start countdown script
-        var clock;
-        $(document).ready(function() {
-            var clock;
-            clock = $('.clock').FlipClock({
-                clockFace: 'DailyCounter',
-                autoStart: false,
-                callbacks: {
-                    stop: function() {
-                        $('.message').html('The clock has stopped!')
-                    }
-                }
-            });
 
-            var d2 = new Date();
-            var d1 = new Date('2018-06-23 00:00:00');
+        // var clock;
+        // $(document).ready(function() {
+        //     var clock;
+        //     clock = $('.clock').FlipClock({
+        //         clockFace: 'DailyCounter',
+        //         autoStart: false,
+        //         callbacks: {
+        //             stop: function() {
+        //                 $('.message').html('The clock has stopped!')
+        //             }
+        //         }
+        //     });
+        //
+        //     var d2 = new Date();
+        //     var d1 = new Date('2018-06-23 00:00:00');
+        //
+        //     var seconds =  (d1- d2)/1000;
+        //
+        //     clock.setTime(seconds);
+        //     clock.setCountdown(true);
+        //     clock.start();
+        //
+        // });
 
-            var seconds =  (d1- d2)/1000;
-
-            clock.setTime(seconds);
-            clock.setCountdown(true);
-            clock.start();
-
-        });
         // end countdown script
 
     });

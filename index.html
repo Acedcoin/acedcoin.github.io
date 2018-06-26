@@ -188,36 +188,36 @@
 
 <body class="home page-template page-template-page-templates page-template-template-onepage page-template-page-templatestemplate-onepage-php page page-id-29 wpb-js-composer js-comp-ver-5.4.5 vc_responsive icos-theme-ver-1.0 wordpress-version-4.9.5  no-touch loaded"
       data-spy="scroll" data-target="#mainnav" data-offset="80">
-<a id="popuplink" href="#inline" style="display:none;"></a>
-<div id="inline" style="display: none; text-align:center;background: #0D102A;padding: 5%;">
-    <img src="logo-white.png" alt="" id="logo">
-    <h2>Pre Sale Program is now LIVE</h2>
-    <p style="color: #fff;">Join AceD Pre sale program to get early access to Masternodes and Wallets. The raised funds are to be spent on Team Building, Platform Maintenance, Marketing, and Development. Please join our <a href="https://discord.gg/bW7sYBg">Discord</a> and contact @MaGe-AceD#9956 for sales inquiries.</p>
-    <div class="wpb_wrapper">
-        <div class="row" style="text-align: left;">
-            <div class="col-sm-6">
-                <h6>Start:  <span> May 31st 2018</span></h6>
-            </div>
-            <div class="col-sm-6">
-                <h6>Number of Coins for Sale: <span> 250,000 (ACED)</span></h6>
-            </div>
-            <div class="col-sm-6">
-                <h6>End: <span> June 22nd 2018</span></h6>
-            </div>
-            <div class="col-sm-6">
-                <h6>Coin Price: <span> 0.75 USD</span></h6>
-            </div>
-            <div class="col-sm-6">
-                <h6>Acceptable currencies: <span> BTC</span></h6>
-            </div>
-            <div class="col-sm-6">
-                <h6>Minimal Transaction Amount: <span> $200</span></h6>
-            </div>
-        </div>
-    </div>
-    <a class="btn btn-alt btn-sm" href="https://www.acedcoin.com/buycoin.html" target="_self" style="margin: 2% 0;">Buy Coins</a>
-    <p><a href="javascript:;" onclick="jQuery.fancybox.close();" style="font-size: 29px;padding:5px 10px;color:#d9b169;border-radius: 13px;text-decoration:none;position:  absolute;top: 0;right: 3px;">X</a></p>
-</div>
+<!--<a id="popuplink" href="#inline" style="display:none;"></a>-->
+<!--<div id="inline" style="display: none; text-align:center;background: #0D102A;padding: 5%;">-->
+    <!--<img src="logo-white.png" alt="" id="logo">-->
+    <!--<h2>Pre Sale Program is now LIVE</h2>-->
+    <!--<p style="color: #fff;">Join AceD Pre sale program to get early access to Masternodes and Wallets. The raised funds are to be spent on Team Building, Platform Maintenance, Marketing, and Development. Please join our <a href="https://discord.gg/bW7sYBg">Discord</a> and contact @MaGe-AceD#9956 for sales inquiries.</p>-->
+    <!--<div class="wpb_wrapper">-->
+        <!--<div class="row" style="text-align: left;">-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>Start:  <span> May 31st 2018</span></h6>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>Number of Coins for Sale: <span> 250,000 (ACED)</span></h6>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>End: <span> June 22nd 2018</span></h6>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>Coin Price: <span> 0.75 USD</span></h6>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>Acceptable currencies: <span> BTC</span></h6>-->
+            <!--</div>-->
+            <!--<div class="col-sm-6">-->
+                <!--<h6>Minimal Transaction Amount: <span> $200</span></h6>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<a class="btn btn-alt btn-sm" href="https://www.acedcoin.com/buycoin.html" target="_self" style="margin: 2% 0;">Buy Coins</a>-->
+    <!--<p><a href="javascript:;" onclick="jQuery.fancybox.close();" style="font-size: 29px;padding:5px 10px;color:#d9b169;border-radius: 13px;text-decoration:none;position:  absolute;top: 0;right: 3px;">X</a></p>-->
+<!--</div>-->
 <div id="wrapper">
     <!-- Header -->
     <header class="site-header is-sticky">
@@ -1665,21 +1665,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.js"></script>
 <script>
     jQuery(document).ready(function () {
-        function openFancybox() {
-            setTimeout(function () {
-                jQuery('#popuplink').trigger('click');
-            }, 500);
-        };
-        var visited = jQuery.cookie('visited');
-        if (visited == 'yes') {
-            // second page load, cookie active
-        } else {
-            openFancybox(); // first page load, launch fancybox
-        }
-        jQuery.cookie('visited', 'yes', {
-            expires: 365 // the number of days cookie  will be effective
-        });
-        jQuery("#popuplink").fancybox({modal:true, maxWidth: 600, overlay : {closeClick : true}});
+        // function openFancybox() {
+        //     setTimeout(function () {
+        //         jQuery('#popuplink').trigger('click');
+        //     }, 500);
+        // };
+        // var visited = jQuery.cookie('visited');
+        // if (visited == 'yes') {
+        //     // second page load, cookie active
+        // } else {
+        //     openFancybox(); // first page load, launch fancybox
+        // }
+        // jQuery.cookie('visited', 'yes', {
+        //     expires: 365 // the number of days cookie  will be effective
+        // });
+        // jQuery("#popuplink").fancybox({modal:true, maxWidth: 600, overlay : {closeClick : true}});
+        //
+
         var loc = window.location.href+'';
         if (loc.indexOf('http://')==0){
             window.location.href = loc.replace('http://','https://');

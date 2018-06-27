@@ -22,7 +22,7 @@ table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after
 .dark-template .table > tbody > tr > td {
     color: #888;
 }
-.dark-template a {
+.dark-template table a {
     color: #2a9fd6 !important;
 }
 table tr > td:nth-child(7){

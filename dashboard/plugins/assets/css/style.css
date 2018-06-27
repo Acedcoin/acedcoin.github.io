@@ -16,3 +16,272 @@ table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after
 .co_currency{
     margin-top: 45px;
 }
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #080808;
+}
+.dark-template .table > tbody > tr > td {
+    color: #888;
+}
+.dark-template a {
+    color: #2a9fd6 !important;
+}
+table tr > td:nth-child(7){
+    color: #2a9fd6 !important;
+}
+
+
+
+
+
+
+
+
+
+
+.coinabs, .coinacco, .coinaced, .coinadl, .coinadr, .coinadv, .coinadvance, .coinaeg, .coinaff, .coinagn, .coinagni, .coinairin, .coinakl, .coinakn, .coinalmex, .coinalp, .coinalqo, .coinals, .coinans, .coinapeir, .coinapr, .coinaqa, .coinarc, .coinargo, .coinarion, .coinarkt, .coinastr, .coinaxs, .coinbanq, .coinbashc, .coinbb, .coinbbp, .coinbeet, .coinbepay100000, .coinbepay20000, .coinbepay50000, .coinbepay75000, .coinbhd, .coinbitg, .coinblock, .coinblt, .coinbltg, .coinbos, .coinboxy, .coinbpg, .coinbrig, .coinbro, .coinbrv, .coinbsd, .coinbsl, .coinbtc, .coinbtcf, .coinbtdx, .coinbugo, .coinbwk, .coinbzm, .coincap, .coincarat, .coincare, .coincaz, .coincbs, .coincbx, .coinccb, .coincdm, .coincharm, .coincheese, .coinchn, .coincif, .coinciv, .coincmc, .coincmos, .coincolx, .coincotn, .coincrc, .coincrm, .coincrop, .coincrop10000, .coincrop20000, .coincrop30000, .coincrs, .coincru, .coincrw-sn, .coincrw, .coincrz, .coinctf, .coincts, .coincub, .coincubis, .coincurv, .coindas, .coindash, .coindemos, .coindev, .coindfs, .coindgm, .coindin, .coindmd, .coindnr, .coindp, .coindrip, .coindsc, .coindsn, .coindsr, .coindtem, .coindvi, .coindxc, .coindxo, .coindyn, .coindyo, .coinebs, .coineliqa, .coinelli, .coinelp, .coinench, .coinend, .coineng, .coinenix, .coinent, .coinenx, .coineon, .coinepic, .coinepr, .coinerz, .coinesco, .coinesp, .coiness, .coinethf, .coinexcl, .coinext, .coinextn, .coinexus, .coinexvo, .coinfans, .coinfgc, .coinfix, .coinflc, .coinflea20000, .coinflea40000, .coinflea6000, .coinflea80000, .coinflm, .coinfor, .coinfrm, .coinfrost, .coinfsc, .coinfss, .coinfxc, .coingali, .coingbx, .coingdnc, .coingic, .coingin, .coingiro, .coingmcn, .coingnr, .coingnro, .coingoa, .coingoss, .coingron, .coingrph, .coinhalo, .coinharc, .coinhash, .coinhc, .coinher, .coinherb, .coinhld, .coinhldc, .coinhlm, .coinhtk, .coinhtrc, .coinhxx, .coinic, .coinice, .coinifx, .coinikt, .coinimc, .coininn, .coininsn, .coinion, .coinips, .coinitz, .coinjew, .coinjiyo, .coinjlg, .coinkc, .coinkec, .coinketan, .coinkgx, .coinklks, .coinkng, .coinkore, .coinkrait, .coinkreds, .coinkrt, .coinkzc, .coinlen, .coinlga, .coinlili, .coinlinc, .coinliz, .coinlnp, .coinlobs, .coinlpc, .coinlsn, .coinltx, .coinlucky, .coinlunex, .coinluq, .coinlux, .coinmac, .coinmag, .coinmano, .coinmarco, .coinmbc, .coinmblc, .coinmcc, .coinmdc, .coinmedic, .coinmeme, .coinmgn, .coinmie, .coinmmb, .coinmnb, .coinmojo, .coinmon, .coinmonk, .coinmouse, .coinmrja, .coinmrq, .coinmti, .coinmtnc, .coinmtrip, .coinmue, .coinmxt, .coinn2o, .coinndk, .coinneos, .coinnero, .coinnibex, .coinnihl, .coinnms, .coinnnc, .coinnort, .coinnos, .coinnpw, .coinntrn, .coinnyex, .coinnyx, .coinnzl, .coinoasis, .coinohm, .coinolmp12000, .coinolmp30000, .coinolmp5500, .coinolmp70000, .coinomega, .coinopcx, .coinore, .coinoys, .coinpac, .coinpar, .coinpaxex, .coinpbs, .coinpdx, .coinphc, .coinphils, .coinphr, .coinpiex, .coinpirl, .coinpivx, .coinpnx, .coinpolis, .coinposw, .coinppx, .coinproton, .coinprtx, .coinprufus, .coinptg, .coinptn, .coinpura, .coinpure, .coinpushi, .coinpyro, .coinpzdc, .coinqbic, .coinquaz, .coinrace, .coinradius, .coinragna, .coinrap, .coinrco, .coinrebl, .coinrel, .coinrns, .coinrnsh, .coinroe, .coinrtl, .coinrupx, .coinsaga, .coinsaros, .coinsatc, .coinscore, .coinscriv, .coinseko, .coinsend, .coinsib, .coinslash, .coinslc, .coinsmart, .coinsmrt, .coinsnc, .coinsncz, .coinsp, .coinspd, .coinsplb, .coinspo, .coinspr, .coinsqr, .coinstak, .coinstake, .coinstone, .coinstr, .coinsub1x, .coinsucr, .coinswap, .coinsynx, .coinsys, .cointecax, .cointfc, .cointhc, .cointimec, .cointoba, .cointok, .cointrc, .cointrig, .cointrp, .cointrtt, .cointun, .cointune, .cointx, .coinucom, .coinult, .coinultra, .coinutum, .coinven, .coinvet, .coinvgs, .coinviog, .coinvivo, .coinvizz, .coinvre, .coinvrt, .coinvsx, .coinvtar, .coinvyi, .coinwabi, .coinwage, .coinwant, .coinwgr, .coinwilo, .coinwino, .coinworx, .coinwtc, .coinxano, .coinxap, .coinxar, .coinxax, .coinxbi, .coinxby, .coinxcpo, .coinxcxt, .coinxdna-fn, .coinxdna-ln, .coinxdna-mn, .coinxdo, .coinxen, .coinxfe, .coinxgs, .coinxios, .coinxlq, .coinxlr, .coinxlrc, .coinxmcc, .coinxmn, .coinxmx, .coinxnd, .coinxnt, .coinxrh, .coinxsn, .coinxstk, .coinxuez, .coinxur, .coinxxx, .coinxylo, .coinxzc, .coinxzx, .coinyce, .coinyic, .coinyoba, .coinyup, .coinzaca, .coinzcr, .coinzest, .coinzex, .coinzixx, .coinzls, .coinznd, .coinzoc, .coinzoi, .coinzula, .coinbeeasy, .coinfeirm, .coingizer, .coinrampant, .coinsocialwallet, .coinvinchain, .coinh2o, .coinnxton, .coinspk, .coincrave, .coindc, .coinxn, .coinzmg, .coindlr, .coinxbr{
+    display: inline-block;
+    background: url(../img/v141.png) no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+}
+.coindash {
+    background-position: -0px -1437px;
+    width: 16px;
+    height: 16px;
+}
+.coinsmart {
+    background-position: -0px -4949px;
+    width: 16px;
+    height: 16px;
+}
+.coinxzc {
+    background-position: -0px -6318px;
+    width: 16px;
+    height: 16px;
+}
+.coinpivx {
+    background-position: -0px -4325px;
+    width: 16px;
+    height: 16px;
+}
+.coinsys {
+    background-position: -0px -5228px;
+    width: 16px;
+    height: 16px;
+}
+.coinphr {
+    background-position: -0px -4272px;
+    width: 16px;
+    height: 19px;
+}
+.coinxsn {
+    background-position: -0px -6222px;
+    width: 16px;
+    height: 16px;
+}
+.coinlpc {
+    background-position: -0px -3251px;
+    width: 16px;
+    height: 16px;
+}
+.coinhxx {
+    background-position: -0px -2742px;
+    width: 16px;
+    height: 18px;
+}
+.coinion {
+    background-position: -0px -2871px;
+    width: 16px;
+    height: 16px;
+}
+.coincdm {
+    background-position: -0px -1003px;
+    width: 16px;
+    height: 16px;
+}
+.coinneos {
+    background-position: -0px -3799px;
+    width: 16px;
+    height: 16px;
+}
+.coinxmn {
+    background-position: -0px -6138px;
+    width: 16px;
+    height: 16px;
+}
+.cointrtt {
+    background-position: -0px -5388px;
+    width: 16px;
+    height: 14px;
+}
+.coinblock {
+    background-position: -0px -623px;
+    width: 16px;
+    height: 16px;
+}
+.coinkore {
+    background-position: -0px -3061px;
+    width: 16px;
+    height: 16px;
+}
+.coinmano {
+    background-position: -0px -3395px;
+    width: 16px;
+    height: 16px;
+}
+.coinpac {
+    background-position: -0px -4166px;
+    width: 16px;
+    height: 16px;
+}
+.coingbx {
+    background-position: -0px -2369px;
+    width: 16px;
+    height: 16px;
+}
+.coingin {
+    background-position: -0px -2417px;
+    width: 16px;
+    height: 16px;
+}
+.coinxrh {
+    background-position: -0px -6206px;
+    width: 16px;
+    height: 16px;
+}
+.coinarkt {
+    background-position: -0px -402px;
+    width: 16px;
+    height: 13px;
+}
+.coinmue {
+    background-position: -0px -3735px;
+    width: 16px;
+    height: 16px;
+}
+.coinmrq {
+    background-position: -0px -3671px;
+    width: 16px;
+    height: 16px;
+}
+.cointx {
+    background-position: -0px -5436px;
+    width: 16px;
+    height: 16px;
+}
+.coinapr {
+    background-position: -0px -322px;
+    width: 16px;
+    height: 16px;
+}
+.coinxgs {
+    background-position: -0px -6043px;
+    width: 16px;
+    height: 16px;
+}
+.coincrw-sn {
+    background-position: -0px -1291px;
+    width: 16px;
+    height: 16px;
+}
+.coinxlr {
+    background-position: -0px -6091px;
+    width: 16px;
+    height: 15px;
+}
+.coinpolis {
+    background-position: -0px -4357px;
+    width: 16px;
+    height: 16px;
+}
+.coinans {
+    background-position: -0px -290px;
+    width: 16px;
+    height: 16px;
+}
+.coinfrost {
+    background-position: -0px -2290px;
+    width: 16px;
+    height: 16px;
+}
+.coinpura {
+    background-position: -0px -4484px;
+    width: 16px;
+    height: 16px;
+}
+.coinbwk {
+    background-position: -0px -862px;
+    width: 16px;
+    height: 13px;
+}
+.coinaeg {
+    background-position: -0px -113px;
+    width: 16px;
+    height: 16px;
+}
+.coindyn {
+    background-position: -0px -1711px;
+    width: 16px;
+    height: 16px;
+}
+.coinspd {
+    background-position: -0px -5029px;
+    width: 16px;
+    height: 16px;
+}
+.coinnpw {
+    background-position: -0px -3927px;
+    width: 16px;
+    height: 16px;
+}
+.coincts {
+    background-position: -0px -1355px;
+    width: 16px;
+    height: 16px;
+}
+.coincolx {
+    background-position: -0px -1131px;
+    width: 16px;
+    height: 16px;
+}
+.coinsib {
+    background-position: -0px -4901px;
+    width: 16px;
+    height: 16px;
+}
+.coinbsd {
+    background-position: -0px -767px;
+    width: 16px;
+    height: 16px;
+}
+.coinzoi {
+    background-position: -0px -6542px;
+    width: 16px;
+    height: 16px;
+}
+.coinmeme {
+    background-position: -0px -3511px;
+    width: 16px;
+    height: 16px;
+}
+.coinxlq {
+    background-position: -0px -6075px;
+    width: 16px;
+    height: 16px;
+}
+.coinbitg {
+    background-position: -0px -607px;
+    width: 16px;
+    height: 16px;
+}
+.coinmonk {
+    background-position: -0px -3623px;
+    width: 16px;
+    height: 16px;
+}
+.coinflc {
+    background-position: -0px -2161px;
+    width: 16px;
+    height: 16px;
+}

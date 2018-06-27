@@ -671,84 +671,49 @@
       <!-- Row -->
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-          <div class="panel panel-default card-view">
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Bitcoin Price Chart</h6>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper">
-              <div class="panel-body row pa-0 bitcoin-wdgt">
-                <div class="btcwdgt-chart"></div>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="currency1">Select base currency:</label>
+            <select class="form-control" id="currency1">
+              <option id="usd">US dollar (USD)</option>
+              <option id="btc">Bitcoin (BTC)</option>
+              <option id="aud">Australian dollar (AUD)</option>
+              <option id="bgn">Bulgarian lev (BGN)</option>
+              <option id="brl">Brazilian real (BRL)</option>
+              <option id="cad">Canadian dollar (CAD)</option>
+              <option id="chf">Swiss franc (CHF)</option>
+              <option id="cny">Chinese yuan renminbi (CNY)</option>
+              <option id="czk">Czech koruna (CZK)</option>
+              <option id="dkk">Danish krone (DKK)</option>
+              <option id="eur">Euro (EUR)</option>
+              <option id="gbp">Pound sterling (GBP)</option>
+              <option id="hkd">Hong Kong dollar (HKD)</option>
+              <option id="hrk">Croatian kuna (HRK)</option>
+              <option id="huf">Hungarian forint (HUF)</option>
+              <option id="idr">Indonesian rupiah (IDR)</option>
+              <option id="ils">Israeli shekel (ILS)</option>
+              <option id="inr">Indian rupee (INR)</option>
+              <option id="jpy">Japanese yen (JPY)</option>
+              <option id="krw">South Korean won (KRW)</option>
+              <option id="mxn">Mexican peso (MXN)</option>
+              <option id="myr">Malaysian ringgit (MYR)</option>
+              <option id="nok">Norwegian krone (NOK)</option>
+              <option id="nzd">New Zealand dollar (NZD)</option>
+              <option id="php">Philippine piso (PHP)</option>
+              <option id="pln">Polish zloty (PLN)</option>
+              <option id="ron">Romanian leu (RON)</option>
+              <option id="rub">Russian rouble (RUB)</option>
+              <option id="sek">Swedish krona (SEK)</option>
+              <option id="sgd">Singapore dollar (SGD)</option>
+              <option id="thb">Thai baht (THB)</option>
+              <option id="try">Turkish lira (TRY)</option>
+              <option id="zar">South African rand (ZAR)</option>
+            </select>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-          <div class="panel panel-default card-view">
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Bitcoin Forum</h6>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper">
-              <div class="panel-body row pa-0 pb-20 bitcoin-wdgt">
-                <div class="btcwdgt-forum" bw-entries="9"></div>
-              </div>
-            </div>
-          </div>
+
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-          <div class="panel panel-default card-view">
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Crypto Currency Compare</h6>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper">
-              <div class="panel-body row pl-20 pr-20 pt-5 pb-5">
-                <p class="mb-20">Bitcoin Calculator tool allows you to convert any amount to and from bitcoin and your preferred world currencies, with conversion rates based on the live Bitcoin Price Index.</p>
-                <div class="form-group">
-                  <div class="input-group input-group-dropdown form-inline">
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button" value="1.2346">
-                    <div class="input-group-btn">
-                      <select class="btn btn-warning" aria-hidden="true">
-                        <option value="BTC">BTC</option>
-                        <option value="BTC">Ethereum</option>
-                        <option value="Ripple">Ripple</option>
-                        <option value="Ripple">Bitcoin Cash</option>
-                        <option value="Ripple">Cardano</option>
-                        <option value="Ripple">Litecoin</option>
-                        <option value="Ripple">NEO</option>
-                        <option value="Ripple">Stellar</option>
-                        <option value="Ripple">EOS</option>
-                        <option value="Ripple">NEM</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <span class="pa-10 text-center font-large w-100">=</span>
-                <div class="form-group">
-                  <div class="input-group input-group-dropdown form-inline">
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button" value="1.2346">
-                    <div class="input-group-btn">
-                      <select class="btn btn-warning" aria-hidden="true">
-                        <option value="BTC">USD</option>
-                        <option value="EURO">EURO</option>
-                        <option value="RUPEE">RUPEE</option>
-                        <option value="YEN">YEN</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="panel panel-default card-view">
             <div class="panel-heading">
               <div class="pull-left">
@@ -1295,162 +1260,8 @@
         </div>
       </div>
       <!--/table-->
-      
-      <!-- Row -->
-      <div class="row">
-        <div class="col-sm-12 col-xs-12">
-          <div class="panel panel-default card-view">
-            <div class="panel-heading">
-              <h6 class="panel-title txt-dark">Stock Summary </h6>
-            </div>
-            <div class="panel-wrapper collapse in pa-10">
-              <div id="chartdiv"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-xs-12">
-          <div class="panel panel-default card-view panel-refresh">
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Top Stocks</h6>
-              </div>
-              <div class="pull-right"> <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a> <a href="#" class="pull-left inline-block full-screen mr-15"> <i class="mdi mdi-fullscreen"></i> </a> </div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper collapse in">
-              <div class="refresh-container">
-                <div class="preloader">
-                  <div class="circles-1">
-                    <div class="circles-1-center"></div>
-                    <div class="circles-1"></div>
-                    <div class="circles-1"></div>
-                    <div class="circles-1"></div>
-                    <div class="circles-1"></div>
-                    <div class="circles-1"></div>
-                    <div class="circles-1"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel-body row pa-0">
-                <div class="table-wrapper">
-                  <div class="table-responsive">
-                    <table class="table table-hover mb-10">
-                      <thead>
-                        <tr>
-                          <th>Campaign</th>
-                          <th>Client</th>
-                          <th>Changes</th>
-                          <th>Budget</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><span class="txt-dark weight-500">Facebook</span></td>
-                          <td>Beavis</td>
-                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>2.43%</span></td>
-                          <td><span class="txt-dark weight-500">$1478</span></td>
-                          <td><span class="label label-primary">Active</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">Youtube</span></td>
-                          <td>Felix</td>
-                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>1.43%</span></td>
-                          <td><span class="txt-dark weight-500">$951</span></td>
-                          <td><span class="label label-danger">Closed</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">Twitter</span></td>
-                          <td>Cannibus</td>
-                          <td><i class="zmdi zmdi-caret-down mr-10 font-20"></i><span>-8.43%</span></td>
-                          <td><span class="txt-dark weight-500">$632</span></td>
-                          <td><span class="label label-default">Hold</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">Spotify</span></td>
-                          <td>Neosoft</td>
-                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>7.43%</span></td>
-                          <td><span class="txt-dark weight-500">$325</span></td>
-                          <td><span class="label label-default">Hold</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">Instagram</span></td>
-                          <td>Hencework</td>
-                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>9.43%</span></td>
-                          <td><span class="txt-dark weight-500">$258</span></td>
-                          <td><span class="label label-primary">Active</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-xs-12">
-          <div class="panel panel-default card-view">
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Share Traders</h6>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper">
-              <div class="panel-body row pa-0">
-                <div class="table-wrapper">
-                  <div class="table-responsive">
-                    <table class="table table-hover mb-0">
-                      <thead>
-                        <tr>
-                          <th >#</th>
-                          <th>Products</th>
-                          <th>Price Range</th>
-                          <th>Popularity</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><span class="txt-dark weight-500">1</span></td>
-                          <td>Engine oil</td>
-                          <td>$150 - $200</td>
-                          <td><span class="peity-line" data-peity='{ "fill": ["#2BB9C3"],"stroke":["#2BB9C3"]}' data-width="100%" data-height="25">1,2,5,1,2,8,6,5</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">2</span></td>
-                          <td>Generator</td>
-                          <td>$1600 - $2000 </td>
-                          <td><span class="peity-line" data-peity='{ "fill": ["#fd7397"],"stroke":["#FD7397"]}' data-width="100%" data-height="25">4,5,5,8,5,4,5,2</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">3</span></td>
-                          <td>Auto Gas</td>
-                          <td>$150 - $200</td>
-                          <td><span class="peity-line" data-peity='{ "fill": ["#F8B32D"],"stroke":["#F8B32D"]}' data-width="100%" data-height="25">7,3,9,1,2,8,6,1</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">4</span></td>
-                          <td>Stablizers</td>
-                          <td>$250 - $400</td>
-                          <td><span class="peity-line" data-peity='{ "fill": ["#119dd2"],"stroke":["#119dd2"]}' data-width="100%" data-height="25">3,7,1,9,2,8,3,9</span></td>
-                        </tr>
-                        <tr>
-                          <td><span class="txt-dark weight-500">5</span></td>
-                          <td>Auto Parts</td>
-                          <td>$150 - $200</td>
-                          <td><span class="peity-line" data-peity='{ "fill": ["#34c1ce"],"stroke":["#34c1ce"]}' data-width="100%" data-height="25">9,1,2,5,1,4,8,7</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
       <div class="clearfix"></div>
       <!-- Row --> 
       <!-- Footer -->

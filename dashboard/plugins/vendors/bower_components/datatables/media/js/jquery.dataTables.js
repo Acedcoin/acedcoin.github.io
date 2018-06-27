@@ -14320,7 +14320,7 @@
 		"sSortIcon": "",
 		"sJUIHeader": "",
 		"sJUIFooter": ""
-	} );
+	});
 	
 	
 	(function() {

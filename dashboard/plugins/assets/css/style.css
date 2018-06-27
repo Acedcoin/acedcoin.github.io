@@ -7,3 +7,9 @@
 table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after{
     top:3px;
 }
+#currency1{
+    background: #1b1a1a;
+    color: #fff;
+    border-radius: 7px;
+    width: 227px;
+}

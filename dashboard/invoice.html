@@ -149,25 +149,16 @@
   <!-- Left Sidebar Menu -->
   <div class="fixed-sidebar-left">
     <ul class="nav navbar-nav side-nav nicescroll-bar">
-      <li class="navigation-header"> <span>Main</span> <i class="mdi mdi-more"></i> </li>
-      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#admin-dash">
-        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
-        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-        <div class="clearfix"></div>
-      </a>
-        <ul id="admin-dash" class="collapse collapse-level-1 in">
-          <li><a href="index.html">Dashboard V1</a></li>
-          <li><a href="index-dark.html">Dashboard V2</a></li>
-          <li><a href="index-stock-data.html">Dashboard V3</a></li>
-          <li><a href="index-boxed.html">Dashboard Boxed</a></li>
-        </ul>
+      <li>
+        <a href="index.html" >
+          <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+          <div class="clearfix"></div>
+        </a>
       </li>
       <li>
         <hr class="light-grey-hr mb-10"/>
       </li>
 
-      <!-- ecommerce -->
-      <li class="navigation-header"> <span>Ecommerce</span> <i class="mdi mdi-more"></i> </li>
       <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#pages_ecommerce">
         <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Ecommerce Pages</span></div>
         <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
@@ -180,11 +171,15 @@
           <li> <a  href="ecommerce-order-details.html">Order Details</a> </li>
         </ul>
       </li>
-      <li> <a class="active-page" href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
-        <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
-        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-        <div class="clearfix"></div>
-      </a>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a class="active-page" href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
+          <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
+          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+          <div class="clearfix"></div>
+        </a>
         <ul id="invoice_list" class="collapse collapse-level-2">
           <li> <a href="invoice.html" class="active">Invoice</a> </li>
           <li> <a href="invoice-list.html">Invoice List</a> </li>
@@ -194,39 +189,51 @@
       <li>
         <hr class="light-grey-hr mb-10"/>
       </li>
-      <!-- ecommerce -->
-      <li class="navigation-header"> <span>featured</span> <i class="mdi mdi-more"></i> </li>
-      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#pages_dr">
-        <div class="pull-left"><i class="mdi mdi-star-circle mr-20"></i><span class="right-nav-text">Sample Pages</span></div>
-        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-        <div class="clearfix"></div>
-      </a>
-        <ul id="pages_dr" class="collapse collapse-level-1 two-col-list">
-
-          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">Authentication pages
-            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-            <div class="clearfix"></div>
-          </a>
-            <ul id="authentication_list" class="collapse collapse-level-2">
-              <li> <a href="login.html" target="_blank">Login</a> </li>
-              <li> <a href="signup.html" target="_blank">Register</a> </li>
-              <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
-              <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
-            </ul>
-          </li>
-          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">Mailbox
-            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-            <div class="clearfix"></div>
-          </a>
-            <ul id="mailbox" class="collapse collapse-level-2">
-              <li> <a href="email-inbox.html">Email Inbox</a> </li>
-              <li> <a href="email-detail.html">Email Detail</a> </li>
-              <li> <a href="email-compose.html">Email Compose</a> </li>
-            </ul>
-          </li>
-          <li> <a href="profile.html">Profile</a> </li>
-          <li> <a href="faq.html">FAQ</a> </li>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">
+          <div class="pull-left"><i class="mdi mdi-login mr-20"></i><span class="right-nav-text">Authentication Pages</span></div>
+          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+          <div class="clearfix"></div>
+        </a>
+        <ul id="authentication_list" class="collapse collapse-level-2">
+          <li> <a href="login.html" target="_blank">Login</a> </li>
+          <li> <a href="signup.html" target="_blank">Register</a> </li>
+          <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
+          <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
         </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">
+          <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
+          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+          <div class="clearfix"></div>
+        </a>
+        <ul id="mailbox" class="collapse collapse-level-2">
+          <li> <a href="email-inbox.html">Email Inbox</a> </li>
+          <li> <a href="email-detail.html">Email Detail</a> </li>
+          <li> <a href="email-compose.html">Email Compose</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="profile.html">
+          <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
+          <div class="clearfix"></div>
+        </a>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="faq.html">
+          <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
+          <div class="clearfix"></div>
+        </a>
       </li>
     </ul>
   </div>

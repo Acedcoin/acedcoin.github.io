@@ -12,7 +12,10 @@
 <link rel="icon" href="plugins/assets/img/favicon/favicon.png" type="image/x-icon">
 <!-- Data table CSS -->
 <link href="plugins/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<!-- select2 CSS -->
+<link href="plugins/vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
 <link href="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
 <!-- Custom CSS -->
 <link href="plugins/assets/css/default.css" rel="stylesheet" type="text/css">
 </head>
@@ -32,7 +35,7 @@
   </div>
 </div>
 <!-- //Preloader -->
-<div class="wrapper light-theme"> 
+<div class="wrapper random-data light-theme dark-template"> 
   <!-- Top Header -->
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="mobile-only-brand pull-left">
@@ -44,7 +47,7 @@
         <div class="input-group">
           <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
           <span class="input-group-btn">
-          <button type="button" class="btn btn-default" data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
+          <button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
           </span> </div>
       </form>
     </div>
@@ -79,7 +82,7 @@
               <div class="streamline message-nicescroll-bar">
                 <div class="sl-item"> <a href="javascript:void(0)">
                   <div class="icon bg-green"> <i class="mdi mdi-alarm-check"></i> </div>
-                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11 pull-right notifications-time">5pm</span>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11  pull-right notifications-time">5pm</span>
                     <div class="clearfix"></div>
                     <p class="truncate">Neque porro quisquam est.</p>
                   </div>
@@ -152,30 +155,21 @@
   <!-- Left Sidebar Menu -->
   <div class="fixed-sidebar-left">
     <ul class="nav navbar-nav side-nav nicescroll-bar">
-      <li class="navigation-header"> <span>Main</span> <i class="mdi mdi-more"></i> </li>
-      <li> <a class="active-page" href="javascript:void(0);" data-toggle="collapse" data-target="#admin-dash">
+      <li>
+        <a class="active-page" href="index.html" >
         <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
-        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
         <div class="clearfix"></div>
         </a>
-        <ul id="admin-dash" class="collapse collapse-level-1 in">
-          <li><a href="index.html" class="active">Dashboard V1</a></li>
-          <li><a href="index-dark.html">Dashboard V2</a></li>
-          <li><a href="index-stock-data.html">Dashboard V3</a></li>
-          <li><a href="index-boxed.html">Dashboard Boxed</a></li>
-        </ul>
       </li>
       <li>
         <hr class="light-grey-hr mb-10"/>
       </li>
 
-      <!-- ecommerce -->
-      <li class="navigation-header"> <span>Ecommerce</span> <i class="mdi mdi-more"></i> </li>
       <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#pages_ecommerce">
         <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Ecommerce Pages</span></div>
         <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
         <div class="clearfix"></div>
-        </a>
+      </a>
         <ul id="pages_ecommerce" class="collapse collapse-level-2">
           <li> <a href="ecommerce-dashboard.html">Shop dashboard</a> </li>
           <li> <a href="ecommerce-products-details.html">Products List</a> </li>
@@ -183,7 +177,11 @@
           <li> <a  href="ecommerce-order-details.html">Order Details</a> </li>
         </ul>
       </li>
-      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a  href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
         <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
         <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
         <div class="clearfix"></div>
@@ -197,39 +195,51 @@
       <li>
         <hr class="light-grey-hr mb-10"/>
       </li>
-      <!-- ecommerce -->
-      <li class="navigation-header"> <span>featured</span> <i class="mdi mdi-more"></i> </li>
-      <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#pages_dr">
-        <div class="pull-left"><i class="mdi mdi-star-circle mr-20"></i><span class="right-nav-text">Sample Pages</span></div>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">
+        <div class="pull-left"><i class="mdi mdi-login mr-20"></i><span class="right-nav-text">Authentication Pages</span></div>
         <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
         <div class="clearfix"></div>
         </a>
-        <ul id="pages_dr" class="collapse collapse-level-1 two-col-list">
-
-          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">Authentication pages
-            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-            <div class="clearfix"></div>
-            </a>
-            <ul id="authentication_list" class="collapse collapse-level-2">
-              <li> <a href="login.html" target="_blank">Login</a> </li>
-              <li> <a href="signup.html" target="_blank">Register</a> </li>
-              <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
-              <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
-            </ul>
-          </li>
-          <li> <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">Mailbox
-            <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-            <div class="clearfix"></div>
-            </a>
-            <ul id="mailbox" class="collapse collapse-level-2">
-              <li> <a href="email-inbox.html">Email Inbox</a> </li>
-              <li> <a href="email-detail.html">Email Detail</a> </li>
-              <li> <a href="email-compose.html">Email Compose</a> </li>
-            </ul>
-          </li>
-          <li> <a href="profile.html">Profile</a> </li>
-          <li> <a href="faq.html">FAQ</a> </li>
+        <ul id="authentication_list" class="collapse collapse-level-2">
+          <li> <a href="login.html" target="_blank">Login</a> </li>
+          <li> <a href="signup.html" target="_blank">Register</a> </li>
+          <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
+          <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
         </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">
+          <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
+          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+          <div class="clearfix"></div>
+        </a>
+        <ul id="mailbox" class="collapse collapse-level-2">
+          <li> <a href="email-inbox.html">Email Inbox</a> </li>
+          <li> <a href="email-detail.html">Email Detail</a> </li>
+          <li> <a href="email-compose.html">Email Compose</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="profile.html">
+        <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
+        <div class="clearfix"></div>
+        </a>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="faq.html">
+          <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
+          <div class="clearfix"></div>
+        </a>
       </li>
     </ul>
   </div>
@@ -581,16 +591,16 @@
     <div class="container-fluid pt-25"> 
       <!-- Row -->
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
           <div class="panel panel-default card-view pa-0">
             <div class="panel-wrapper collapse in">
               <div class="panel-body pa-0">
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><span class="counter-anim">123,456</span></span> <span class="weight-500 uppercase-font block">TOTAL PROFIT</span> </div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Bitcoin BTC</span> </div>
                       <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
-                        <div id="sparkline_3" class="sparkline-w-100"></div>
+                        <div id="sparkline_1_20" class="sparkline-w-100-h-50"></div>
                       </div>
                     </div>
                   </div>
@@ -599,14 +609,14 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
           <div class="panel panel-default card-view pa-0">
             <div class="panel-wrapper collapse in">
               <div class="panel-body pa-0">
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><span class="counter-anim">12.34</span>%</span> <span class="weight-500 uppercase-font block">ACTIVE USERS </span> </div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Litecoin LTC </span> </div>
                       <div class="col-xs-6 text-center  pl-0 pr-0  pt-30 data-wrap-right">
                         <div id="sparkline_4" class="sparkline-w-100-h-50"></div>
                       </div>
@@ -617,16 +627,16 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
           <div class="panel panel-default card-view pa-0">
             <div class="panel-wrapper collapse in">
               <div class="panel-body pa-0">
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><span class="counter-anim">1,234,568</span></span> <span class="weight-500 uppercase-font block">NEW ORDERS </span> </div>
-                      <div class="col-xs-6 text-center  pl-0 pr-0 pt-20 data-wrap-right">
-                        <div id="e_chart_1" class="h-50"></div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-down text-danger"></i></span> <span class="weight-500 uppercase-font block">Ethereum ETH </span> </div>
+                      <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
+                        <div id="sparkline_1"  class="sparkline-w-100-h-50"></div>
                       </div>
                     </div>
                   </div>
@@ -635,468 +645,283 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <div class="panel panel-default card-view pa-0">
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">-->
+          <!--<div class="panel panel-default card-view pa-0">-->
+            <!--<div class="panel-wrapper collapse in">-->
+              <!--<div class="panel-body pa-0">-->
+                <!--<div class="sm-data-box">-->
+                  <!--<div class="container-fluid">-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up"></i></span> <span class="weight-500 uppercase-font block">Ripple XRP </span> </div>-->
+                      <!--<div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">-->
+                        <!--<div id="sparkline_1_2"  class="sparkline-w-100-h-50"></div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      </div>
+      <!-- Row --> 
+      
+      <!-- Row -->
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Bitcoin Price Chart</h6>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper">
+              <div class="panel-body row pa-0 bitcoin-wdgt">
+                <div class="btcwdgt-chart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Bitcoin Forum</h6>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper">
+              <div class="panel-body row pa-0 pb-20 bitcoin-wdgt">
+                <div class="btcwdgt-forum" bw-entries="9"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Crypto Currency Compare</h6>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper">
+              <div class="panel-body row pl-20 pr-20 pt-5 pb-5">
+                <p class="mb-20">Bitcoin Calculator tool allows you to convert any amount to and from bitcoin and your preferred world currencies, with conversion rates based on the live Bitcoin Price Index.</p>
+                <div class="form-group">
+                  <div class="input-group input-group-dropdown form-inline">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" value="1.2346">
+                    <div class="input-group-btn">
+                      <select class="btn btn-warning" aria-hidden="true">
+                        <option value="BTC">BTC</option>
+                        <option value="BTC">Ethereum</option>
+                        <option value="Ripple">Ripple</option>
+                        <option value="Ripple">Bitcoin Cash</option>
+                        <option value="Ripple">Cardano</option>
+                        <option value="Ripple">Litecoin</option>
+                        <option value="Ripple">NEO</option>
+                        <option value="Ripple">Stellar</option>
+                        <option value="Ripple">EOS</option>
+                        <option value="Ripple">NEM</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <span class="pa-10 text-center font-large w-100">=</span>
+                <div class="form-group">
+                  <div class="input-group input-group-dropdown form-inline">
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button" value="1.2346">
+                    <div class="input-group-btn">
+                      <select class="btn btn-warning" aria-hidden="true">
+                        <option value="BTC">USD</option>
+                        <option value="EURO">EURO</option>
+                        <option value="RUPEE">RUPEE</option>
+                        <option value="YEN">YEN</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Crypto Ticker</h6>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper">
+              <div class="panel-body row pt-10 pb-15 bitcoin-wdgt">
+                <div class="tickercontainer-main">
+                  <ul id="webTicker">
+                    <li><i class="mdi mdi-bitcoin text-warning"></i> BTC <span class="coin-value"> $12.015451</span></li>
+                    <li><i class="mdi mdi-currency-eth text-primary"></i> ETH <span class="coin-value"> $11.56454</span></li>
+                    <li><i class="mdi mdi-currency-ngn text-danger"></i> NGN <span class="coin-value"> $11.3215</span></li>
+                    <li><i class="mdi mdi-currency-rub text-info"></i> RUB <span class="coin-value"> $0.12345</span></li>
+                    <li><i class="mdi mdi-currency-gbp text-default"></i> GBP <span class="coin-value"> $10.98115</span></li>
+                    <li><i class="mdi mdi-currency-chf text-success"></i> CHF <span class="coin-value"> $9.156151</span></li>
+                    <li><i class="mdi mdi-currency-eur text-danger"></i> EUR <span class="coin-value"> $1.1561556</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Row --> 
+      
+      <!-- Row -->
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <h6 class="panel-title txt-dark">Stock Summary </h6>
+            </div>
+            <div class="panel-wrapper collapse in pa-10">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <div class="panel panel-default card-view panel-refresh">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Top Stocks</h6>
+              </div>
+              <div class="pull-right"> <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a> <a href="#" class="pull-left inline-block full-screen mr-15"> <i class="mdi mdi-fullscreen"></i> </a> </div>
+              <div class="clearfix"></div>
+            </div>
             <div class="panel-wrapper collapse in">
-              <div class="panel-body pa-0">
-                <div class="sm-data-box">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><span class="counter-anim">35.13</span>%</span> <span class="weight-500 uppercase-font block">NEW COMMENTS </span> </div>
-                      <div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">
-                        <div class="flot-container h-55">
-                          <div id="real_time_chart" class="demo-placeholder"></div>
-                        </div>
-                      </div>
-                    </div>
+              <div class="refresh-container">
+                <div class="preloader">
+                  <div class="circles-1">
+                    <div class="circles-1-center"></div>
+                    <div class="circles-1"></div>
+                    <div class="circles-1"></div>
+                    <div class="circles-1"></div>
+                    <div class="circles-1"></div>
+                    <div class="circles-1"></div>
+                    <div class="circles-1"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body row pa-0">
+                <div class="table-wrapper">
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-10">
+                      <thead>
+                        <tr>
+                          <th>Campaign</th>
+                          <th>Client</th>
+                          <th>Changes</th>
+                          <th>Budget</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="txt-dark weight-500">Facebook</span></td>
+                          <td>Beavis</td>
+                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>2.43%</span></td>
+                          <td><span class="txt-dark weight-500">$1478</span></td>
+                          <td><span class="label label-primary">Active</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">Youtube</span></td>
+                          <td>Felix</td>
+                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>1.43%</span></td>
+                          <td><span class="txt-dark weight-500">$951</span></td>
+                          <td><span class="label label-danger">Closed</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">Twitter</span></td>
+                          <td>Cannibus</td>
+                          <td><i class="zmdi zmdi-caret-down mr-10 font-20"></i><span>-8.43%</span></td>
+                          <td><span class="txt-dark weight-500">$632</span></td>
+                          <td><span class="label label-default">Hold</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">Spotify</span></td>
+                          <td>Neosoft</td>
+                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>7.43%</span></td>
+                          <td><span class="txt-dark weight-500">$325</span></td>
+                          <td><span class="label label-default">Hold</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">Instagram</span></td>
+                          <td>Hencework</td>
+                          <td><i class="zmdi zmdi-caret-up mr-10 font-20"></i><span>9.43%</span></td>
+                          <td><span class="txt-dark weight-500">$258</span></td>
+                          <td><span class="label label-primary">Active</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- /Row --> 
-    <!-- Row-->
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="panel panel-default card-view  pa-0">
-        <div class="panel-wrapper collapse in">
-          <div class="panel-body  pa-0">
-            <div class="profile-box">
-              <div class="profile-cover-pic">
-                <div class="fileupload btn btn-default"> <span class="btn-text"><i class="typcn typcn-pencil"></i></span>
-                  <input class="upload" type="file">
-                </div>
-                <div class="profile-image-overlay"></div>
+        <div class="col-md-6 col-xs-12">
+          <div class="panel panel-default card-view">
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Share Traders</h6>
               </div>
-              <div class="profile-info text-center">
-                <div class="profile-img-wrap"> <img class="inline-block mb-10" src="http://via.placeholder.com/177x177" alt="user"/>
-                  <div class="fileupload btn btn-default"> <span class="btn-text"><i class="typcn typcn-pencil"></i></span>
-                    <input class="upload" type="file">
-                  </div>
-                </div>
-                <h5 class="block mt-5 mb-5 weight-500 capitalize-font txt-primary">Michelle Abraham</h5>
-                <h6 class="block capitalize-font pb-10">CEO Xyz</h6>
-              </div>
-              <div class="social-info">
-                <div class="row">
-                  <div class="col-xs-4 text-center"> <span class="counts block head-font"><span class="counter-anim">345</span></span> <span class="counts-text block">post</span> </div>
-                  <div class="col-xs-4 text-center"> <span class="counts block head-font"><span class="counter-anim">246</span></span> <span class="counts-text block">followers</span> </div>
-                  <div class="col-xs-4 text-center"> <span class="counts block head-font"><span class="counter-anim">898</span></span> <span class="counts-text block">tweets</span> </div>
-                </div>
-                <button class="btn btn-primary btn-block  btn-anim mt-10" data-toggle="modal" data-target="#myModal1"><i class="fa fa-pencil"></i><span class="btn-text">edit profile</span></button>
-                <div id="myModal1" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h5 class="modal-title" id="myModalLabel">Edit Profile</h5>
-                      </div>
-                      <div class="modal-body"> 
-                        <!-- Row -->
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <div class="">
-                              <div class="panel-wrapper collapse in">
-                                <div class="panel-body pa-0">
-                                  <div class="col-sm-12 col-xs-12">
-                                    <div class="form-wrap">
-                                      <form action="#">
-                                        <div class="form-body overflow-hide">
-                                          <div class="form-group">
-                                            <label class="control-label mb-10" for="exampleInputuname_1">Name</label>
-                                            <div class="input-group">
-                                              <div class="input-group-addon"><i class="mdi mdi-account"></i></div>
-                                              <input type="text" class="form-control" id="exampleInputuname_1" placeholder="willard bryant">
-                                            </div>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label mb-10" for="exampleInputEmail_1">Email address</label>
-                                            <div class="input-group">
-                                              <div class="input-group-addon"><i class="mdi mdi-email"></i></div>
-                                              <input type="email" class="form-control" id="exampleInputEmail_1" placeholder="xyz@gmail.com">
-                                            </div>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label mb-10" for="exampleInputContact_1">Contact number</label>
-                                            <div class="input-group">
-                                              <div class="input-group-addon"><i class="mdi mdi-cellphone"></i></div>
-                                              <input type="email" class="form-control" id="exampleInputContact_1" placeholder="+102 9388333">
-                                            </div>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label mb-10" for="exampleInputpwd_1">Password</label>
-                                            <div class="input-group">
-                                              <div class="input-group-addon"><i class="mdi mdi-lock"></i></div>
-                                              <input type="password" class="form-control" id="exampleInputpwd_1" placeholder="Enter pwd" value="password">
-                                            </div>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label mb-10">Gender</label>
-                                            <div>
-                                              <div class="radio">
-                                                <input type="radio" name="radio1" id="radio_1" value="option1" checked="">
-                                                <label for="radio_1"> Male </label>
-                                              </div>
-                                              <div class="radio">
-                                                <input type="radio" name="radio1" id="radio_2" value="option2">
-                                                <label for="radio_2"> Female </label>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="form-group">
-                                            <label class="control-label mb-10">Country</label>
-                                            <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-                                              <option value="Category 1">USA</option>
-                                              <option value="Category 2">Austrailia</option>
-                                              <option value="Category 3">India</option>
-                                              <option value="Category 4">UK</option>
-                                            </select>
-                                          </div>
-                                        </div>
-                                        <button type="button" class="btn btn-success waves-effect" data-dismiss="modal">Save</button>
-                                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
-                                      </form>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /.modal-content --> 
-                  </div>
-                  <!-- /.modal-dialog --> 
-                </div>
-              </div>
+              <div class="clearfix"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="panel panel-default card-view panel-refresh">
-        <div class="refresh-container">
-          <div class="preloader">
-            <div class="circles-1">
-              <div class="circles-1-center"></div>
-              <div class="circles-1"></div>
-              <div class="circles-1"></div>
-              <div class="circles-1"></div>
-              <div class="circles-1"></div>
-              <div class="circles-1"></div>
-              <div class="circles-1"></div>
-            </div>
-          </div>
-        </div>
-        <div class="panel-heading">
-          <div class="pull-left">
-            <h6 class="panel-title txt-dark">Finance Summary </h6>
-          </div>
-          <div class="pull-right"> <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a> </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="panel-wrapper collapse in">
-          <div class="panel-body pt-0">
-            <div id="e_chart_3" class="h-55-m-25"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <div class="row ad-row--full-height">
-        <div class="col-lg-6 col-xs-6">
-          <div class="ad-portlet card-view ad-portlet--half-height ad-portlet--border-bottom-success ">
-            <div class="ad-portlet__body">
-              <div class="ad-widget-1">
-                <div class="ad-widget-1__number"> 132 <small>All Sales</small> </div>
-                <div id="sparkline_1_1" class="spakline-o-hidden" ></div>
-              </div>
-            </div>
-          </div>
-          <div class="ad--space-30"></div>
-          <div class="ad-portlet card-view ad-portlet--half-height ad-portlet--border-bottom-brand ">
-            <div class="ad-portlet__body">
-              <div class="ad-widget-1">
-                <div class="ad-widget-1__number"> 321 <small>All Orders</small> </div>
-                <div id="sparkline_1"  class="spakline-o-hidden"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6  col-xs-6">
-          <div class="ad-portlet card-view ad-portlet--half-height ad-portlet--border-bottom-danger ">
-            <div class="ad-portlet__body">
-              <div class="ad-widget-1">
-                <div class="ad-widget-1__number"> 465 <small>All Transactions</small> </div>
-                <div id="sparkline_1_2"  class="spakline-o-hidden"></div>
-              </div>
-            </div>
-          </div>
-          <div class="ad--space-30"></div>
-          <div class="ad-portlet card-view ad-portlet--half-height ad-portlet--border-bottom-accent ">
-            <div class="ad-portlet__body">
-              <div class="ad-widget-1">
-                <div class="ad-widget-1__number"> 798 <small>All Sales</small> </div>
-                <div id="sparkline_1_3"  class="spakline-o-hidden"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <!-- Row --> 
-    <!-- Row-->
-    <div class="col-lg-6 col-md-12 ">
-      <div class="panel panel-default card-view">
-        <div class="panel-heading">
-          <div class="pull-left">
-            <h6 class="panel-title txt-dark">Employees</h6>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-        <div class="panel-wrapper">
-          <div class="panel-body row pa-0">
-            <div class="table-wrapper">
-              <div class="table-responsive">
-                <table class="table border-none" id="data_table_employee">
-                  <thead>
-                    <tr>
-                      <th>Employee ID</th>
-                      <th>Name</th>
-                      <th>Department</th>
-                      <th>Status</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="txt-dark">#123654</span></td>
-                      <td>Irina Sampio</td>
-                      <td>Chart Analyst</td>
-                      <td><span class="label label-danger">Terminated</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="txt-dark">#564798</span></td>
-                      <td>Michell Mark</td>
-                      <td>Design Lead</td>
-                      <td><span class="label label-warning">Offline</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="txt-dark">#6547861</span></td>
-                      <td>Tom Fiege</td>
-                      <td>UI Development</td>
-                      <td><span class="label label-danger">Terminated</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="txt-dark">#3124564</span></td>
-                      <td>James Nolan</td>
-                      <td>Programming</td>
-                      <td><span class="label label-success">active</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="txt-dark">#7894612</span></td>
-                      <td>Chris Jackson</td>
-                      <td>Finance</td>
-                      <td><span class="label label-success">active</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td><span class="txt-dark">#3579514</span></td>
-                      <td>Wanda Runners</td>
-                      <td>Accounting</td>
-                      <td><span class="label label-success">active</span></td>
-                      <td class="text-center"><a href="javascript:void(0)" class="text-inverse" title="Edit" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a> <a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="mdi mdi-delete"></i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 pl-0 pr-0 col-xs-12 widget-penal">
-      <div class="col-md-7 col-xs-12">
-        <div class="panel panel-default card-view widget-weather">
-          <div class="panel-heading">
-            <div class="pull-left">
-              <h6 class="panel-title txt-dark">Today's Weather</h6>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <div class="panel-wrapper">
-            <div class="panel-body row pa-0">
-              <div class="col-xs-12 ">
-                <div class="row mt-20">
-                  <div class="col-lg-5">
-                    <h4 class="no-margin">Monday</h4>
-                    <p class="small hint-text">9th March 2018</p>
-                  </div>
-                  <div class="col-lg-7">
-                    <div class="pull-left">
-                      <p class="small hint-text no-margin">Currently</p>
-                      <h4 class="text-danger bold no-margin">32° <span class="small">/ 30C</span> </h4>
-                    </div>
-                    <div class="pull-right">
-                      <canvas height="64" width="64" class="clear-day"></canvas>
-                    </div>
-                  </div>
-                </div>
-                <h5>Feels like <span class="semi-bold">rainy</span> </h5>
-                <p>Weather information</p>
-                <div class="widget-weather">
-                  <div class="col-xs-6 pt-10 pl-0">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Wind</p>
-                        <p class="pull-right bold">11km/h</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Sunrise</p>
-                        <p class="pull-right bold">05:20</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Humidity</p>
-                        <p class="pull-right bold">20%</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Precipitation</p>
-                        <p class="pull-right bold">60%</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-6  pt-10 pl-10">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Sunset</p>
-                        <p class="pull-right bold">21:05</p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <p class="pull-left txt-dark">Visibility</p>
-                        <p class="pull-right bold">21km</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="mt-10 timeslot">
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">13:30</p>
-                    <canvas height="25" width="25" class="partly-cloudy-day"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">14:00</p>
-                    <canvas height="25" width="25" class="cloudy"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">14:30</p>
-                    <canvas height="25" width="25" class="rain"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">15:00</p>
-                    <canvas height="25" width="25" class="sleet"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">15:30</p>
-                    <canvas height="25" width="25" class="snow"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="col-xs-2 pt-15 pb-15 text-center">
-                    <p class="small">16:00</p>
-                    <canvas height="25" width="25" class="wind"></canvas>
-                    <p class="text-danger bold">30°C</p>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5 col-xs-12 pr-0">
-        <div class="panel panel-default card-view widget-weather">
-          <div class="panel-heading">
-            <div class="pull-left">
-              <h6 class="panel-title txt-dark">Upcoming</h6>
-            </div>
-            <div class="clearfix"></div>
-          </div>
-          <div class="panel-wrapper">
-            <div class="panel-body row pa-0">
-              <div class="col-xs-12 ">
-                <div class="">
-                  <div class="forecast-day col-lg-6 text-center mt-0 ">
-                    <div class="bg-master-lightest pb-10 pt-10">
-                      <h4 class="pt-10 no-margin">Tuesday</h4>
-                      <p class="small hint-text mb-20">11th March 2018</p>
-                      <canvas class="rain" width="64" height="64"></canvas>
-                      <h5 class="text-danger">32°</h5>
-                      <p>Feels like <span class="bold">sunny</span> </p>
-                      <p class="small">Wind <span class="bold pl-20">11km/h</span> </p>
-                      <div class="mt-25 mb-15 block">
-                        <div class="padding-10">
-                          <div class="row">
-                            <div class="col-lg-6 text-center">
-                              <p class="small">Noon</p>
-                              <canvas class="sleet" width="25" height="25"></canvas>
-                              <p class="text-danger bold">30°C</p>
-                            </div>
-                            <div class="col-lg-6 text-center">
-                              <p class="small">Night</p>
-                              <canvas class="wind" width="25" height="25"></canvas>
-                              <p class="text-danger bold">30°C</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 text-center mt-0 ">
-                    <div class="bg-master-lightest pb-10 pt-10">
-                      <h4 class="pt-10 no-margin">Wednesday</h4>
-                      <p class="small hint-text mb-20">11th March 2018</p>
-                      <canvas class="rain" width="64" height="64"></canvas>
-                      <h5 class="text-danger">32°</h5>
-                      <p>Feels like <span class="bold">sunny</span> </p>
-                      <p class="small">Wind <span class="bold pl-20">11km/h</span> </p>
-                      <div class="mt-25 mb-15 block">
-                        <div class="padding-10">
-                          <div class="row">
-                            <div class="col-lg-6 text-center">
-                              <p class="small">Noon</p>
-                              <canvas class="sleet" width="25" height="25"></canvas>
-                              <p class="text-danger bold">30°C</p>
-                            </div>
-                            <div class="col-lg-6 text-center">
-                              <p class="small">Night</p>
-                              <canvas class="wind" width="25" height="25"></canvas>
-                              <p class="text-danger bold">30°C</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            <div class="panel-wrapper">
+              <div class="panel-body row pa-0">
+                <div class="table-wrapper">
+                  <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                      <thead>
+                        <tr>
+                          <th >#</th>
+                          <th>Products</th>
+                          <th>Price Range</th>
+                          <th>Popularity</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="txt-dark weight-500">1</span></td>
+                          <td>Engine oil</td>
+                          <td>$150 - $200</td>
+                          <td><span class="peity-line" data-peity='{ "fill": ["#2BB9C3"],"stroke":["#2BB9C3"]}' data-width="100%" data-height="25">1,2,5,1,2,8,6,5</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">2</span></td>
+                          <td>Generator</td>
+                          <td>$1600 - $2000 </td>
+                          <td><span class="peity-line" data-peity='{ "fill": ["#fd7397"],"stroke":["#FD7397"]}' data-width="100%" data-height="25">4,5,5,8,5,4,5,2</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">3</span></td>
+                          <td>Auto Gas</td>
+                          <td>$150 - $200</td>
+                          <td><span class="peity-line" data-peity='{ "fill": ["#F8B32D"],"stroke":["#F8B32D"]}' data-width="100%" data-height="25">7,3,9,1,2,8,6,1</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">4</span></td>
+                          <td>Stablizers</td>
+                          <td>$250 - $400</td>
+                          <td><span class="peity-line" data-peity='{ "fill": ["#119dd2"],"stroke":["#119dd2"]}' data-width="100%" data-height="25">3,7,1,9,2,8,3,9</span></td>
+                        </tr>
+                        <tr>
+                          <td><span class="txt-dark weight-500">5</span></td>
+                          <td>Auto Parts</td>
+                          <td>$150 - $200</td>
+                          <td><span class="peity-line" data-peity='{ "fill": ["#34c1ce"],"stroke":["#34c1ce"]}' data-width="100%" data-height="25">9,1,2,5,1,4,8,7</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -1105,26 +930,26 @@
         </div>
       </div>
       <div class="clearfix"></div>
-    </div>
-    <div class="clearfix"></div>
-    <!-- Row--> 
-    <!-- Footer -->
-    <footer class="footer container-fluid pt-10 pb-10  pl-30 pr-30">
-      <div class="row">
-        <div class="col-sm-12 ">
-          <div class="pull-left text-dark pt-5 small">Copyright @ 2018  Hyrax UX  Panel. All Rights Reserved</div>
-          <div class="pull-right">Created with by <img src="plugins/assets/img/heartbeat.svg" alt="srgit" class="heart"> <a href="http://www.srgit.com/" target="_blank">SRGIT</a></div>
-          <div class="clearfix"></div>
+      <!-- Row --> 
+      <!-- Footer -->
+      <footer class="footer container-fluid pt-10 pb-10  pl-30 pr-30">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <div class="pull-left text-dark pt-5 small">Copyright @ 2018  Hyrax UX  Panel. All Rights Reserved</div>
+            <div class="pull-right">Created with by <img src="plugins/assets/img/heartbeat.svg" alt="srgit" class="heart"> <a href="http://www.srgit.com/" target="_blank">SRGIT</a></div>
+            <div class="clearfix"></div>
+          </div>
         </div>
-      </div>
-    </footer>
-    <!-- /Footer --> 
+      </footer>
+      <!-- /Footer --> 
+    </div>
   </div>
+  <!-- /Main Content --> 
 </div>
-<!-- /Main Content --> 
 <!-- /#wrapper --> 
 <!-- JavaScript --> 
 <!-- jQuery --> 
+
 <script src="plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script> 
 <!-- Bootstrap Core JavaScript --> 
 <script src="plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
@@ -1150,10 +975,28 @@
 <script src="plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script> 
 <!-- EChartJS JavaScript --> 
 <script src="plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script> 
+
+<!-- Select2 JavaScript --> 
+<script src="plugins/vendors/bower_components/select2/dist/js/select2.full.min.js"></script> 
 <!-- Toast JavaScript --> 
 <script src="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> 
+<!-- Webticker Javascript --> 
+<script src="plugins/vendors/bower_components/web-ticker/jquery.webticker.min.js"></script> 
+<!-- Amcharts charts JavaScript --> 
+<script src="plugins/vendors/bower_components/amcharts/amcharts.js"></script> 
+<script src="plugins/vendors/bower_components/amcharts/serial.js"></script> 
+<script src="plugins/vendors/bower_components/amcharts/amstock.js"></script> 
+
+<!-- Piety JavaScript --> 
+<script src="plugins/vendors/bower_components/peity/jquery.peity.min.js"></script> 
+<script src="plugins/assets/js/peity-data.js"></script> 
 <!-- Init JavaScript --> 
 <script src="plugins/assets/js/init.js"></script> 
-<script src="plugins/assets/js/dashboard.init.js"></script>
+<script src="plugins/assets/js/random-class.js"></script> 
+<!-- Form Advance Init JavaScript --> 
+<script src="plugins/assets/js/form-advance-data.js"></script> 
+<script src="plugins/assets/js/stock-chart.init.js"></script> 
+<script src="plugins/assets/js/bitcoin-init.js"></script> 
+<script src="plugins/assets/js/dashboard-dark.init.js"></script>
 </body>
 </html>

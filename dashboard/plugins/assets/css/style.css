@@ -45,6 +45,12 @@ table tr > td:nth-child(7){
     text-indent: -9999px;
     text-align: left;
 }
+.coinaced {
+    background-position: -0px -32px;
+    width: 16px;
+    height: 17px;
+}
+.coinbtc { background-position: -0px -799px; width: 16px; height: 16px; }
 .coindash {
     background-position: -0px -1437px;
     width: 16px;

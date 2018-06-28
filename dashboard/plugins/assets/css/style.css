@@ -56,6 +56,13 @@ table tr > td:nth-child(7){
     background: #1b1b1b;
     color: #ffffff;
 }
+.jvectormap-container svg{
+    width:100% !important;
+    height:100% !important;
+}
+.jvectormap-container svg g{
+    transform: scale(0.997778, 0.997778) !important;
+}
 
 
 

@@ -36,5 +36,7 @@ Project:	Hyrax UX Admin Template
 
 /** Hyrax UX Responsive **/
 @import url('responsive.css');
-
+.fixed-sidebar-left .mb-10{
+    margin: 0.3px !important;
+}
 

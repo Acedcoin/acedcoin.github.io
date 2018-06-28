@@ -38,7 +38,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="mobile-only-brand pull-left">
       <div class="nav-header pull-left">
-        <div class="logo-wrap"> <a href="https://www.acedcoin.com/dashboard/"> <img class="brand-img" src="../favicon.png"  style="width: 32px;margin-bottom: -5px;" alt="brand"/> <span class="brand-text">[ Aced<strong>Coin</strong> ]</span> </a> </div>
+        <div class="logo-wrap"> <a href="https://www.acedcoin.com/"> <img class="brand-img" src="../favicon.png"  style="width: 32px;margin-bottom: -5px;" alt="brand"/> <span class="brand-text">[ Aced<strong>Coin</strong> ]</span> </a> </div>
       </div>
       <a id="toggle-btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="mdi mdi-format-list-bulleted"></i></a> <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-search"></i></a> <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-more"></i></a>
       <form id="search_form" role="search" class="top-nav-search collapse pull-left">
@@ -153,92 +153,71 @@
   <!-- Left Sidebar Menu -->
   <div class="fixed-sidebar-left">
     <ul class="nav navbar-nav side-nav nicescroll-bar">
-      <li>
-        <a href="index.html" >
-          <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
-          <div class="clearfix"></div>
-        </a>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-
-      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#pages_ecommerce">
-        <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Ecommerce Pages</span></div>
-        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+      <li><a class="active-page" href="https://www.acedcoin.com/dashboard/" >
+        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
         <div class="clearfix"></div>
-      </a>
-        <ul id="pages_ecommerce" class="collapse collapse-level-2">
-          <li> <a href="ecommerce-dashboard.html">Shop dashboard</a> </li>
-          <li> <a href="ecommerce-products-details.html">Products List</a> </li>
-          <li> <a href="ecommerce-add-product.html">Add Product</a> </li>
-          <li> <a  href="ecommerce-order-details.html">Order Details</a> </li>
-        </ul>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-      <li>
-        <a href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
-          <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
-          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-          <div class="clearfix"></div>
-        </a>
-        <ul id="invoice_list" class="collapse collapse-level-2">
-          <li> <a href="invoice.html">Invoice</a> </li>
-          <li> <a href="invoice-list.html">Invoice List</a> </li>
-          <li> <a href="invoice-archive.html">Invoice Archive</a> </li>
-        </ul>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-      <li>
-        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">
-          <div class="pull-left"><i class="mdi mdi-login mr-20"></i><span class="right-nav-text">Authentication Pages</span></div>
-          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-          <div class="clearfix"></div>
-        </a>
-        <ul id="authentication_list" class="collapse collapse-level-2">
-          <li> <a href="login.html" target="_blank">Login</a> </li>
-          <li> <a href="signup.html" target="_blank">Register</a> </li>
-          <li> <a href="forgot-password.html" target="_blank">Recover Password</a> </li>
-          <li> <a href="locked.html" target="_blank">Lock Screen</a> </li>
-        </ul>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-      <li>
-        <a class="active-page" href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">
-          <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
-          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
-          <div class="clearfix"></div>
-        </a>
-        <ul id="mailbox" class="collapse collapse-level-2">
-          <li> <a href="email-inbox.html">Email Inbox</a> </li>
-          <li> <a href="email-detail.html" class="active">Email Detail</a> </li>
-          <li> <a href="email-compose.html">Email Compose</a> </li>
-        </ul>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-      <li>
-        <a href="profile.html">
-          <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
-          <div class="clearfix"></div>
-        </a>
-      </li>
-      <li>
-        <hr class="light-grey-hr mb-10"/>
-      </li>
-      <li>
-        <a href="faq.html">
-          <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
-          <div class="clearfix"></div>
-        </a>
-      </li>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li> <a  href="ecommerce-products-details.html">
+        <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Store</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="email-inbox.html">
+        <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="profile.html">
+        <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="aced-gaming.html">
+        <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Gaming</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="aced-streaming.html">
+        <div class="pull-left"><i class="mdi mdi-view-stream mr-20"></i><span class="right-nav-text">AceD Streaming</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="aced-snap.html">
+        <div class="pull-left"><i class="mdi mdi-snapchat mr-20"></i><span class="right-nav-text">AceD Snap</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="aced-foundation.html">
+        <div class="pull-left"><i class="mdi mdi-basecamp mr-20"></i><span class="right-nav-text">AceD Foundation</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="https://www.coinexchange.io/market/AceD/BTC" target="_blank">
+        <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">CoinExchange </span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="faq.html">
+        <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
+        <div class="clearfix"></div>
+      </a></li>
+
     </ul>
   </div>
   <!-- /Left Sidebar Menu --> 

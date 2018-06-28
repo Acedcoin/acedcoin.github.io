@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard-Aced Coin</title>
+<meta name="description" content="" />
+<meta name="keywords" content="admin, admin dashboard, admin template" />
+<meta name="author" content="SRGIT"/>
+<!-- Favicon -->
+<link rel="shortcut icon" href="../../favicon.png">
+<link rel="icon" href="../../favicon.png" type="image/x-icon">
+<!-- Data table CSS -->
+<link href="../plugins/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<!-- select2 CSS -->
+<link href="../plugins/vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
+<link href="../plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
+<!-- Custom CSS -->
+<link href="../plugins/assets/css/default.css" rel="stylesheet" type="text/css">
+<link href="../plugins/assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- Preloader -->
+<div class="preloader-it">
+  <div class="preloader">
+    <div class="circles-1">
+      <div class="circles-1-center"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+      <div class="circles-1"></div>
+    </div>
+  </div>
+</div>
+<!-- //Preloader -->
+<div class="wrapper random-data light-theme dark-template"> 
+  <!-- Top Header -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="mobile-only-brand pull-left">
+      <div class="nav-header pull-left">
+        <div class="logo-wrap"> <a href="aced.html"> <img class="brand-img" src="../../favicon.png" alt="brand" style="width: 32px;margin-bottom: -5px;"/> <span class="brand-text">[ Aced<strong>Coin</strong> ]</span> </a> </div>
+      </div>
+      <a id="toggle-btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="mdi mdi-format-list-bulleted"></i></a> <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-search"></i></a> <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-more"></i></a>
+      <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+        <div class="input-group">
+          <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+          <span class="input-group-btn">
+          <button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
+          </span> </div>
+      </form>
+    </div>
+    <div id="mobile_right_sidebar" class="mobile-right-sidebar pull-right">
+      <ul class="nav navbar-right top-nav pull-right">
+        <li> <a id="open_right_sidebar" href="#"><i class="pe-7s-chat top-nav-icon"></i></a> </li>
+        <li class="dropdown app-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-edit top-nav-icon"></i></a>
+          <ul class="dropdown-menu app-dropdown"  data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="app-nicescroll-bar">
+                <ul class="app-icon-wrap pa-10">
+                  <li> <a href="../weather.html" class="connection-item"> <i class="pe-7s-sun txt-info"></i> <span class="block">weather</span> </a> </li>
+                  <li> <a href="../vector-map.html" class="connection-item"> <i class="pe-7s-way txt-danger"></i> <span class="block">map</span> </a> </li>
+                  <li> <a href="../chats.html" class="connection-item"> <i class="pe-7s-chat txt-warning"></i> <span class="block">chat</span> </a> </li>
+                  <li> <a href="../calendar.html" class="connection-item"> <i class="pe-7s-date txt-primary"></i> <span class="block">calendar</span> </a> </li>
+                  <li> <a href="../email-inbox.html" class="connection-item"> <i class="pe-7s-mail-open-file txt-success"></i> <span class="block">e-mail</span> </a> </li>
+                  <li> <a href="../contact-card.html" class="connection-item"> <i class="pe-7s-config"></i> <span class="block">configure</span> </a> </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown alert-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-alarm top-nav-icon"></i><span class="top-nav-icon-badge btn-sonar">1</span></a>
+          <ul class="dropdown-menu alert-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li>
+              <div class="notification-box-head-wrap"> <span class="notification-box-head pull-left inline-block">notifications</span> <a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)"> clear all </a>
+                <div class="clearfix"></div>
+                <hr class="light-grey-hr ma-0"/>
+              </div>
+            </li>
+            <li>
+              <div class="streamline message-nicescroll-bar">
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-green"> <i class="mdi mdi-alarm-check"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11  pull-right notifications-time">5pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-yellow"> <i class="mdi mdi-video-input-antenna"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">Neque porro quisquam est</span> <span class="inline-block font-11 pull-right notifications-time">12pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-blue"> <i class="mdi mdi-comment-text"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">61 new messages</span> <span class="inline-block font-11  pull-right notifications-time">6am</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate"> Neque porro quisquam est.</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="sl-avatar"> <img class="img-responsive" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">Vivian Rox</span> <span class="inline-block font-11  pull-right notifications-time">3pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                  </div>
+                  </a> </div>
+                <hr class="light-grey-hr ma-0"/>
+                <div class="sl-item"> <a href="javascript:void(0)">
+                  <div class="icon bg-red"> <i class="mdi mdi-storage"></i> </div>
+                  <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-danger">99% server space occupied.</span> <span class="inline-block font-11  pull-right notifications-time">1pm</span>
+                    <div class="clearfix"></div>
+                    <p class="truncate">consectetur, adipisci velit.</p>
+                  </div>
+                  </a> </div>
+              </div>
+            </li>
+            <li>
+              <div class="notification-box-bottom-wrap">
+                <hr class="light-grey-hr ma-0"/>
+                <a class="block text-center read-all" href="javascript:void(0)"> read all </a>
+                <div class="clearfix"></div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown auth-drp"> <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="http://via.placeholder.com/128x128" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+          <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+            <li> <a href="../profile.html"><i class="mdi mdi-account"></i><span>Profile</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-credit-card"></i><span>my balance</span></a> </li>
+            <li> <a href="../email-inbox.html"><i class="mdi mdi-email"></i><span>Inbox</span></a> </li>
+            <li> <a href="#"><i class="mdi mdi-settings"></i><span>Settings</span></a> </li>
+            <li class="divider"></li>
+            <li class="sub-menu show-on-hover"> <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="mdi mdi-check text-success"></i> available</a>
+              <ul class="dropdown-menu open-left-side">
+                <li> <a href="#"><i class="mdi mdi-check text-success"></i><span>available</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-circle-o text-warning"></i><span>busy</span></a> </li>
+                <li> <a href="#"><i class="mdi mdi-minus-circle-outline text-danger"></i><span>offline</span></a> </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li> <a href="#"><i class="mdi mdi-power"></i><span>Log Out</span></a> </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /Top Menu Items --> 
+  <!-- Left Sidebar Menu -->
+  <div class="fixed-sidebar-left">
+    <ul class="nav navbar-nav side-nav nicescroll-bar">
+      <li>
+        <a class="active-page" href="aced.html" >
+        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+        <div class="clearfix"></div>
+        </a>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+
+      <li> <a  href="javascript:void(0);" data-toggle="collapse" data-target="#pages_ecommerce">
+        <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Ecommerce Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+      </a>
+        <ul id="pages_ecommerce" class="collapse collapse-level-2">
+          <li> <a href="../ecommerce-dashboard.html">Shop dashboard</a> </li>
+          <li> <a href="../ecommerce-products-details.html">Products List</a> </li>
+          <li> <a href="../ecommerce-add-product.html">Add Product</a> </li>
+          <li> <a  href="../ecommerce-order-details.html">Order Details</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a  href="javascript:void(0);" data-toggle="collapse" data-target="#invoice_list">
+        <div class="pull-left"><i class="mdi mdi-file-document mr-20"></i><span class="right-nav-text">Invoice Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="invoice_list" class="collapse collapse-level-2">
+          <li> <a href="../invoice.html">Invoice</a> </li>
+          <li> <a href="../invoice-list.html">Invoice List</a> </li>
+          <li> <a href="../invoice-archive.html">Invoice Archive</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#authentication_list">
+        <div class="pull-left"><i class="mdi mdi-login mr-20"></i><span class="right-nav-text">Authentication Pages</span></div>
+        <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+        <div class="clearfix"></div>
+        </a>
+        <ul id="authentication_list" class="collapse collapse-level-2">
+          <li> <a href="../login.html" target="_blank">Login</a> </li>
+          <li> <a href="../signup.html" target="_blank">Register</a> </li>
+          <li> <a href="../forgot-password.html" target="_blank">Recover Password</a> </li>
+          <li> <a href="../locked.html" target="_blank">Lock Screen</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#mailbox">
+          <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
+          <div class="pull-right"><i class="mdi mdi-chevron-down"></i></div>
+          <div class="clearfix"></div>
+        </a>
+        <ul id="mailbox" class="collapse collapse-level-2">
+          <li> <a href="../email-inbox.html">Email Inbox</a> </li>
+          <li> <a href="../email-detail.html">Email Detail</a> </li>
+          <li> <a href="../email-compose.html">Email Compose</a> </li>
+        </ul>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="../profile.html">
+        <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
+        <div class="clearfix"></div>
+        </a>
+      </li>
+      <li>
+        <hr class="light-grey-hr mb-10"/>
+      </li>
+      <li>
+        <a href="../faq.html">
+          <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
+          <div class="clearfix"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- /Left Sidebar Menu --> 
+  <!-- Right Sidebar Menu -->
+  <div class="fixed-sidebar-right">
+    <ul class="right-sidebar">
+      <li>
+        <div  class="tab-struct user-tabs">
+          <ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
+            <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="chat_tab_btn" href="#chat_tab"><i class="pe-7s-chat"></i></a></li>
+            <li role="presentation" class=""><a  data-toggle="tab" id="messages_tab_btn" role="tab" href="#messages_tab" aria-expanded="false"><i class="pe-7s-mail"></i></a></li>
+            <li role="presentation" class=""><a  data-toggle="tab" id="settings_tab_btn" role="tab" href="#settings_tab" aria-expanded="false"><i class="pe-7s-keypad"></i></a></li>
+          </ul>
+          <div class="tab-content" id="right_sidebar_content">
+            <div  id="chat_tab" class="tab-pane fade active in" role="tabpanel">
+              <div class="chat-cmplt-wrap">
+                <div class="chat-box-wrap">
+                  <div class="add-friend"> <span class="inline-block txt-dark">Recent Chats</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-plus"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div id="chat_list_scroll">
+                    <div class="nicescroll-bar">
+                      <ul class="chat-list-wrap">
+                        <li class="chat-list">
+                          <div class="chat-body"> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Peter Wyatt</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Vivian Rox</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status offline"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Mr. Danielle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Suzi Cole</span> <span class="time block truncate txt-grey">Neque porro quisquam est..</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Tom Taylor</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status offline"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Mitch Blue</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Jason Rudd</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Michelle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status online"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> <a href="javascript:void(0)">
+                            <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                              <div class="user-data"> <span class="name block capitalize-font">Ludacris Stack</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                              <div class="status away"></div>
+                              <div class="clearfix"></div>
+                            </div>
+                            </a> </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent-chat-box-wrap">
+                  <div class="recent-chat-wrap">
+                    <div class="panel-heading ma-0">
+                      <div class="goto-back"> <a  id="goto_back" href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-chevron-left"></i> </a> <span class="inline-block txt-dark">Max</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-more"></i></a>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                      <div class="panel-body pa-0">
+                        <div class="chat-content">
+                          <ul class="nicescroll-bar pt-20">
+                            <li class="friend">
+                              <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                <div class="msg pull-left">
+                                  <p class="msng-name">Sam Wrote:</p>
+                                  <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet?</p>
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-grey">5:01 PM</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="self mb-10">
+                              <div class="self-msg-wrap">
+                                <div class="msg block pull-right"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:01 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="self">
+                              <div class="self-msg-wrap">
+                                <div class="msg block pull-right"> Consectetur, adipisci velit.
+                                  <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:13 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                            <li class="friend">
+                              <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                <div class="msg pull-left">
+                                  <p class="msng-name">Sam Wrote:</p>
+                                  <p>Neque porro quisquam.</p>
+                                  <div class="msg-per-detail  text-right"> <span class="msg-time txt-grey">6:35 pm</span> </div>
+                                </div>
+                                <div class="clearfix"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="input-group">
+                          <input type="text" id="input_msg_send" name="send-msg" class="input-msg-send form-control" placeholder="Type something">
+                          <div class="input-group-btn emojis">
+                            <div class="dropup">
+                              <button type="button" class="btn  btn-default  dropdown-toggle" data-toggle="dropdown" ><i class="mdi mdi-mood"></i></button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="javascript:void(0)">Action</a></li>
+                                <li><a href="javascript:void(0)">Another action</a></li>
+                                <li class="divider"></li>
+                                <li><a href="javascript:void(0)">Separated link</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="input-group-btn attachment">
+                            <div class="fileupload btn  btn-default"><i class="mdi mdi-attachment-alt"></i>
+                              <input type="file" class="upload">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="messages_tab" class="tab-pane fade" role="tabpanel">
+              <div class="message-box-wrap">
+                <div class="add-friend"> <span class="inline-block txt-dark">messages</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-search"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="set-height-wrap">
+                  <div class="streamline message-box nicescroll-bar"> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Peter Wyatt</span> <span class="inline-block font-11  pull-right message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Vivian Rox</span> <span class="inline-block font-11  pull-right message-time">1 Feb</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mr. Danielle</span> <span class="inline-block font-11  pull-right message-time">31 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur nominees</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Tom Taylor</span> <span class="inline-block font-11  pull-right message-time">29 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mitch Blue</span> <span class="inline-block font-11  pull-right message-time">27 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Michelle</span> <span class="inline-block font-11  pull-right message-time">19 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam es.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> <a href="javascript:void(0)">
+                    <div class="sl-item">
+                      <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                      <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Linda Stack</span> <span class="inline-block font-11  pull-right message-time">13 Jan</span>
+                        <div class="clearfix"></div>
+                        <span class=" truncate message-subject">Neque porro quisquam.</span>
+                        <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                      </div>
+                    </div>
+                    </a> </div>
+                </div>
+              </div>
+            </div>
+            <div id="settings_tab" class="tab-pane fade" role="tabpanel">
+              <div class="settings-box-wrap">
+                <div class="add-settings text-center txt-dark pt-15"> General Settings
+                  <div class="clearfix"></div>
+                </div>
+                <div class="set-height-wrap"> 
+                  <!-- settings-List -->
+                  <ul class="settings-list nicescroll-bar">
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Email Notifications</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Site Tracking</div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">SMS Alerts </div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Backup Storage</div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Audit Logs</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="add-settings text-center txt-dark pt-15"> SYSTEM SETTINGS
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">System Logs </div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Error Reporting </div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Applications Logs </div>
+                        <div class="pull-right">
+                          <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Backup Servers</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                    <li class="settings-item">
+                      <div class="list-settings">
+                        <div class="pull-left">Audit Logs</div>
+                        <div class="pull-right">
+                          <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- /settings-List --> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- /Right Sidebar Menu --> 
+  <!-- Main Content -->
+  <div class="page-wrapper">
+    <div class="container-fluid pt-25"> 
+      <!-- Row -->
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel panel-default card-view pa-0">
+            <div class="panel-wrapper collapse in">
+              <div class="panel-body pa-0">
+                <div class="sm-data-box">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Bitcoin BTC</span> </div>
+                      <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
+                        <div id="sparkline_1_20" class="sparkline-w-100-h-50"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel panel-default card-view pa-0">
+            <div class="panel-wrapper collapse in">
+              <div class="panel-body pa-0">
+                <div class="sm-data-box">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Litecoin LTC </span> </div>
+                      <div class="col-xs-6 text-center  pl-0 pr-0  pt-30 data-wrap-right">
+                        <div id="sparkline_4" class="sparkline-w-100-h-50"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="panel panel-default card-view pa-0">
+            <div class="panel-wrapper collapse in">
+              <div class="panel-body pa-0">
+                <div class="sm-data-box">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-down text-danger"></i></span> <span class="weight-500 uppercase-font block">Ethereum ETH </span> </div>
+                      <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
+                        <div id="sparkline_1"  class="sparkline-w-100-h-50"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">-->
+          <!--<div class="panel panel-default card-view pa-0">-->
+            <!--<div class="panel-wrapper collapse in">-->
+              <!--<div class="panel-body pa-0">-->
+                <!--<div class="sm-data-box">-->
+                  <!--<div class="container-fluid">-->
+                    <!--<div class="row">-->
+                      <!--<div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up"></i></span> <span class="weight-500 uppercase-font block">Ripple XRP </span> </div>-->
+                      <!--<div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">-->
+                        <!--<div id="sparkline_1_2"  class="sparkline-w-100-h-50"></div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      </div>
+      <!-- Row -->
+      <div class="row" style="margin:3% 0;">
+        <div class="col-md-8 col-md-offset-2">
+          <div align="center">
+            <a href="https://ctsplatform.cc/" title="CTS - Crypto Trading Solutions" target="_blank">
+              <img src="../plugins/assets/img/cts.png" style="max-width: 100%; height: auto" alt="CTS - Crypto Trading Solutions">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Row -->
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12"  style="margin-top: 55px">
+          <h2><img src="../../favicon.png" style="width:37px;"> AceD (ACED)</h2>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="form-group co_change">
+            <label for="changecoin">Change Coin:</label>
+            <select class="form-control" id="changecoin">
+              <option id="ZOC/">01coin (ZOC)</option>
+              <option id="ABS/">Absolute (ABS)</option>
+              <option id="ACCO/">Accolade (ACCO)</option>
+              <option id="ACED/" selected="">AceD (ACED)</option>
+              <option id="ADR/">Adirondack (ADR)</option>
+              <option id="ADL/">AdlerCash (ADL)</option>
+              <option id="XXX/">AdultChain (XXX)</option>
+              <option id="ADV/">Advance (ADV)</option>
+              <option id="ARC/">Advanced Technology Coin (ARC)</option>
+              <option id="AEG/">Aegeus (AEG)</option>
+              <option id="AGN/">Agena (AGN)</option>
+              <option id="AGNI/">AGNI coin (AGNI)</option>
+              <option id="AIRIN/">Airin (AIRIN)</option>
+              <option id="AKN/">Akencash (AKN)</option>
+              <option id="AKL/">Akula (AKL)</option>
+              <option id="ALS/">Alanis (ALS)</option>
+              <option id="ALMEX/">ALMEX (ALMEX)</option>
+              <option id="ALP/">AlphaCoin (ALP)</option>
+              <option id="XLQ/">ALQO (XLQ)</option>
+              <option id="ANS/">ANODOS (ANS)</option>
+              <option id="APEIR/">APEIRON (APEIR)</option>
+              <option id="XAP/">Apollon Coin (XAP)</option>
+              <option id="APR/">APR Coin (APR)</option>
+              <option id="AQA/">AQUILA (AQA)</option>
+              <option id="ARGO/">ARGO (ARGO)</option>
+              <option id="ARION/">ARION (ARION)</option>
+              <option id="ARKT/">ARKTUR (ARKT)</option>
+              <option id="XAX/">ARTAX (XAX)</option>
+              <option id="ASTR/">Astrum (ASTR)</option>
+              <option id="AXS/">AXS (AXS)</option>
+              <option id="HASH/">b-hash (HASH)</option>
+              <option id="BANQ/">BANQ (BANQ)</option>
+              <option id="BASHC/">BashCoin (BASHC)</option>
+              <option id="XUR/">Baxur (XUR)</option>
+              <option id="BEET/">Beetle Coin (BEET)</option>
+              <option id="KNG/">BetKings (KNG)</option>
+              <option id="BBP/">BiblePay (BBP)</option>
+              <option id="FROST/">Bifrost (FROST)</option>
+              <option id="BTDX/">Bitcloud (BTDX)</option>
+              <option id="BTCF/">Bitcoin Final (BTCF)</option>
+              <option id="BITG/">Bitcoin Green (BITG)</option>
+              <option id="XBI/">Bitcoin Incognito (XBI)</option>
+              <option id="BLTG/">Bitcoin Lightning (BLTG)</option>
+              <option id="MON/">Bitcoin Monster (MON)</option>
+              <option id="BHD/">Bithold (BHD)</option>
+              <option id="BRO/">Bitradio (BRO)</option>
+              <option id="XBR/">BitRewards (XBR)</option>
+              <option id="BSD/">BitSend (BSD)</option>
+              <option id="BSL/">BitSolo (BSL)</option>
+              <option id="BZM/">Blazarium (BZM)</option>
+              <option id="BLOCK/">Blocknet (BLOCK)</option>
+              <option id="BPG/">BPGCoin (BPG)</option>
+              <option id="BRV/">BravoCoin (BRV)</option>
+              <option id="BRIG/">Brig (BRIG)</option>
+              <option id="BUGO/">BU-GO (BUGO)</option>
+              <option id="BWK/">Bulwark (BWK)</option>
+              <option id="BEPAY50000/">BYTEPAY (BEPAY50000)</option>
+              <option id="BEPAY75000/">BYTEPAY (BEPAY75000)</option>
+              <option id="BEPAY20000/">BYTEPAY (BEPAY20000)</option>
+              <option id="BEPAY100000/">BYTEPAY (BEPAY100000)</option>
+              <option id="CAP/">Capital Coin (CAP)</option>
+              <option id="CARAT/">CaratusCoin (CARAT)</option>
+              <option id="CARE/">CareBit (CARE)</option>
+              <option id="CAZ/">CAZ Coin (CAZ)</option>
+              <option id="CBS/">Cerberus (CBS)</option>
+              <option id="CHARM/">CHARM Coin (CHARM)</option>
+              <option id="CHEESE/">CHEESE (CHEESE)</option>
+              <option id="CHN/">Chronon (CHN)</option>
+              <option id="CIV/">Civitas (CIV)</option>
+              <option id="CTF/">Coin2Fly (CTF)</option>
+              <option id="XCXT/">CoinonatX (XCXT)</option>
+              <option id="COLX/">ColossusCoinXT (COLX)</option>
+              <option id="CMC/">Community coin (CMC)</option>
+              <option id="CDM/">Condominium (CDM)</option>
+              <option id="CRZ/">COREZ (CRZ)</option>
+              <option id="CMOS/">Cosmo Coin (CMOS)</option>
+              <option id="CRAVE/">Crave NG (CRAVE)</option>
+              <option id="CRM/">CREAM (CRM)</option>
+              <option id="CRS/">Criptoreal (CRS)</option>
+              <option id="CROP30000/">CropCoin (CROP30000)</option>
+              <option id="CROP20000/">CropCoin (CROP20000)</option>
+              <option id="CROP10000/">CropCoin (CROP10000)</option>
+              <option id="CRC/">CrowdCoin (CRC)</option>
+              <option id="CRW/">Crown (CRW)</option>
+              <option id="CRW-SN/">Crown SN (CRW-SN)</option>
+              <option id="CIF/">Crypto Improvement Fund (CIF)</option>
+              <option id="CTS/">Crypto Trading Solutions (CTS)</option>
+              <option id="CCB/">CryptoCashBack (CCB)</option>
+              <option id="CUB/">CUBEX (CUB)</option>
+              <option id="CUBIS/">CubisCore (CUBIS)</option>
+              <option id="CRU/">Curium (CRU)</option>
+              <option id="CURV/">CurveCoin (CURV)</option>
+              <option id="DASH/">Dash (DASH)</option>
+              <option id="DLR/">Delor (DLR)</option>
+              <option id="DEMOS/">DEMOS PAY (DEMOS)</option>
+              <option id="DNR/">Denarius (DNR)</option>
+              <option id="DSN/">DesignCoin (DSN)</option>
+              <option id="DSR/">Desire (DSR)</option>
+              <option id="DEV/">Deviant (DEV)</option>
+              <option id="DXO/">Dextro (DXO)</option>
+              <option id="DMD/">Diamond (DMD)</option>
+              <option id="DGM/">DigiMoney (DGM)</option>
+              <option id="DP/">Digital Price (DP)</option>
+              <option id="WAGE/">Digiwage (WAGE)</option>
+              <option id="DIN/">Dinero (DIN)</option>
+              <option id="DSC/">DiscountCoin (DSC)</option>
+              <option id="DXC/">DIXIcoin (DXC)</option>
+              <option id="DRIP/">DRIP (DRIP)</option>
+              <option id="DC/">Ducat Coin (DC)</option>
+              <option id="DYN/">Dynamic (DYN)</option>
+              <option id="DYO/">DynamoPay (DYO)</option>
+              <option id="DTEM/">Dystem (DTEM)</option>
+              <option id="ERZ/">EarnzCoin (ERZ)</option>
+              <option id="EBS/">Elbrus (EBS)</option>
+              <option id="ELIQA/">ELIQA (ELIQA)</option>
+              <option id="ELP/">Ellerium Project (ELP)</option>
+              <option id="ELLI/">Elliotcoin (ELLI)</option>
+              <option id="ENCH/">Enchant (ENCH)</option>
+              <option id="END/">Endorphin (END)</option>
+              <option id="ENX/">Enox (ENX)</option>
+              <option id="EPIC/">EPIC (EPIC)</option>
+              <option id="ESCO/">Escrow (ESCO)</option>
+              <option id="ESS/">Essence (ESS)</option>
+              <option id="ENT/">Eternity (ENT)</option>
+              <option id="ETHF/">Ethereum Future (ETHF)</option>
+              <option id="EXCL/">ExclusiveCoin (EXCL)</option>
+              <option id="EXT/">ExSolution (EXT)</option>
+              <option id="EXTN/">ExtensiveCoin (EXTN)</option>
+              <option id="EXUS/">EXUS Coin (EXUS)</option>
+              <option id="FGC/">FantasyGold (FGC)</option>
+              <option id="XFE/">FEIRM (XFE)</option>
+              <option id="FRM/">Ferrum Coin (FRM)</option>
+              <option id="FXC/">Fexchange (FXC)</option>
+              <option id="FLC/">FLCoin (FLC)</option>
+              <option id="FLEA80000/">Flea Coin (FLEA80000)</option>
+              <option id="FLEA20000/">Flea Coin (FLEA20000)</option>
+              <option id="FLEA40000/">Flea Coin (FLEA40000)</option>
+              <option id="FLEA6000/">Flea Coin (FLEA6000)</option>
+              <option id="FLM/">FOLM (FLM)</option>
+              <option id="FOR/">Force (FOR)</option>
+              <option id="FIX/">Fornix (FIX)</option>
+              <option id="FSC/">FriendshipCoin (FSC)</option>
+              <option id="ICE/">Frozen (ICE)</option>
+              <option id="FSS/">FSS Coin (FSS)</option>
+              <option id="GNR/">Gainer (GNR)</option>
+              <option id="ORE/">Galactrum (ORE)</option>
+              <option id="GALI/">Galilel (GALI)</option>
+              <option id="GMCN/">GambleCoin (GMCN)</option>
+              <option id="MRJA/">GanjaCoin (MRJA)</option>
+              <option id="GNRO/">GENERO (GNRO)</option>
+              <option id="XGS/">GenesisX (XGS)</option>
+              <option id="GIC/">Giant (GIC)</option>
+              <option id="GIN/">GINCoin (GIN)</option>
+              <option id="GOA/">GoaCoin (GOA)</option>
+              <option id="GBX/">GoByte (GBX)</option>
+              <option id="GOSS/">Gossip Coin (GOSS)</option>
+              <option id="GRPH/">Graphcoin (GRPH)</option>
+              <option id="GDNC/">Guardian Coin (GDNC)</option>
+              <option id="H2O/">H2O (H2O)</option>
+              <option id="HC/">Harvest Coin (HC)</option>
+              <option id="HARC/">HashRentalCoin (HARC)</option>
+              <option id="HLDC/">HeldCoin (HLDC)</option>
+              <option id="HER/">Hera Coin (HER)</option>
+              <option id="HERB/">HERB (HERB)</option>
+              <option id="HXX/">HexxCoin (HXX)</option>
+              <option id="HTK/">HiddenTalk (HTK)</option>
+              <option id="HTRC/">High Temperature Coin (HTRC)</option>
+              <option id="HLD/">HIGHLAND (HLD)</option>
+              <option id="IC/">Ignition Coin (IC)</option>
+              <option id="IFX/">Infinex (IFX)</option>
+              <option id="IKT/">Innoket (IKT)</option>
+              <option id="INN/">Innova (INN)</option>
+              <option id="INSN/">INSaNe (INSN)</option>
+              <option id="IMC/">Intermodal Coin (IMC)</option>
+              <option id="ITZ/">Interzone (ITZ)</option>
+              <option id="ION/">ION (ION)</option>
+              <option id="IPS/">IPSUM (IPS)</option>
+              <option id="JIYO/">JIYO (JIYO)</option>
+              <option id="JLG/">Jolt Gas (JLG)</option>
+              <option id="KLKS/">Kalkulus (KLKS)</option>
+              <option id="KETAN/">Ketan (KETAN)</option>
+              <option id="KEC/">KEYCO (KEC)</option>
+              <option id="KGX/">KINGSTON (KGX)</option>
+              <option id="KORE/">Kore (KORE)</option>
+              <option id="KRAIT/">KRAIT (KRAIT)</option>
+              <option id="KC/">Kraken Coin (KC)</option>
+              <option id="KREDS/">Kreds (KREDS)</option>
+              <option id="KRT/">Kreita (KRT)</option>
+              <option id="VGS/">Las Vegas Coin (VGS)</option>
+              <option id="LGA/">League Coin (LGA)</option>
+              <option id="LPC/">LightPayCoin (LPC)</option>
+              <option id="LILI/">LILI Coin (LILI)</option>
+              <option id="LINC/">LINC (LINC)</option>
+              <option id="LNP/">LINUX PAY (LNP)</option>
+              <option id="LTX/">LITEX (LTX)</option>
+              <option id="LIZ/">LIZUS (LIZ)</option>
+              <option id="LOBS/">Lobstex (LOBS)</option>
+              <option id="LSN/">Lucin (LSN)</option>
+              <option id="LUCKY/">LuckyBit (LUCKY)</option>
+              <option id="LEN/">Lumen (LEN)</option>
+              <option id="LUNEX/">LUNEX (LUNEX)</option>
+              <option id="LUQ/">LUNIQUE (LUQ)</option>
+              <option id="LUX/">LUXCoin (LUX)</option>
+              <option id="MAC/">Machinecoin (MAC)</option>
+              <option id="MDC/">MADCOIN (MDC)</option>
+              <option id="MGN/">MagnaCoin (MGN)</option>
+              <option id="MAG/">Magnet (MAG)</option>
+              <option id="MTRIP/">MAKETRIP (MTRIP)</option>
+              <option id="MMB/">MamboCoin (MMB)</option>
+              <option id="MANO/">MANO (MANO)</option>
+              <option id="MARCO/">MarbleCoin (MARCO)</option>
+              <option id="MXT/">MarteX (MXT)</option>
+              <option id="MBC/">MasterBit (MBC)</option>
+              <option id="MCC/">Masternode Community Coin (MCC)</option>
+              <option id="MTNC/">Masternodecoin (MTNC)</option>
+              <option id="MEDIC/">MEDIC Coin (MEDIC)</option>
+              <option id="MEME/">Memetic (MEME)</option>
+              <option id="MRQ/">MIRQ (MRQ)</option>
+              <option id="MUE/">MonetaryUnit (MUE)</option>
+              <option id="MNB/">MoneyBag (MNB)</option>
+              <option id="MONK/">Monkey Project (MONK)</option>
+              <option id="XMCC/">Monoeci (XMCC)</option>
+              <option id="MBLC/">MontBlanc (MBLC)</option>
+              <option id="MIE/">MotileCoin (MIE)</option>
+              <option id="XMN/">Motion (XMN)</option>
+              <option id="MOUSE/">MOUSE (MOUSE)</option>
+              <option id="MTI/">MTI Coin (MTI)</option>
+              <option id="YCE/">MYCE (YCE)</option>
+              <option id="NNC/">Nanucoin (NNC)</option>
+              <option id="NEOS/">NeosCoin (NEOS)</option>
+              <option id="NERO/">NERO (NERO)</option>
+              <option id="NTRN/">Neutron (NTRN)</option>
+              <option id="NPW/">New Power Coin (NPW)</option>
+              <option id="NXTON/">NextON (NXTON)</option>
+              <option id="NIBEX/">NIBEX (NIBEX)</option>
+              <option id="NIHL/">NihiloCoin (NIHL)</option>
+              <option id="N2O/">Nitrous (N2O)</option>
+              <option id="XN/">Nodium (XN)</option>
+              <option id="NORT/">Northern (NORT)</option>
+              <option id="NOS/">NOS (NOS)</option>
+              <option id="NMS/">Numus (NMS)</option>
+              <option id="NYEX/">Nyerium (NYEX)</option>
+              <option id="NYX/">NYXCOIN (NYX)</option>
+              <option id="OASIS/">OASIS (OASIS)</option>
+              <option id="OLMP5500/">Olympic Coin (OLMP5500)</option>
+              <option id="OLMP70000/">Olympic Coin (OLMP70000)</option>
+              <option id="OLMP30000/">Olympic Coin (OLMP30000)</option>
+              <option id="OLMP12000/">Olympic Coin (OLMP12000)</option>
+              <option id="OMEGA/">OMEGA (OMEGA)</option>
+              <option id="OPCX/">OPCoinX (OPCX)</option>
+              <option id="OYS/">Oyster Platform (OYS)</option>
+              <option id="PAC/">PACcoin (PAC)</option>
+              <option id="PAR/">Parlay (PAR)</option>
+              <option id="PAXEX/">PAXEX (PAXEX)</option>
+              <option id="PDX/">PayDay Coin (PDX)</option>
+              <option id="PTN/">Pentanode (PTN)</option>
+              <option id="PNX/">Phantomx (PNX)</option>
+              <option id="PBS/">PHOBOS (PBS)</option>
+              <option id="PHR/">PHORE (PHR)</option>
+              <option id="PIVX/">PIVX (PIVX)</option>
+              <option id="PZDC/">PIZDEC (PZDC)</option>
+              <option id="PPX/">PlatoPay (PPX)</option>
+              <option id="POLIS/">Polis (POLIS)</option>
+              <option id="PRTX/">PRINTEX (PRTX)</option>
+              <option id="PHC/">ProfitHuntersCoin (PHC)</option>
+              <option id="PROTON/">ProtonCoin (PROTON)</option>
+              <option id="PRUFUS/">Prufus (PRUFUS)</option>
+              <option id="PURA/">PURA (PURA)</option>
+              <option id="PURE/">Pure (PURE)</option>
+              <option id="PUSHI/">PUSHI Coin (PUSHI)</option>
+              <option id="PYRO/">Pyro (PYRO)</option>
+              <option id="QBIC/">QBIC (QBIC)</option>
+              <option id="RACE/">RaceCoin (RACE)</option>
+              <option id="RADIUS/">RADIUS (RADIUS)</option>
+              <option id="RAGNA/">Ragnarok (RAGNA)</option>
+              <option id="RCO/">Rampant (RCO)</option>
+              <option id="RAP/">RAPTURE (RAP)</option>
+              <option id="RTL/">REAL TIME (RTL)</option>
+              <option id="REL/">RELIANCE (REL)</option>
+              <option id="RNSH/">Renish (RNSH)</option>
+              <option id="RNS/">RENOS (RNS)</option>
+              <option id="XRH/">Rhenium (XRH)</option>
+              <option id="ROE/">Rover Coin (ROE)</option>
+              <option id="RUPX/">Rupaya (RUPX)</option>
+              <option id="SAGA/">SagaCoin (SAGA)</option>
+              <option id="SNCZ/">Sanchezium (SNCZ)</option>
+              <option id="SAROS/">SAROS (SAROS)</option>
+              <option id="SATC/">Satoshicoin (SATC)</option>
+              <option id="SCORE/">SCORE (SCORE)</option>
+              <option id="SCRIV/">SCRIV (SCRIV)</option>
+              <option id="SEKO/">Seko (SEKO)</option>
+              <option id="JEW/">Shekel (JEW)</option>
+              <option id="SIB/">SIBCoin (SIB)</option>
+              <option id="SPLB/">SimpleBank (SPLB)</option>
+              <option id="SLASH/">Slash (SLASH)</option>
+              <option id="SQR/">Smart Quorum (SQR)</option>
+              <option id="SMART/">SmartCash (SMART)</option>
+              <option id="SMRT/">SmartSpace (SMRT)</option>
+              <option id="SEND/">Social Send (SEND)</option>
+              <option id="XLR/">Solaris (XLR)</option>
+              <option id="XLRC/">Solarium Coin (XLRC)</option>
+              <option id="SPK/">SPARKS (SPK)</option>
+              <option id="SPO/">SPEDO (SPO)</option>
+              <option id="STAKE/">Stake (STAKE)</option>
+              <option id="XSN/">StakeNet (XSN)</option>
+              <option id="SNC/">Stannum Coin (SNC)</option>
+              <option id="SPD/">Stipend (SPD)</option>
+              <option id="STONE/">StoneCoin (STONE)</option>
+              <option id="STAK/">STRAKS (STAK)</option>
+              <option id="SUB1X/">SUB1X (SUB1X)</option>
+              <option id="SUCR/">Sucre (SUCR)</option>
+              <option id="SLC/">SuperLumic Coin (SLC)</option>
+              <option id="SP/">Supro (SP)</option>
+              <option id="SWAP/">SwapCash (SWAP)</option>
+              <option id="SYS/">SysCoin (SYS)</option>
+              <option id="TECAX/">Tec-AX (TECAX)</option>
+              <option id="TRC/">Terracoin (TRC)</option>
+              <option id="TFC/">The Freedom Coin (TFC)</option>
+              <option id="TIMEC/">TIMECoin (TIMEC)</option>
+              <option id="TOBA/">TOBA (TOBA)</option>
+              <option id="TOK/">TokugawaCoin (TOK)</option>
+              <option id="TX/">TransferCoin (TX)</option>
+              <option id="TRP/">TravelPay (TRP)</option>
+              <option id="TRTT/">TRITTIUM (TRTT)</option>
+              <option id="TUN/">TUNE (TUN)</option>
+              <option id="ULT/">ULTIMA (ULT)</option>
+              <option id="ULTRA/">Ultranatum (ULTRA)</option>
+              <option id="UCOM/">United Crypto Community (UCOM)</option>
+              <option id="UTUM/">Utum (UTUM)</option>
+              <option id="VTAR/">Vantaur (VTAR)</option>
+              <option id="VRE/">Versus (VRE)</option>
+              <option id="VET/">Vetani (VET)</option>
+              <option id="VRT/">Virtus (VRT)</option>
+              <option id="VIVO/">VIVO (VIVO)</option>
+              <option id="VIZZ/">VIZZOTOP (VIZZ)</option>
+              <option id="VSX/">Vsync (VSX)</option>
+              <option id="VYI/">VYIGRAT (VYI)</option>
+              <option id="WANT/">WantCore (WANT)</option>
+              <option id="WILO/">Wilo (WILO)</option>
+              <option id="WINO/">Wino (WINO)</option>
+              <option id="WORX/">Worx (WORX)</option>
+              <option id="XDO/">Xando (XDO)</option>
+              <option id="XANO/">XANO (XANO)</option>
+              <option id="XAR/">XaruCoin (XAR)</option>
+              <option id="XEN/">XEON (XEN)</option>
+              <option id="XNT/">Ximant (XNT)</option>
+              <option id="XSTK/">XStake (XSTK)</option>
+              <option id="XUEZ/">XUEZ (XUEZ)</option>
+              <option id="XMX/">Xuma (XMX)</option>
+              <option id="YIC/">YICOIN (YIC)</option>
+              <option id="YOBA/">YOBA Coin (YOBA)</option>
+              <option id="ZACA/">ZacaCoin (ZACA)</option>
+              <option id="ZLS/">Zalias (ZLS)</option>
+              <option id="XZC/">Zcoin (XZC)</option>
+              <option id="ZCR/">ZCore (ZCR)</option>
+              <option id="NZL/">Zealium Coin (NZL)</option>
+              <option id="ZND/">Zenad (ZND)</option>
+              <option id="ZEST/">Zest (ZEST)</option>
+              <option id="XZX/">ZIXX (XZX)</option>
+              <option id="ZMG/">Zmining (ZMG)</option>
+              <option id="ZOI/">ZOIN (ZOI)</option>
+              <option id="ZULA/">ZULA (ZULA)</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="form-group co_currency" style="float: right;">
+            <label for="currency1">Select base currency:</label>
+            <select class="form-control" id="currency1">
+              <option id="usd">US dollar (USD)</option>
+              <option id="btc">Bitcoin (BTC)</option>
+              <option id="aud">Australian dollar (AUD)</option>
+              <option id="bgn">Bulgarian lev (BGN)</option>
+              <option id="brl">Brazilian real (BRL)</option>
+              <option id="cad">Canadian dollar (CAD)</option>
+              <option id="chf">Swiss franc (CHF)</option>
+              <option id="cny">Chinese yuan renminbi (CNY)</option>
+              <option id="czk">Czech koruna (CZK)</option>
+              <option id="dkk">Danish krone (DKK)</option>
+              <option id="eur">Euro (EUR)</option>
+              <option id="gbp">Pound sterling (GBP)</option>
+              <option id="hkd">Hong Kong dollar (HKD)</option>
+              <option id="hrk">Croatian kuna (HRK)</option>
+              <option id="huf">Hungarian forint (HUF)</option>
+              <option id="idr">Indonesian rupiah (IDR)</option>
+              <option id="ils">Israeli shekel (ILS)</option>
+              <option id="inr">Indian rupee (INR)</option>
+              <option id="jpy">Japanese yen (JPY)</option>
+              <option id="krw">South Korean won (KRW)</option>
+              <option id="mxn">Mexican peso (MXN)</option>
+              <option id="myr">Malaysian ringgit (MYR)</option>
+              <option id="nok">Norwegian krone (NOK)</option>
+              <option id="nzd">New Zealand dollar (NZD)</option>
+              <option id="php">Philippine piso (PHP)</option>
+              <option id="pln">Polish zloty (PLN)</option>
+              <option id="ron">Romanian leu (RON)</option>
+              <option id="rub">Russian rouble (RUB)</option>
+              <option id="sek">Swedish krona (SEK)</option>
+              <option id="sgd">Singapore dollar (SGD)</option>
+              <option id="thb">Thai baht (THB)</option>
+              <option id="try">Turkish lira (TRY)</option>
+              <option id="zar">South African rand (ZAR)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Row -->
+      <div class="divider"></div>
+      <div class="row" style="padding-top: 3%;">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" style="border-right: 1px solid #2121217a;">
+          <h2>Links</h2>
+          <div class="bs-component">
+            <p><a href="https://bitcointalk.org/index.php?topic=4159695.0" target="_blank">Announcement</a><br>
+              <a href="https://github.com/AceDCore" target="_blank">Github</a><br>
+              <a href="http://www.acedcoin.com/" target="_blank">Website</a><br><br>
+              <a href="https://t.me/AceD_Coin" target="_blank">Telegram</a><br>
+              <a href="https://discord.gg/yMTRTsj" target="_blank">Discord</a><br>
+              <a href="https://twitter.com/AcedCoin" target="_blank">Twitter</a><br><br>
+              <a href="http://explorer.acedcoin.com/" target="_blank">Explorer</a><br><br>
+              Buy:<br>
+              <a href="https://www.coinexchange.io/market/AceD/BTC" target="_blank">Coinexchange</a></p>
+            <br><br>
+            <p><a href="https://betweenblocks.org/" target="_blank" title="BetweenBlocks.org - Join the masternode discussion"><strong>BetweenBlocks.org</strong><br>Join the masternode discussion</a></p><br>
+            <p><a href="https://masternode.buzz/" target="_blank" title="Masternode.buzz - The latest Masternode news, analysis &amp; in-depth interviews."><strong>masternode.buzz</strong><br>The latest Masternode news, analysis &amp; in-depth interviews</a></p><br>
+            <p><a href="https://cryptocompare.com/" target="_blank" title="CryptoCompare.com -  Live cryptocurrency prices, trades, volumes, forums, wallets, mining equipment and reviews">CryptoCompare.com - Live<br>cryptocurrency prices, trades<br>volumes, forums and reviews</a></p>
+            <br>
+            <p><a href="/">Back to homepage</a></p>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="panel panel-default card-view">
+                <div class="panel-heading" style="background-color: #804d00;">
+                  <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Daily income</h6>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper">
+                  <div class="panel-body row pt-10 pb-15">
+                    <div class="co_panel">
+                      <p>$5.8020</p>
+                      <p>0.00093996 BTC</p>
+                      <p>14.1093 ACED</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="panel panel-default card-view">
+                <div class="panel-heading" style="background-color: #003300;">
+                  <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Weekly income</h6>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper">
+                  <div class="panel-body row pt-10 pb-15">
+                    <div class="co_panel">
+                      <p>$40.6138</p>
+                      <p>0.00657973 BTC</p>
+                      <p>98.7651 ACED</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="panel panel-default card-view">
+                <div class="panel-heading" style="background-color: #330033;">
+                  <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Monthly income</h6>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper">
+                  <div class="panel-body row pt-10 pb-15">
+                    <div class="co_panel">
+                      <p>$174.0591</p>
+                      <p>0.02819885 BTC</p>
+                      <p>423.2790 ACED</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="panel panel-default card-view">
+                <div class="panel-heading" style="background-color: #670000;">
+                  <div class="pull-left">
+                    <h6 class="panel-title txt-dark">Yearly income</h6>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper">
+                  <div class="panel-body row pt-10 pb-15">
+                    <div class="co_panel">
+                      <p>$2,117.7190</p>
+                      <p>0.34308597 BTC</p>
+                      <p>5,149.8945 ACED</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Row -->
+      <!--table-->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default card-view panel-refresh">
+            <div class="refresh-container">
+              <div class="preloader">
+                <div class="circles-1">
+                  <div class="circles-1-center"></div>
+                  <div class="circles-1"></div>
+                  <div class="circles-1"></div>
+                  <div class="circles-1"></div>
+                  <div class="circles-1"></div>
+                  <div class="circles-1"></div>
+                  <div class="circles-1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-heading">
+              <div class="pull-left">
+                <h6 class="panel-title txt-dark">Stats</h6>
+              </div>
+              <div class="pull-right float-right">
+                <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a>
+                <a href="#" class="pull-left inline-block full-screen mr-15"> <i class="mdi mdi-fullscreen"></i> </a></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-wrapper collapse in">
+              <div class="panel-body pt-0">
+                <div class="datatable-responsive table-responsive">
+                  <table id="compact" class="table compact table-striped table-bordered nowrap">
+                    <thead>
+                    <tr>
+                      <th></th>
+                      <th>Coin/Detail</th>
+                      <th>Price</th>
+                      <th>Change</th>
+                      <th>Volume</th>
+                      <th>Marketcap</th>
+                      <th>ROI</th>
+                      <th>Nodes</th>
+                      <th>#Required</th>
+                      <th>Mn worth</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td><div class="coinaced"></div></td>
+                      <td><a href="#">AceD (ACED)</a></td>
+                      <td>$0.4398	</td>
+                      <td>-6.73 %</td>
+                      <td>$13,393	</td>
+                      <td>$865,342</td>
+                      <td>508.21%	</td>
+                      <td>786</td>
+                      <td>1,000</td>
+                      <td>$440</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinbtc"></div></td>
+                      <td><a href="#">Bitcoin (BTC)</a></td>
+                      <td>$6,176.1845</td>
+                      <td>1.60%</td>
+                      <td>$108,027,742.28</td>
+                      <td>$105,768,513,036</td>
+                      <td>7.00%</td>
+                      <td>4,676	</td>
+                      <td>1,000</td>
+                      <td>$226,757</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coindash"></div></td>
+                      <td><a href="#">Dash (DASH)</a></td>
+                      <td>$226.7570</td>
+                      <td>-2.84%</td>
+                      <td>$160,947,000</td>
+                      <td>$1,849,612,791</td>
+                      <td>7.00%</td>
+                      <td>4,676	</td>
+                      <td>1,000</td>
+                      <td>$226,757</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinsmart"></div></td>
+                      <td>  <a href="#">SmartCash (SMART)</a></td>
+                      <td>$0.0704	</td>
+                      <td>3.09 %</td>
+                      <td>$2,027,460</td>
+                      <td>$74,163,810</td>
+                      <td>58.05%	</td>
+                      <td>12,837	</td>
+                      <td>10,000</td>
+                      <td>$704</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinxzc"></div></td>
+                      <td> <a href="#">Zcoin (XZC)</a></td>
+                      <td>$14.4901</td>
+                      <td>-8.68 %</td>
+                      <td>$1,263,360</td>
+                      <td>$73,318,582</td>
+                      <td>29.05%	</td>
+                      <td>3,185	</td>
+                      <td>1,000	</td>
+                      <td>$14,490</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinpivx"></div></td>
+                      <td><a href="#">PIVX (PIVX)</a></td>
+                      <td>$1.9391	</td>
+                      <td>3.33 %	</td>
+                      <td>$908,898	</td>
+                      <td>$109,732,167	</td>
+                      <td>6.55%	</td>
+                      <td>1,971	</td>
+                      <td>10,000	</td>
+                      <td>$19,391</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinsys"></div></td>
+                      <td><a href="#">  SysCoin (SYS)</a></td>
+                      <td>$0.1725	</td>
+                      <td>-6.75 %	</td>
+                      <td>$660,170</td>
+                      <td>$92,464,655	</td>
+                      <td>11.82%	</td>
+                      <td>1,098	</td>
+                      <td>100,000</td>
+                      <td>$17,254</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinphr"></div></td>
+                      <td><a href="#">  PHORE (PHR)</a></td>
+                      <td>$1.2247</td>
+                      <td>-1.32 %	</td>
+                      <td>$583,460	</td>
+                      <td>$16,673,193</td>
+                      <td>38.10%	</td>
+                      <td>571</td>
+                      <td>10,000</td>
+                      <td>$12,247</td>
+                    </tr>
+                    <tr>
+                      <td><div class="coinxsn"></div></td>
+                      <td> <a href="#">StakeNet (XSN)</a> </td>
+                      <td>$0.5145	</td>
+                      <td>-5.69 %	</td>
+                      <td>$341,242	</td>
+                      <td>$35,246,606	</td>
+                      <td>38.16%</td>
+                      <td>1,419	</td>
+                      <td>15,000	</td>
+                      <td>$7,717</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                      <th></th>
+                      <th>Coin/Detail</th>
+                      <th>Price</th>
+                      <th>Change</th>
+                      <th>Volume</th>
+                      <th>Marketcap</th>
+                      <th>ROI</th>
+                      <th>Nodes</th>
+                      <th>#Required</th>
+                      <th>Mn worth</th>
+                    </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/table-->
+      <!--Row-->
+      <!--Row-->
+      <div class="clearfix"></div>
+      <!-- Row --> 
+      <!-- Footer -->
+      <footer class="footer container-fluid pt-10 pb-10  pl-30 pr-30">
+        <div class="row">
+          <div class="col-sm-12 ">
+            <div class="pull-left text-dark pt-5 small">Copyright @ 2018  Aced Coin. All Rights Reserved</div>
+            <div class="pull-right">Created with by <img src="../plugins/assets/img/heartbeat.svg" alt="srgit" class="heart"> <a href="https://www.acedcoin.com/" target="_blank">ACED</a></div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </footer>
+      <!-- /Footer --> 
+    </div>
+  </div>
+  <!-- /Main Content --> 
+</div>
+<!-- /#wrapper --> 
+<!-- JavaScript --> 
+<!-- jQuery --> 
+
+<script src="../plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript --> 
+<script src="../plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Data table JavaScript -->
+<script src="../plugins/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../plugins/vendors/bower_components/data-table/js/data-table-custom.js"></script>
+<!-- Slimscroll JavaScript --> 
+<script src="../plugins/assets/js/jquery.slimscroll.js"></script>
+<!-- Owl JavaScript --> 
+<script src="../plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- Progressbar Animation JavaScript --> 
+<script src="../plugins/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../plugins/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script>
+<!-- Fancy Dropdown JS --> 
+<script src="../plugins/assets/js/dropdown-bootstrap-extended.js"></script>
+<!-- FlotChart JavaScript --> 
+<script src="../plugins/vendors/bower_components/flot/jquery.flot.js"></script>
+<script src="../plugins/assets/js/flot-data-dashboard.js"></script>
+<script src="../plugins/vendors/bower_components/skycons/skycons.js"></script>
+<!-- Sparkline JavaScript --> 
+<script src="../plugins/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- Switchery JavaScript --> 
+<script src="../plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script>
+<!-- EChartJS JavaScript --> 
+<script src="../plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
+<!-- Select2 JavaScript --> 
+<script src="../plugins/vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- Toast JavaScript --> 
+<script src="../plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+<!-- Webticker Javascript --> 
+<script src="../plugins/vendors/bower_components/web-ticker/jquery.webticker.min.js"></script>
+<!-- Amcharts charts JavaScript --> 
+<script src="../plugins/vendors/bower_components/amcharts/amcharts.js"></script>
+<script src="../plugins/vendors/bower_components/amcharts/serial.js"></script>
+<script src="../plugins/vendors/bower_components/amcharts/amstock.js"></script>
+<!-- Piety JavaScript --> 
+<script src="../plugins/vendors/bower_components/peity/jquery.peity.min.js"></script>
+<script src="../plugins/assets/js/peity-data.js"></script>
+<!-- Init JavaScript --> 
+<script src="../plugins/assets/js/init.js"></script>
+<script src="../plugins/assets/js/random-class.js"></script>
+<!-- Form Advance Init JavaScript --> 
+<script src="../plugins/assets/js/form-advance-data.js"></script>
+<script src="../plugins/assets/js/stock-chart.init.js"></script>
+<script src="../plugins/assets/js/bitcoin-init.js"></script>
+<script src="../plugins/assets/js/dashboard-dark.init.js"></script>
+</body>
+</html>

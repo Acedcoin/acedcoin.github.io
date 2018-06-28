@@ -16,19 +16,37 @@ table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after
 .co_currency{
     margin-top: 45px;
 }
+#changecoin{
+    background: #1b1a1a;
+    color: #fff;
+    border-radius: 7px;
+}
+.co_change{
+    margin-top: 45px;
+}
 .table-striped > tbody > tr:nth-of-type(odd) {
     background-color: #080808;
 }
 .dark-template .table > tbody > tr > td {
     color: #888;
 }
-.dark-template table a {
+.dark-template table a,
+.bs-component a{
     color: #2a9fd6 !important;
 }
 table tr > td:nth-child(7){
     color: #2a9fd6 !important;
 }
-
+.co_panel{
+    padding-left: 15px;
+}
+.co_panel p{
+    color:grey;
+}
+.co_panel p:last-child{
+    color: #77b300;
+    font-weight: bold;
+}
 
 
 

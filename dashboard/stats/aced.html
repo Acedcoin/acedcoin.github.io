@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard-Aced Coin</title>
+<title>Dashboard-Stats-Aced</title>
 <meta name="description" content="" />
 <meta name="keywords" content="admin, admin dashboard, admin template" />
 <meta name="author" content="SRGIT"/>
@@ -15,7 +15,8 @@
 <!-- select2 CSS -->
 <link href="../plugins/vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
 <link href="../plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
-
+<!-- Vector CSS -->
+<link href="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 <!-- Custom CSS -->
 <link href="../plugins/assets/css/default.css" rel="stylesheet" type="text/css">
 <link href="../plugins/assets/css/style.css" rel="stylesheet" type="text/css">
@@ -1115,82 +1116,103 @@
           </div>
         </div>
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-          <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="panel panel-default card-view">
-                <div class="panel-heading" style="background-color: #804d00;">
-                  <div class="pull-left">
-                    <h6 class="panel-title txt-dark">Daily income</h6>
+          <div class="row co_tab">
+            <ul class="nav nav-tabs">
+              <li class="active"> <a  href="#acedstats" data-toggle="tab">Aced stats</a> </li>
+              <li><a href="#acedmap" data-toggle="tab">Aced map</a></li>
+            </ul>
+
+            <div class="tab-content" style="width: 100%;padding-top: 1%;">
+              <div class="tab-pane active" id="acedstats">
+                <div class="" style="">
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view">
+                      <div class="panel-heading" style="background-color: #804d00;">
+                        <div class="pull-left">
+                          <h6 class="panel-title txt-dark">Daily income</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="panel-wrapper">
+                        <div class="panel-body row pt-10 pb-15">
+                          <div class="co_panel">
+                            <p>$5.8020</p>
+                            <p>0.00093996 BTC</p>
+                            <p>14.1093 ACED</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="panel-wrapper">
-                  <div class="panel-body row pt-10 pb-15">
-                    <div class="co_panel">
-                      <p>$5.8020</p>
-                      <p>0.00093996 BTC</p>
-                      <p>14.1093 ACED</p>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view">
+                      <div class="panel-heading" style="background-color: #003300;">
+                        <div class="pull-left">
+                          <h6 class="panel-title txt-dark">Weekly income</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="panel-wrapper">
+                        <div class="panel-body row pt-10 pb-15">
+                          <div class="co_panel">
+                            <p>$40.6138</p>
+                            <p>0.00657973 BTC</p>
+                            <p>98.7651 ACED</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view">
+                      <div class="panel-heading" style="background-color: #330033;">
+                        <div class="pull-left">
+                          <h6 class="panel-title txt-dark">Monthly income</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="panel-wrapper">
+                        <div class="panel-body row pt-10 pb-15">
+                          <div class="co_panel">
+                            <p>$174.0591</p>
+                            <p>0.02819885 BTC</p>
+                            <p>423.2790 ACED</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view">
+                      <div class="panel-heading" style="background-color: #670000;">
+                        <div class="pull-left">
+                          <h6 class="panel-title txt-dark">Yearly income</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="panel-wrapper">
+                        <div class="panel-body row pt-10 pb-15">
+                          <div class="co_panel">
+                            <p>$2,117.7190</p>
+                            <p>0.34308597 BTC</p>
+                            <p>5,149.8945 ACED</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="panel panel-default card-view">
-                <div class="panel-heading" style="background-color: #003300;">
-                  <div class="pull-left">
-                    <h6 class="panel-title txt-dark">Weekly income</h6>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="panel-wrapper">
-                  <div class="panel-body row pt-10 pb-15">
-                    <div class="co_panel">
-                      <p>$40.6138</p>
-                      <p>0.00657973 BTC</p>
-                      <p>98.7651 ACED</p>
+              <div class="tab-pane panel panel-default card-view" id="acedmap">
+                  <div class="panel-wrapper collapse in">
+                    <div class="panel-body pt-0">
+                      <div class="table-wrap">
+                        <div id="world-map-markers" class="h-450"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
               </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="panel panel-default card-view">
-                <div class="panel-heading" style="background-color: #330033;">
-                  <div class="pull-left">
-                    <h6 class="panel-title txt-dark">Monthly income</h6>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="panel-wrapper">
-                  <div class="panel-body row pt-10 pb-15">
-                    <div class="co_panel">
-                      <p>$174.0591</p>
-                      <p>0.02819885 BTC</p>
-                      <p>423.2790 ACED</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-              <div class="panel panel-default card-view">
-                <div class="panel-heading" style="background-color: #670000;">
-                  <div class="pull-left">
-                    <h6 class="panel-title txt-dark">Yearly income</h6>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="panel-wrapper">
-                  <div class="panel-body row pt-10 pb-15">
-                    <div class="co_panel">
-                      <p>$2,117.7190</p>
-                      <p>0.34308597 BTC</p>
-                      <p>5,149.8945 ACED</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -1398,6 +1420,14 @@
 <script src="../plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript --> 
 <script src="../plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Vector map JavaScript -->
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-in-mill.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-us-aea-en.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-uk-mill-en.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-au-mill.js"></script>
+<script src="../plugins/vendors/bower_components/vectormap/jvectormap.custom.js"></script>
 <!-- Data table JavaScript -->
 <script src="../plugins/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/vendors/bower_components/data-table/js/data-table-custom.js"></script>

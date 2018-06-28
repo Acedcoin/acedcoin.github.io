@@ -47,7 +47,15 @@ table tr > td:nth-child(7){
     color: #77b300;
     font-weight: bold;
 }
-
+.nav-tabs > li.active > a, .nav-tabs > li.open > a {
+    background: #2a9fd6 !important;
+    color: #ffffff !important;
+    border-bottom: 2px solid #804d00 !important;
+}
+.nav-tabs > li > a:active, .nav-tabs > li > a:focus, .nav-tabs > li > a:hover {
+    background: #1b1b1b;
+    color: #ffffff;
+}
 
 
 

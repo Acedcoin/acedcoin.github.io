@@ -63,7 +63,9 @@ table tr > td:nth-child(7){
 .jvectormap-container svg g{
     transform: scale(0.997778, 0.997778) !important;
 }
-
+.co_chart h5{
+    font-size: 13px;
+}
 
 
 

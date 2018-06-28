@@ -17,6 +17,8 @@
 <link href="../plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
 <!-- Vector CSS -->
 <link href="../plugins/vendors/bower_components/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+<!--This page css - Morris CSS -->
+<link href="../plugins/vendors/bower_components/morris-js/morris.css" rel="stylesheet">
 <!-- Custom CSS -->
 <link href="../plugins/assets/css/default.css" rel="stylesheet" type="text/css">
 <link href="../plugins/assets/css/style.css" rel="stylesheet" type="text/css">
@@ -1202,6 +1204,195 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-12"><img src="../plugins/assets/img/acedbanner.jpg" style="width: 100%;"></div>
+                <!--table-->
+                  <div class="col-xs-12 pa-20">
+                    <div class="panel panel-default card-view">
+                      <div class="panel-heading">
+                        <div class="pull-left">
+                          <h6 class="panel-title txt-dark">ACED PRICE STATS</h6>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="panel-wrapper collapse in">
+                        <div class="panel-body">
+                          <div class="table-responsive">
+                            <table class="table mb-0">
+                              <thead>
+                              <tr>
+                                <th>Price</th>
+                                <th>Volume</th>
+                                <th>Marketcap</th>
+                                <th>Change</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td>$0.411216</td>
+                                <td>$13,652.16</td>
+                                <td>$809,488.00</span></td>
+                                <td>-20.50%</td>
+                              </tr>
+                              <tr>
+                                <td>0.00006662 BTC</td>
+                                <td>2.21 BTC</td>
+                                <td>131.00 BTC</td>
+                                <td></td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!--/table-->
+                <!--table-->
+                <div class="col-xs-12 pa-20">
+                  <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                      <div class="pull-left">
+                        <h6 class="panel-title txt-dark">ACED MASTERNODE STATS</h6>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                      <div class="panel-body">
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <thead>
+                            <tr>
+                              <th>based on actual data over the past 24 hours</th>
+                              <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>ROI (annual):</td>
+                              <td>514.99% / 71 days</td>
+                            </tr>
+                            <tr>
+                              <td>Paid rewards for masternodes:</td>
+                              <td>11,104.0044 ACED</td>
+                            </tr>
+                            <tr>
+                              <td>AVG masternode reward frequency:</td>
+                              <td>1d 3h 12m 58s</td>
+                            </tr>
+                            <tr>
+                              <td>Active masternodes:</td>
+                              <td>787</td>
+                            </tr>
+                            <tr>
+                              <td>Supply:</td>
+                              <td>1,968,522 ACED</td>
+                            </tr>
+                            <tr>
+                              <td>Coins locked:</td>
+                              <td>787,000 ACED</td>
+                            </tr>
+                            <tr>
+                              <td>Required coins for masternode:</td>
+                              <td>1,000 ACED</td>
+                            </tr>
+                            <tr>
+                              <td>Masternode worth:</td>
+                              <td>$411.22 / 0.06662 BTC</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/table-->
+                <!--moris chart -->
+                <div class="col-xs-12">
+                  <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                      <div class="pull-left">
+                        <h6 class="panel-title txt-dark">GRAPH</h6>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in co_chart">
+                      <div class="panel-body">
+                        <ul class="list-inline text-right">
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-inverse"></i>Masternodes</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-info"></i>Roi[%]</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-success"></i>Price[USD]</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-danger"></i>Price[BTC]</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-primary"></i>Daily[ACED]</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5 text-warning"></i>Monthly[ACED]</h5>
+                          </li>
+                          <li>
+                            <h5><i class="fa fa-circle mr-5" style="color: #804d00; "></i>Yearly[ACED]</h5>
+                          </li>
+                        </ul>
+                        <div id="morris-area-chart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--moris chart -->
+                <!--table-->
+                <div class="col-xs-12 pa-20">
+                  <div class="panel panel-default card-view">
+                    <div class="panel-heading">
+                      <div class="pull-left">
+                        <h6 class="panel-title txt-dark">ACED BLOCKCHAIN STATS</h6>
+                        <p></p>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="panel-wrapper collapse in">
+                      <div class="panel-body">
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <thead>
+                            <tr>
+                              <th>based on actual data over the past 24 hours</th>
+                              <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                              <td>Blocks:</td>
+                              <td>694</td>
+                            </tr>
+                            <tr>
+                              <td>AVG block time:</td>
+                              <td>2m 4s</td>
+                            </tr>
+                            <tr>
+                              <td>Genesis block:</td>
+                              <td>37d 16h 22m 33s ago / May 21 2018 06:49:12</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/table-->
+                <p>Last price and masternodes count update: 1m 45s ago.</p>
+                <p> Last ACED block 25,812 generated: 2m 2s ago.</p>
+                <p>ROI is calculated based on actual rewards for each block for the last 24 hours.</p>
+                <P>MNO is a masternode coin monitoring and stats service. MNO does not research or recommend any coin. Do your own research and invest at your own risk.</P>
+                <p>ROI changes often and is not the most important factor. Please consider Dev Team - Community - PURPOSE/Platform - Liquidity - Wallet when making masternode purchases.</p>
               </div>
               <div class="tab-pane" id="acedmap">
                 <div class="panel panel-default card-view">
@@ -1220,183 +1411,6 @@
         </div>
       </div>
       <!-- /Row -->
-      <!--table-->
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-default card-view panel-refresh">
-            <div class="refresh-container">
-              <div class="preloader">
-                <div class="circles-1">
-                  <div class="circles-1-center"></div>
-                  <div class="circles-1"></div>
-                  <div class="circles-1"></div>
-                  <div class="circles-1"></div>
-                  <div class="circles-1"></div>
-                  <div class="circles-1"></div>
-                  <div class="circles-1"></div>
-                </div>
-              </div>
-            </div>
-            <div class="panel-heading">
-              <div class="pull-left">
-                <h6 class="panel-title txt-dark">Stats</h6>
-              </div>
-              <div class="pull-right float-right">
-                <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a>
-                <a href="#" class="pull-left inline-block full-screen mr-15"> <i class="mdi mdi-fullscreen"></i> </a></div>
-              <div class="clearfix"></div>
-            </div>
-            <div class="panel-wrapper collapse in">
-              <div class="panel-body pt-0">
-                <div class="datatable-responsive table-responsive">
-                  <table id="compact" class="table compact table-striped table-bordered nowrap">
-                    <thead>
-                    <tr>
-                      <th></th>
-                      <th>Coin/Detail</th>
-                      <th>Price</th>
-                      <th>Change</th>
-                      <th>Volume</th>
-                      <th>Marketcap</th>
-                      <th>ROI</th>
-                      <th>Nodes</th>
-                      <th>#Required</th>
-                      <th>Mn worth</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td><div class="coinaced"></div></td>
-                      <td><a href="#">AceD (ACED)</a></td>
-                      <td>$0.4398	</td>
-                      <td>-6.73 %</td>
-                      <td>$13,393	</td>
-                      <td>$865,342</td>
-                      <td>508.21%	</td>
-                      <td>786</td>
-                      <td>1,000</td>
-                      <td>$440</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinbtc"></div></td>
-                      <td><a href="#">Bitcoin (BTC)</a></td>
-                      <td>$6,176.1845</td>
-                      <td>1.60%</td>
-                      <td>$108,027,742.28</td>
-                      <td>$105,768,513,036</td>
-                      <td>7.00%</td>
-                      <td>4,676	</td>
-                      <td>1,000</td>
-                      <td>$226,757</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coindash"></div></td>
-                      <td><a href="#">Dash (DASH)</a></td>
-                      <td>$226.7570</td>
-                      <td>-2.84%</td>
-                      <td>$160,947,000</td>
-                      <td>$1,849,612,791</td>
-                      <td>7.00%</td>
-                      <td>4,676	</td>
-                      <td>1,000</td>
-                      <td>$226,757</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinsmart"></div></td>
-                      <td>  <a href="#">SmartCash (SMART)</a></td>
-                      <td>$0.0704	</td>
-                      <td>3.09 %</td>
-                      <td>$2,027,460</td>
-                      <td>$74,163,810</td>
-                      <td>58.05%	</td>
-                      <td>12,837	</td>
-                      <td>10,000</td>
-                      <td>$704</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinxzc"></div></td>
-                      <td> <a href="#">Zcoin (XZC)</a></td>
-                      <td>$14.4901</td>
-                      <td>-8.68 %</td>
-                      <td>$1,263,360</td>
-                      <td>$73,318,582</td>
-                      <td>29.05%	</td>
-                      <td>3,185	</td>
-                      <td>1,000	</td>
-                      <td>$14,490</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinpivx"></div></td>
-                      <td><a href="#">PIVX (PIVX)</a></td>
-                      <td>$1.9391	</td>
-                      <td>3.33 %	</td>
-                      <td>$908,898	</td>
-                      <td>$109,732,167	</td>
-                      <td>6.55%	</td>
-                      <td>1,971	</td>
-                      <td>10,000	</td>
-                      <td>$19,391</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinsys"></div></td>
-                      <td><a href="#">  SysCoin (SYS)</a></td>
-                      <td>$0.1725	</td>
-                      <td>-6.75 %	</td>
-                      <td>$660,170</td>
-                      <td>$92,464,655	</td>
-                      <td>11.82%	</td>
-                      <td>1,098	</td>
-                      <td>100,000</td>
-                      <td>$17,254</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinphr"></div></td>
-                      <td><a href="#">  PHORE (PHR)</a></td>
-                      <td>$1.2247</td>
-                      <td>-1.32 %	</td>
-                      <td>$583,460	</td>
-                      <td>$16,673,193</td>
-                      <td>38.10%	</td>
-                      <td>571</td>
-                      <td>10,000</td>
-                      <td>$12,247</td>
-                    </tr>
-                    <tr>
-                      <td><div class="coinxsn"></div></td>
-                      <td> <a href="#">StakeNet (XSN)</a> </td>
-                      <td>$0.5145	</td>
-                      <td>-5.69 %	</td>
-                      <td>$341,242	</td>
-                      <td>$35,246,606	</td>
-                      <td>38.16%</td>
-                      <td>1,419	</td>
-                      <td>15,000	</td>
-                      <td>$7,717</td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                      <th></th>
-                      <th>Coin/Detail</th>
-                      <th>Price</th>
-                      <th>Change</th>
-                      <th>Volume</th>
-                      <th>Marketcap</th>
-                      <th>ROI</th>
-                      <th>Nodes</th>
-                      <th>#Required</th>
-                      <th>Mn worth</th>
-                    </tr>
-                    </tfoot>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/table-->
-      <!--Row-->
       <!--Row-->
       <div class="clearfix"></div>
       <!-- Row --> 
@@ -1463,6 +1477,10 @@
 <script src="../plugins/vendors/bower_components/amcharts/amcharts.js"></script>
 <script src="../plugins/vendors/bower_components/amcharts/serial.js"></script>
 <script src="../plugins/vendors/bower_components/amcharts/amstock.js"></script>
+<!--Morris JavaScript -->
+<script src="../plugins/vendors/bower_components/raphael/raphael.min.js"></script>
+<script src="../plugins/vendors/bower_components/morris-js/morris.js"></script>
+<script src="../plugins/assets/js/morris-data.js"></script>
 <!-- Piety JavaScript --> 
 <script src="../plugins/vendors/bower_components/peity/jquery.peity.min.js"></script>
 <script src="../plugins/assets/js/peity-data.js"></script>

@@ -2,6 +2,59 @@
 $(function () {
     "use strict";
 Morris.Area({
+        element: 'co_morris-area-chart',
+        data: [{
+            period: '2010',
+            masternodes: 50,
+            roi: 80,
+            priceusd: 20
+        }, {
+            period: '2011',
+            masternodes: 130,
+            roi: 100,
+            priceusd: 80
+        }, {
+            period: '2012',
+            masternodes: 80,
+            roi: 60,
+            priceusd: 70
+        }, {
+            period: '2013',
+            masternodes: 70,
+            roi: 200,
+            priceusd: 140
+        }, {
+            period: '2014',
+            masternodes: 180,
+            roi: 150,
+            priceusd: 140
+        }, {
+            period: '2015',
+            masternodes: 105,
+            roi: 100,
+            priceusd: 80
+        },
+         {
+            period: '2016',
+             masternodes: 250,
+             roi: 150,
+             priceusd: 200
+        }],
+        xkey: 'period',
+        ykeys: ['masternodes', 'roi', 'priceusd'],
+        labels: ['Master Nodes', 'Roi', 'Price[USD]'],
+        pointSize: 3,
+        fillOpacity: 0,
+        pointStrokeColors:['#55ce63', '#009efb', '#2f3d4a'],
+        behaveLikeLine: true,
+        gridLineColor: '#e0e0e0',
+        lineWidth: 3,
+        hideHover: 'auto',
+        lineColors: ['#55ce63', '#009efb', '#2f3d4a'],
+        resize: true
+        
+    });
+    Morris.Area({
         element: 'morris-area-chart',
         data: [{
             period: '2010',
@@ -34,12 +87,12 @@ Morris.Area({
             ipad: 100,
             itouch: 80
         },
-         {
-            period: '2016',
-            iphone: 250,
-            ipad: 150,
-            itouch: 200
-        }],
+            {
+                period: '2016',
+                iphone: 250,
+                ipad: 150,
+                itouch: 200
+            }],
         xkey: 'period',
         ykeys: ['iphone', 'ipad', 'itouch'],
         labels: ['iPhone', 'iPad', 'iPod Touch'],
@@ -52,7 +105,7 @@ Morris.Area({
         hideHover: 'auto',
         lineColors: ['#55ce63', '#009efb', '#2f3d4a'],
         resize: true
-        
+
     });
 
 Morris.Area({
@@ -254,6 +307,6 @@ Morris.Area({
                 behaveLikeLine: true,
                 gridLineColor: '#e0e0e0',
                 hideHover: 'auto'
-        
+
     });
  });    

@@ -66,7 +66,33 @@ table tr > td:nth-child(7){
 .co_chart h5{
     font-size: 13px;
 }
-
+.co_acedpage{
+    padding: 3% 0;
+}
+.co_acedpage h1{    color: #e89026;}
+.co_acedpage h6{
+    padding: 3px 0;
+    color: grey;
+}
+.breadcrumb > li + li::before{
+    color: #fff;
+}
+.co_faq .panel{
+    background-color: transparent;
+}
+.accordion-struct.panel-group .panel .panel-heading.activestate {
+    background: #599ce4;
+    border-bottom: 1px solid #6392e9;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.accordion-struct.panel-group .panel .panel-heading {
+    background: #191919;
+    border-bottom: 1px solid #444444;
+}
+.accordion-struct.panel-group .panel .panel-body {
+    border: 1px solid #191919;
+}
 
 
 

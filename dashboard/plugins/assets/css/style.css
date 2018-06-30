@@ -93,6 +93,12 @@ table tr > td:nth-child(7){
 .accordion-struct.panel-group .panel .panel-body {
     border: 1px solid #191919;
 }
+.carousel-inner>.item {
+    min-height: 61em;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev{
+    top: 27%;
+}
 
 
 

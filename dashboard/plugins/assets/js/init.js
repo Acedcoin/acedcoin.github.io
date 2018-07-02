@@ -366,8 +366,6 @@ $(window).on("resize", function () {
 }).resize();
 /***** Resize function end *****/
 
-
-
 /* Switchery Init*/
 var elems = Array.prototype.slice.call(document.querySelectorAll('.switch-setting-bar'));
 $('.switch-setting').each(function() {

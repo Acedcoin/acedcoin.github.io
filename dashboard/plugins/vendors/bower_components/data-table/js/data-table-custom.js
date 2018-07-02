@@ -498,10 +498,10 @@ $(document).ready(function() {
     // Styling js start
     $('#base-style').DataTable();
     $('#no-style').DataTable();
-    $('#compact').DataTable();
+    //$('#compact').DataTable();
     $('#table-style-hover').DataTable();
     // Styling js end
-
+    /*
 
     $('#simpletable').DataTable();
 
@@ -552,11 +552,11 @@ $(document).ready(function() {
             "thousands": "."
         }
     });
-	
-	
+
+
 
     var table = $('#dom-jquery').DataTable();
-     
+
     $('#dom-jquery tbody').on('click', 'tr', function () {
         var data = table.row( this ).data();
         alert( 'You clicked on '+data[0]+'\'s row' );
@@ -686,5 +686,5 @@ $(document).ready(function() {
             }
         }
     });
-
+*/
 });

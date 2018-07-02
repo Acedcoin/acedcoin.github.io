@@ -373,11 +373,11 @@ $('.switch-setting').each(function() {
 });
 /* Switchery end*/
  $(document).ready(function(){
-     $.getJSON("https://autosector.com/get_coin_data.php", function(markets) {
+     /*$.getJSON("https://autosector.com/get_coin_data.php", function(markets) {
          	 var ret=markets.result;
              var i;var idx=0;
          	 var MarketAssetCode=[],MarketAssetCode1=[],MarketAssetName=[];
-             jQuery("#compact tbody").html("");
+             //jQuery("#compact tbody").html("");
          	 for(i=0;i<ret.length;i++) {
          	 	//if(ret[i].BaseCurrencyCode=="BTC") {
                     var market_id = ret[i].MarketID;
@@ -392,7 +392,7 @@ $('.switch-setting').each(function() {
                  var html = "";
                  idx=i+1;
                  html += '<tr>';
-                 html += '<td>' + idx + '<div class="coin' + MarketAssetCode1[result[i].MarketID] + '"></div></td>';
+                 html += '<td class="sorting_1"><div class="coin' + MarketAssetCode1[result[i].MarketID] + '"></div></td>';
                  html += '<td><a href="/dashboard/stats/' + MarketAssetCode1[result[i].MarketID] + '.html">' + MarketAssetName[result[i].MarketID] + ' (' + MarketAssetCode[result[i].MarketID] + ')</a></td>';
                  html += '<td>$' + result[i].LastPrice + '</td>';
                  html += '<td>' + result[i].Change + '%</td>';
@@ -403,8 +403,13 @@ $('.switch-setting').each(function() {
                  html += '<td></td>';
                  html += '<td>$</td>';
                  html += '</tr>';
-                 jQuery("#compact tbody").append(html);
+                 //jQuery("#compact tbody").append(html);
+                 //$('#compact').DataTable();
              }
          });
-     });
+     });*/
+     $('#compact').DataTable( {
+         "ajax": 'https://autosector.com/get_coin_data.php?market_id='
+     } );
+
  });

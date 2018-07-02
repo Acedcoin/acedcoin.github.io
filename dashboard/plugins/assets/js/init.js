@@ -409,7 +409,7 @@ $('.switch-setting').each(function() {
          });
      });*/
      $('#compact').DataTable( {
-         "ajax": 'https://autosector.com/get_coin_data.php?market_id='
+         "ajax": 'https://autosector.com/get_coin_data.php?type=table'
      } );
 
  });

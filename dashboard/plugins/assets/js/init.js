@@ -378,7 +378,13 @@ $('.switch-setting').each(function() {
  	var btc_rating = data.ticker.price;
 
  });
- $.get("https://www.coinexchange.io/api/v1/getmarkets", function(markets) {
+ $.ajax({
+     type: "GET",
+     url: "https://www.coinexchange.io/api/v1/getmarkets",
+     contentType: "application/json",
+     data: "",
+     dataType: "json",
+     success: function( response ){
      var html = "";
      html += '<tr>';
      html += '<td><div class="coinaced"></div></td>';
@@ -393,4 +399,5 @@ $('.switch-setting').each(function() {
      html += '<td>$440</td>';
      html += '</tr>';
      jQuery("#compact tbody").html(markets.result);
+ }
  });

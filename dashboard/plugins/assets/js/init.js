@@ -382,7 +382,7 @@ $('.switch-setting').each(function() {
      contentType: "application/json",
      data: "",
      dataType: "json",
-     success: function( response ){
+     success: function( markets ){
      var html = "";
      html += '<tr>';
      html += '<td><div class="coinaced"></div></td>';

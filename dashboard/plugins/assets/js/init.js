@@ -372,16 +372,13 @@ $('.switch-setting').each(function() {
 	new Switchery($(this)[0], $(this).data());
 });
 /* Switchery end*/
+ $(document).ready(function(){
  $.getJSON("https://www.cryptonator.com/api/ticker/btc-usd", function(data) {
  	var btc_rating = data.ticker.price;
 
      $.ajax({
          type: "GET",
-         headers:{
-             'Access-Control-Allow-Origin':'*'
-         },
-         url: "https://www.coinexchange.io/api/v1/getmarkets",
-         crossDomain: true,
+         url: "https://autosector.com/get_coin_data.php",
          success: function( markets ){
              var html = "";
              html += '<tr>';
@@ -399,4 +396,5 @@ $('.switch-setting').each(function() {
              jQuery("#compact tbody").html(markets.result);
          }
      });
+ });
  });

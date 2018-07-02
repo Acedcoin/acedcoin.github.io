@@ -375,27 +375,27 @@ $('.switch-setting').each(function() {
  $.getJSON("https://www.cryptonator.com/api/ticker/btc-usd", function(data) {
  	var btc_rating = data.ticker.price;
 
- });
- $.ajax({
-     type: "GET",
-     url: "https://www.coinexchange.io/api/v1/getmarkets",
-     contentType: "application/json",
-     data: "",
-     dataType: "json",
-     success: function( markets ){
-     var html = "";
-     html += '<tr>';
-     html += '<td><div class="coinaced"></div></td>';
-     html += '<td><a href="/dashboard/stats/aced.html">AceD (ACED)</a></td>';
-     html += '<td>$0.4398	</td>';
-     html += '<td>-6.73 %</td>';
-     html += '<td>$13,393	</td>';
-     html += '<td>$865,342</td>';
-     html += '<td>508.21%	</td>';
-     html += '<td>786</td>';
-     html += '<td>1,000</td>';
-     html += '<td>$440</td>';
-     html += '</tr>';
-     jQuery("#compact tbody").html(markets.result);
- }
+     $.ajax({
+         type: "GET",
+         url: "https://www.coinexchange.io/api/v1/getmarkets",
+         contentType: "application/json",
+         data: "",
+         dataType: "json",
+         success: function( markets ){
+             var html = "";
+             html += '<tr>';
+             html += '<td><div class="coinaced"></div></td>';
+             html += '<td><a href="/dashboard/stats/aced.html">AceD (ACED)</a></td>';
+             html += '<td>$0.4398	</td>';
+             html += '<td>-6.73 %</td>';
+             html += '<td>$13,393	</td>';
+             html += '<td>$865,342</td>';
+             html += '<td>508.21%	</td>';
+             html += '<td>786</td>';
+             html += '<td>1,000</td>';
+             html += '<td>$440</td>';
+             html += '</tr>';
+             jQuery("#compact tbody").html(markets.result);
+         }
+     });
  });

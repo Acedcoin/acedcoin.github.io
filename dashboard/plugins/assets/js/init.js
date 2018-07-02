@@ -79,11 +79,19 @@ var $wrapper = $(".wrapper");
 var AdminUX = function(){
 	
 	/*Counter Animation*/
-	var counterAnim = $('.counter-anim');
-	if( counterAnim.length > 0 ){
-		counterAnim.counterUp({ delay: 10,
-        time: 1000});
-	}
+
+    $.getJSON("https://autosector.com/get_coin_data.php?type=etc", function(data) {
+        //alert(data.data.btc);
+        $(".top-bitcoin").html(data.data.btc);
+        $(".top-acedcoin").html(data.data.AceD);
+        $(".top-dash").html(data.data.DASH);
+        $(".top-eth").html(data.data.ETH);
+		var counterAnim = $('.counter-anim');
+		if( counterAnim.length > 0 ){
+			counterAnim.counterUp({ delay: 10,
+			time: 1000});
+		}
+    });
 	
 	/*Tooltip*/
 	if( $('[data-toggle="tooltip"]').length > 0 )
@@ -373,41 +381,6 @@ $('.switch-setting').each(function() {
 });
 /* Switchery end*/
  $(document).ready(function(){
-     /*$.getJSON("https://autosector.com/get_coin_data.php", function(markets) {
-         	 var ret=markets.result;
-             var i;var idx=0;
-         	 var MarketAssetCode=[],MarketAssetCode1=[],MarketAssetName=[];
-             //jQuery("#compact tbody").html("");
-         	 for(i=0;i<ret.length;i++) {
-         	 	//if(ret[i].BaseCurrencyCode=="BTC") {
-                    var market_id = ret[i].MarketID;
-                    MarketAssetCode[market_id]=ret[i].MarketAssetCode;
-                    MarketAssetCode1[market_id]=ret[i].MarketAssetCode.toLowerCase();
-                    MarketAssetName[market_id]=ret[i].MarketAssetName;
-                //}
-             }
-         $.getJSON("https://autosector.com/get_coin_data.php?market_id=", function(summary) {
-             var result = summary.result;
-             for(i=0;i<result.length;i++) {
-                 var html = "";
-                 idx=i+1;
-                 html += '<tr>';
-                 html += '<td class="sorting_1"><div class="coin' + MarketAssetCode1[result[i].MarketID] + '"></div></td>';
-                 html += '<td><a href="/dashboard/stats/' + MarketAssetCode1[result[i].MarketID] + '.html">' + MarketAssetName[result[i].MarketID] + ' (' + MarketAssetCode[result[i].MarketID] + ')</a></td>';
-                 html += '<td>$' + result[i].LastPrice + '</td>';
-                 html += '<td>' + result[i].Change + '%</td>';
-                 html += '<td>$' + result[i].Volume + '</td>';
-                 html += '<td>$</td>';
-                 html += '<td>%	</td>';
-                 html += '<td></td>';
-                 html += '<td></td>';
-                 html += '<td>$</td>';
-                 html += '</tr>';
-                 //jQuery("#compact tbody").append(html);
-                 //$('#compact').DataTable();
-             }
-         });
-     });*/
      //setInterval(function(){
      $('#compact').DataTable( {
          "ajax": 'https://autosector.com/get_coin_data.php?type=table'

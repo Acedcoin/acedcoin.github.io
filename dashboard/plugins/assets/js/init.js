@@ -376,7 +376,7 @@ $('.switch-setting').each(function() {
 /* Switchery end*/
  $.getJSON("https://www.cryptonator.com/api/ticker/btc-usd", function(data) {
  	var btc_rating = data.ticker.price;
-     $.getJSON("https://www.coinexchange.io/api/v1/getmarkets", function(data) {
+     $.get("https://www.coinexchange.io/api/v1/getmarkets", function(markets) {
          var html = "";
          html += '<tr>';
          html += '<td><div class="coinaced"></div></td>';

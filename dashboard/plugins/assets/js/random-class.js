@@ -13,7 +13,7 @@
         setInterval(function () {
             setRandomClass();
         }, 1000);
-
+/*
         function setRandomClass() {
             var dtBody = $(".random-data");
             var items = dtBody.find("td");
@@ -39,7 +39,7 @@
             items.eq(random6)
                 .addClass("text-danger");
         }
+ */
     }
-
 
 })(jQuery);

@@ -374,10 +374,8 @@ $('.switch-setting').each(function() {
 /* Switchery end*/
  $.getJSON("https://www.cryptonator.com/api/ticker/btc-usd", function(data) {
  	var btc_rating = data.ticker.price;
-     $.getJSON("https://www.coinexchange.io/api/v1/getmarkets", function(data) {
-     });
 
- /*    $.ajax({
+     $.ajax({
          type: "GET",
          headers:{
              'Access-Control-Allow-Origin':'*'
@@ -400,5 +398,5 @@ $('.switch-setting').each(function() {
              html += '</tr>';
              jQuery("#compact tbody").html(markets.result);
          }
-     });*/
+     });
  });

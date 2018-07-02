@@ -380,9 +380,7 @@ $('.switch-setting').each(function() {
 		 headers: {
              "access-control-allow-origin": "origin",
              "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
-             "access-control-allow-headers": "content-type, accept",
-             "access-control-max-age": 10, // Seconds.
-             "content-length": 0
+             "access-control-allow-headers": "content-type, accept"
          },
          url: "https://www.coinexchange.io/api/v1/getmarkets",
          contentType: "application/json",

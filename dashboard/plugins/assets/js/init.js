@@ -408,8 +408,9 @@ $('.switch-setting').each(function() {
              }
          });
      });*/
+     //setInterval(function(){
      $('#compact').DataTable( {
          "ajax": 'https://autosector.com/get_coin_data.php?type=table'
      } );
-
+     //}, 3000);
  });

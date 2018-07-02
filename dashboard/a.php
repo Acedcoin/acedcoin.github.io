@@ -6,3 +6,4 @@
  * Time: 8:37 PM
  */
 echo "aaa";
+die();

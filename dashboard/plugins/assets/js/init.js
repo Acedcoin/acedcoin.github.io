@@ -83,14 +83,14 @@ var AdminUX = function(){
     $.getJSON("https://autosector.com/get_coin_data.php?type=etc", function(data) {
         //alert(data.data.btc);
         $(".top-bitcoin").html(data.data.btc);
-        $(".top-acedcoin").html(data.data.AceD);
+        $(".top-acedcoin").html(data.data.ACED);
         $(".top-dash").html(data.data.DASH);
-        $(".top-eth").html(data.data.ETH);
+        $(".top-dash").html(data.data.ETH);
 		var counterAnim = $('.counter-anim');
-		if( counterAnim.length > 0 ){
+		/*if( counterAnim.length > 0 ){
 			counterAnim.counterUp({ delay: 10,
 			time: 1000});
-		}
+		}*/
     });
 	
 	/*Tooltip*/
@@ -381,9 +381,22 @@ $('.switch-setting').each(function() {
 });
 /* Switchery end*/
  $(document).ready(function(){
-     //setInterval(function(){
      $('#compact').DataTable( {
          "ajax": 'https://autosector.com/get_coin_data.php?type=table'
      } );
-     //}, 3000);
+     /*setInterval(function(){
+     $.getJSON("https://autosector.com/get_coin_data.php?type=table", function(data) {
+        var markets = data.data;
+        for(var i=0;i<markets.length;i++){
+            var content=markets[i][0];
+            var id="#market"+$(content).text();
+            if($(id).closest("tr").find("td:nth-child(3)").length>0){
+            data=($(id).closest("tr").find("td:nth-child(3)").text());
+            if($(id).closest("tr").find("td:nth-child(3)").text()!=markets[i][2]) {
+                $(id).closest("tr").find("td:nth-child(3)").text(markets[i][2]);
+            }
+			}
+		}
+     });
+     }, 3000);*/
  });

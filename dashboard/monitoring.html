@@ -19,7 +19,24 @@
     <!-- Custom CSS -->
     <link href="plugins/assets/css/default.css" rel="stylesheet" type="text/css">
     <link href="plugins/assets/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+        #my_content .panel-body{
+            color:#333;
+        }
+        table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after {
+            top: 12px;
+            right: 0px;
+        }
+        #masternodes_table th{
+            text-align: center;
+        }
+        #masternodes_table tr th:nth-child(1),#masternodes_table tr td:nth-child(1), #masternodes_table tr th:nth-child(5),#masternodes_table tr td:nth-child(5), #masternodes_table tr th:nth-child(10),#masternodes_table tr td:nth-child(10), #masternodes_table tr th:last-child,#masternodes_table tr td:last-child{
+            display: none !important;
+        }
 
+        #my_content{
+        }
+    </style>
 </head>
 <body>
 <!-- Preloader -->
@@ -584,7 +601,7 @@
     <div class="page-wrapper">
         <div class="container-fluid pt-25">
             <!-- Row -->
-            <div class="container">
+            <div class="" id="my_content">
                 <h1>Masternodes monitoring</h1>
                 <br>
                 <p>Monitor all your masternodes with our monitoring service - anonymous and real time.</p>
@@ -603,7 +620,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-lg-12">
-                                            <button type="button" class="btn btn-primary">Sign In</button>
+                                            <button type="button" class="btn btn-primary" id="sign_in">Sign In</button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -618,7 +635,7 @@
                                 <div class="form-group">
                                     <div class="col-lg-12">
                                         <input type="hidden" name="action" value="register">
-                                        <button type="button" class="btn btn-primary">Generate new seed number</button>
+                                        <button type="button" class="btn btn-primary" id="generate_key">Generate new seed number</button>
                                     </div>
                                 </div>
                             </fieldset>

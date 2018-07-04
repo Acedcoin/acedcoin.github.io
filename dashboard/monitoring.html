@@ -27,14 +27,15 @@
             top: 12px;
             right: 0px;
         }
-        #masternodes_table th{
+        #masternodes_table th, #masternodes_table td{
             text-align: center;
         }
-        #masternodes_table tr th:nth-child(1),#masternodes_table tr td:nth-child(1), #masternodes_table tr th:nth-child(5),#masternodes_table tr td:nth-child(5), #masternodes_table tr th:nth-child(10),#masternodes_table tr td:nth-child(10), #masternodes_table tr th:last-child,#masternodes_table tr td:last-child{
+        #masternodes_table tr th:nth-child(1),#masternodes_table tr td:nth-child(1), #masternodes_table tr th:nth-child(15),#masternodes_table tr td:nth-child(15), #masternodes_table tr th:nth-child(10),#masternodes_table tr td:nth-child(10), #masternodes_table tr th:last-child,#masternodes_table tr td:last-child{
             display: none !important;
         }
 
-        #my_content{
+        #my_content #masternodes_table{
+            width:100% !important;
         }
     </style>
 </head>
@@ -181,8 +182,8 @@
 
             <li><hr class="light-grey-hr mb-10"/></li>
 
-            <li><a class="active-page" href="monitoring.html" >
-                <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Monitoring</span></div>
+            <li><a href="monitoring.html" >
+                <div class="pull-left"><i class="mdi mdi-monitor mr-20"></i><span class="right-nav-text">Monitoring</span></div>
                 <div class="clearfix"></div>
             </a></li>
 

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-Monitoring</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="admin, admin dashboard, admin template" />
+    <meta name="author" content="SRGIT"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="icon" href="../favicon.png" type="image/x-icon">
+    <!-- Data table CSS -->
+    <link href="plugins/vendors/bower_components/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <!-- select2 CSS -->
+    <link href="plugins/vendors/bower_components/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">-->
+
+    <!-- Custom CSS -->
+    <link href="plugins/assets/css/default.css" rel="stylesheet" type="text/css">
+    <link href="plugins/assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- Preloader -->
+<div class="preloader-it">
+    <div class="preloader">
+        <div class="circles-1">
+            <div class="circles-1-center"></div>
+            <div class="circles-1"></div>
+            <div class="circles-1"></div>
+            <div class="circles-1"></div>
+            <div class="circles-1"></div>
+            <div class="circles-1"></div>
+            <div class="circles-1"></div>
+        </div>
+    </div>
+</div>
+<!-- //Preloader -->
+<div class="wrapper random-data light-theme dark-template">
+    <!-- Top Header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="mobile-only-brand pull-left">
+            <div class="nav-header pull-left">
+                <div class="logo-wrap"> <a href="https://www.acedcoin.com/"> <img class="brand-img" src="../favicon.png" alt="brand" style="width: 32px;margin-bottom: -5px;"/> <span class="brand-text">[ Aced<strong>Coin</strong> ]</span> </a> </div>
+            </div>
+            <a id="toggle-btn" class="toggle-left-nav-btn inline-block ml-20 pull-left" href="javascript:void(0);"><i class="mdi mdi-format-list-bulleted"></i></a> <a id="toggle_mobile_search" data-toggle="collapse" data-target="#search_form" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-search"></i></a> <a id="toggle_mobile_nav" class="mobile-only-view" href="javascript:void(0);"><i class="mdi mdi-more"></i></a>
+            <form id="search_form" role="search" class="top-nav-search collapse pull-left">
+                <div class="input-group">
+                    <input type="text" name="example-input1-group2" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+          <button type="button" class="btn  btn-default"  data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="pe-7s-search"></i></button>
+          </span> </div>
+            </form>
+        </div>
+        <div id="mobile_right_sidebar" class="mobile-right-sidebar pull-right">
+            <ul class="nav navbar-right top-nav pull-right">
+                <li> <a id="open_right_sidebar" href="#"><i class="pe-7s-chat top-nav-icon"></i></a> </li>
+                <li class="dropdown app-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-edit top-nav-icon"></i></a>
+                    <ul class="dropdown-menu app-dropdown"  data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li>
+                            <div class="app-nicescroll-bar">
+                                <ul class="app-icon-wrap pa-10">
+                                    <li> <a href="weather.html" class="connection-item"> <i class="pe-7s-sun txt-info"></i> <span class="block">weather</span> </a> </li>
+                                    <li> <a href="vector-map.html" class="connection-item"> <i class="pe-7s-way txt-danger"></i> <span class="block">map</span> </a> </li>
+                                    <li> <a href="chats.html" class="connection-item"> <i class="pe-7s-chat txt-warning"></i> <span class="block">chat</span> </a> </li>
+                                    <li> <a href="calendar.html" class="connection-item"> <i class="pe-7s-date txt-primary"></i> <span class="block">calendar</span> </a> </li>
+                                    <li> <a href="email-inbox.html" class="connection-item"> <i class="pe-7s-mail-open-file txt-success"></i> <span class="block">e-mail</span> </a> </li>
+                                    <li> <a href="contact-card.html" class="connection-item"> <i class="pe-7s-config"></i> <span class="block">configure</span> </a> </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown alert-drp"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="pe-7s-alarm top-nav-icon"></i><span class="top-nav-icon-badge btn-sonar">1</span></a>
+                    <ul class="dropdown-menu alert-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li>
+                            <div class="notification-box-head-wrap"> <span class="notification-box-head pull-left inline-block">notifications</span> <a class="txt-danger pull-right clear-notifications inline-block" href="javascript:void(0)"> clear all </a>
+                                <div class="clearfix"></div>
+                                <hr class="light-grey-hr ma-0"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="streamline message-nicescroll-bar">
+                                <div class="sl-item"> <a href="javascript:void(0)">
+                                    <div class="icon bg-green"> <i class="mdi mdi-alarm-check"></i> </div>
+                                    <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications"> Neque porro quisquam est</span> <span class="inline-block font-11  pull-right notifications-time">5pm</span>
+                                        <div class="clearfix"></div>
+                                        <p class="truncate">Neque porro quisquam est.</p>
+                                    </div>
+                                </a> </div>
+                                <hr class="light-grey-hr ma-0"/>
+                                <div class="sl-item"> <a href="javascript:void(0)">
+                                    <div class="icon bg-yellow"> <i class="mdi mdi-video-input-antenna"></i> </div>
+                                    <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-warning">Neque porro quisquam est</span> <span class="inline-block font-11 pull-right notifications-time">12pm</span>
+                                        <div class="clearfix"></div>
+                                        <p class="truncate">Neque porro quisquam est.</p>
+                                    </div>
+                                </a> </div>
+                                <hr class="light-grey-hr ma-0"/>
+                                <div class="sl-item"> <a href="javascript:void(0)">
+                                    <div class="icon bg-blue"> <i class="mdi mdi-comment-text"></i> </div>
+                                    <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">61 new messages</span> <span class="inline-block font-11  pull-right notifications-time">6am</span>
+                                        <div class="clearfix"></div>
+                                        <p class="truncate"> Neque porro quisquam est.</p>
+                                    </div>
+                                </a> </div>
+                                <hr class="light-grey-hr ma-0"/>
+                                <div class="sl-item"> <a href="javascript:void(0)">
+                                    <div class="sl-avatar"> <img class="img-responsive" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                    <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications">Vivian Rox</span> <span class="inline-block font-11  pull-right notifications-time">3pm</span>
+                                        <div class="clearfix"></div>
+                                        <p class="truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                    </div>
+                                </a> </div>
+                                <hr class="light-grey-hr ma-0"/>
+                                <div class="sl-item"> <a href="javascript:void(0)">
+                                    <div class="icon bg-red"> <i class="mdi mdi-storage"></i> </div>
+                                    <div class="sl-content"> <span class="inline-block capitalize-font  pull-left truncate head-notifications txt-danger">99% server space occupied.</span> <span class="inline-block font-11  pull-right notifications-time">1pm</span>
+                                        <div class="clearfix"></div>
+                                        <p class="truncate">consectetur, adipisci velit.</p>
+                                    </div>
+                                </a> </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="notification-box-bottom-wrap">
+                                <hr class="light-grey-hr ma-0"/>
+                                <a class="block text-center read-all" href="javascript:void(0)"> read all </a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown auth-drp"> <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="http://via.placeholder.com/128x128" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+                    <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <li> <a href="profile.html"><i class="mdi mdi-account"></i><span>Profile</span></a> </li>
+                        <li> <a href="#"><i class="mdi mdi-credit-card"></i><span>my balance</span></a> </li>
+                        <li> <a href="email-inbox.html"><i class="mdi mdi-email"></i><span>Inbox</span></a> </li>
+                        <li> <a href="#"><i class="mdi mdi-settings"></i><span>Settings</span></a> </li>
+                        <li class="divider"></li>
+                        <li class="sub-menu show-on-hover"> <a href="#" class="dropdown-toggle pr-0 level-2-drp"><i class="mdi mdi-check text-success"></i> available</a>
+                            <ul class="dropdown-menu open-left-side">
+                                <li> <a href="#"><i class="mdi mdi-check text-success"></i><span>available</span></a> </li>
+                                <li> <a href="#"><i class="mdi mdi-circle-o text-warning"></i><span>busy</span></a> </li>
+                                <li> <a href="#"><i class="mdi mdi-minus-circle-outline text-danger"></i><span>offline</span></a> </li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li> <a href="#"><i class="mdi mdi-power"></i><span>Log Out</span></a> </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /Top Menu Items -->
+    <!-- Left Sidebar Menu -->
+    <div class="fixed-sidebar-left">
+        <ul class="nav navbar-nav side-nav nicescroll-bar">
+            <li><a class="active-page" href="https://www.acedcoin.com/dashboard/" >
+                <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+            <li><a class="active-page" href="monitoring.html" >
+                <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Monitoring</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li> <a  href="ecommerce-products-details.html">
+                <div class="pull-left"><i class="mdi mdi-cart mr-20"></i><span class="right-nav-text">Store</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="email-inbox.html">
+                <div class="pull-left"><i class="mdi mdi-email-outline mr-20"></i><span class="right-nav-text">MailBox</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="profile.html">
+                <div class="pull-left"><i class="mdi mdi-face-profile mr-20"></i><span class="right-nav-text">Profile</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="aced-gaming.html">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Gaming</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="aced-streaming.html">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Streaming</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="aced-snap.html">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Snap</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="aced-foundation.html">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Foundation</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+            <li><a  href="aced-escrow.html">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">AceD Escrow</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="https://www.coinexchange.io/market/AceD/BTC" target="_blank">
+                <div class="pull-left"><i class="mdi mdi-youtube-gaming mr-20"></i><span class="right-nav-text">CoinExchange </span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+            <li><hr class="light-grey-hr mb-10"/></li>
+
+            <li><a href="faq.html">
+                <div class="pull-left"><i class="mdi mdi-comment-question-outline mr-20"></i><span class="right-nav-text">FAQ</span></div>
+                <div class="clearfix"></div>
+            </a></li>
+
+        </ul>
+    </div>
+    <!-- /Left Sidebar Menu -->
+    <!-- Right Sidebar Menu -->
+    <div class="fixed-sidebar-right">
+        <ul class="right-sidebar">
+            <li>
+                <div  class="tab-struct user-tabs">
+                    <ul role="tablist" class="nav nav-tabs" id="right_sidebar_tab">
+                        <li class="active" role="presentation"><a aria-expanded="true"  data-toggle="tab" role="tab" id="chat_tab_btn" href="#chat_tab"><i class="pe-7s-chat"></i></a></li>
+                        <li role="presentation" class=""><a  data-toggle="tab" id="messages_tab_btn" role="tab" href="#messages_tab" aria-expanded="false"><i class="pe-7s-mail"></i></a></li>
+                        <li role="presentation" class=""><a  data-toggle="tab" id="settings_tab_btn" role="tab" href="#settings_tab" aria-expanded="false"><i class="pe-7s-keypad"></i></a></li>
+                    </ul>
+                    <div class="tab-content" id="right_sidebar_content">
+                        <div  id="chat_tab" class="tab-pane fade active in" role="tabpanel">
+                            <div class="chat-cmplt-wrap">
+                                <div class="chat-box-wrap">
+                                    <div class="add-friend"> <span class="inline-block txt-dark">Recent Chats</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-plus"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div id="chat_list_scroll">
+                                        <div class="nicescroll-bar">
+                                            <ul class="chat-list-wrap">
+                                                <li class="chat-list">
+                                                    <div class="chat-body"> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Peter Wyatt</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status away"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Vivian Rox</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status offline"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Mr. Danielle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status online"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Suzi Cole</span> <span class="time block truncate txt-grey">Neque porro quisquam est..</span> </div>
+                                                            <div class="status online"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Tom Taylor</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status offline"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Mitch Blue</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status online"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Jason Rudd</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status away"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Michelle</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status online"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> <a href="javascript:void(0)">
+                                                        <div class="chat-data"> <img class="user-img img-circle"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                            <div class="user-data"> <span class="name block capitalize-font">Ludacris Stack</span> <span class="time block truncate txt-grey">Neque porro quisquam est.</span> </div>
+                                                            <div class="status away"></div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </a> </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="recent-chat-box-wrap">
+                                    <div class="recent-chat-wrap">
+                                        <div class="panel-heading ma-0">
+                                            <div class="goto-back"> <a  id="goto_back" href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-chevron-left"></i> </a> <span class="inline-block txt-dark">Max</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-more"></i></a>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-wrapper collapse in">
+                                            <div class="panel-body pa-0">
+                                                <div class="chat-content">
+                                                    <ul class="nicescroll-bar pt-20">
+                                                        <li class="friend">
+                                                            <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                                <div class="msg pull-left">
+                                                                    <p class="msng-name">Sam Wrote:</p>
+                                                                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet?</p>
+                                                                    <div class="msg-per-detail text-right"> <span class="msg-time txt-grey">5:01 PM</span> </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="self mb-10">
+                                                            <div class="self-msg-wrap">
+                                                                <div class="msg block pull-right"> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet
+                                                                    <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:01 pm</span> </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="self">
+                                                            <div class="self-msg-wrap">
+                                                                <div class="msg block pull-right"> Consectetur, adipisci velit.
+                                                                    <div class="msg-per-detail text-right"> <span class="msg-time txt-light">5:13 pm</span> </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="friend">
+                                                            <div class="friend-msg-wrap"> <img class="user-img img-circle block pull-left"  src="http://via.placeholder.com/128x128" alt="user"/>
+                                                                <div class="msg pull-left">
+                                                                    <p class="msng-name">Sam Wrote:</p>
+                                                                    <p>Neque porro quisquam.</p>
+                                                                    <div class="msg-per-detail  text-right"> <span class="msg-time txt-grey">6:35 pm</span> </div>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="input-group">
+                                                    <input type="text" id="input_msg_send" name="send-msg" class="input-msg-send form-control" placeholder="Type something">
+                                                    <div class="input-group-btn emojis">
+                                                        <div class="dropup">
+                                                            <button type="button" class="btn  btn-default  dropdown-toggle" data-toggle="dropdown" ><i class="mdi mdi-mood"></i></button>
+                                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                                <li><a href="javascript:void(0)">Action</a></li>
+                                                                <li><a href="javascript:void(0)">Another action</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="javascript:void(0)">Separated link</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group-btn attachment">
+                                                        <div class="fileupload btn  btn-default"><i class="mdi mdi-attachment-alt"></i>
+                                                            <input type="file" class="upload">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="messages_tab" class="tab-pane fade" role="tabpanel">
+                            <div class="message-box-wrap">
+                                <div class="add-friend"> <span class="inline-block txt-dark">messages</span> <a href="javascript:void(0)" class="inline-block text-right txt-grey"><i class="mdi mdi-search"></i></a> <a href="javascript:void(0)" class="inline-block txt-grey"> <i class="mdi mdi-more"></i> </a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="set-height-wrap">
+                                    <div class="streamline message-box nicescroll-bar"> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Peter Wyatt</span> <span class="inline-block font-11  pull-right message-time">12:28 AM</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Vivian Rox</span> <span class="inline-block font-11  pull-right message-time">1 Feb</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mr. Danielle</span> <span class="inline-block font-11  pull-right message-time">31 Jan</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur nominees</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Tom Taylor</span> <span class="inline-block font-11  pull-right message-time">29 Jan</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam est qui dolorem ipsu messm quia dolor sit amet consectetur</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Mitch Blue</span> <span class="inline-block font-11  pull-right message-time">27 Jan</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam.</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Michelle</span> <span class="inline-block font-11  pull-right message-time">19 Jan</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam es.</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> <a href="javascript:void(0)">
+                                        <div class="sl-item">
+                                            <div class="sl-avatar avatar avatar-sm avatar-circle"> <img class="img-responsive img-circle" src="http://via.placeholder.com/128x128" alt="avatar"/> </div>
+                                            <div class="sl-content"> <span class="inline-block capitalize-font   pull-left message-per">Linda Stack</span> <span class="inline-block font-11  pull-right message-time">13 Jan</span>
+                                                <div class="clearfix"></div>
+                                                <span class=" truncate message-subject">Neque porro quisquam.</span>
+                                                <p class="txt-grey truncate">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit</p>
+                                            </div>
+                                        </div>
+                                    </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="settings_tab" class="tab-pane fade" role="tabpanel">
+                            <div class="settings-box-wrap">
+                                <div class="add-settings text-center txt-dark pt-15"> General Settings
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="set-height-wrap">
+                                    <!-- settings-List -->
+                                    <ul class="settings-list nicescroll-bar">
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Email Notifications</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Site Tracking</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">SMS Alerts </div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Backup Storage</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Audit Logs</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="add-settings text-center txt-dark pt-15"> SYSTEM SETTINGS
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">System Logs </div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Error Reporting </div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Applications Logs </div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" checked class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Backup Servers</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                        <li class="settings-item">
+                                            <div class="list-settings">
+                                                <div class="pull-left">Audit Logs</div>
+                                                <div class="pull-right">
+                                                    <input type="checkbox" class="switch-setting-bar switch-setting" data-color="#716aca" data-size="small"/>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- /settings-List -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /Right Sidebar Menu -->
+    <!-- Main Content -->
+    <div class="page-wrapper">
+        <div class="container-fluid pt-25">
+            <!-- Row -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view pa-0">
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body pa-0">
+                                <div class="sm-data-box">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-acedcoin">0.411216</span><i class="mdi mdi-arrow-down text-danger"></i></span> <span class="weight-500 uppercase-font block">Acedcoin (ACED)</span> </div>
+                                            <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
+                                                <div id="sparkline_1"  class="sparkline-w-100-h-50"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view pa-0">
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body pa-0">
+                                <div class="sm-data-box">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-bitcoin">6,095.46</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Bitcoin (BTC)</span> </div>
+                                            <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
+                                                <div id="sparkline_1_20" class="sparkline-w-100-h-50"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-default card-view pa-0">
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body pa-0">
+                                <div class="sm-data-box">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-dash">228.7990</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Dash (DASH)</span> </div>
+                                            <div class="col-xs-6 text-center  pl-0 pr-0  pt-30 data-wrap-right">
+                                                <div id="sparkline_4" class="sparkline-w-100-h-50"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">-->
+                <!--<div class="panel panel-default card-view pa-0">-->
+                <!--<div class="panel-wrapper collapse in">-->
+                <!--<div class="panel-body pa-0">-->
+                <!--<div class="sm-data-box">-->
+                <!--<div class="container-fluid">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">8,569 </span><i class="mdi mdi-arrow-up"></i></span> <span class="weight-500 uppercase-font block">Ripple XRP </span> </div>-->
+                <!--<div class="col-xs-6 text-center  pl-0 pr-0 pt-25  data-wrap-right">-->
+                <!--<div id="sparkline_1_2"  class="sparkline-w-100-h-50"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+            <!-- Row -->
+            <div class="row" style="margin:3% 0;">
+                <div class="col-md-8 col-md-offset-2">
+                    <div align="center">
+                        <a href="https://masternodes.online/currencies/ACED/" title="CTS - Crypto Trading Solutions" target="_blank">
+                            <img src="plugins/assets/img/aced.gif" style="max-width: 100%; height: auto" alt="CTS - Crypto Trading Solutions">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Row -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group co_currency">
+                        <label for="currency1">Select base currency:</label>
+                        <select class="form-control" id="currency1">
+                            <option id="usd" value="usd">US dollar (USD)</option>
+                            <!--<option id="btc" value="btc">Bitcoin (BTC)</option>-->
+                            <option id="aud" value="aud">Australian dollar (AUD)</option>
+                            <option id="bgn" value="bgn">Bulgarian lev (BGN)</option>
+                            <option id="brl" value="brl">Brazilian real (BRL)</option>
+                            <option id="cad" value="cad">Canadian dollar (CAD)</option>
+                            <option id="chf" value="chf">Swiss franc (CHF)</option>
+                            <option id="cny" value="cny">Chinese yuan renminbi (CNY)</option>
+                            <option id="czk" value="czk">Czech koruna (CZK)</option>
+                            <option id="dkk" value="dkk">Danish krone (DKK)</option>
+                            <option id="eur" value="eur">Euro (EUR)</option>
+                            <option id="gbp" value="gbp">Pound sterling (GBP)</option>
+                            <option id="hkd" value="hkd">Hong Kong dollar (HKD)</option>
+                            <option id="hrk" value="hrk">Croatian kuna (HRK)</option>
+                            <option id="huf" value="huf">Hungarian forint (HUF)</option>
+                            <option id="idr" value="idr">Indonesian rupiah (IDR)</option>
+                            <option id="ils" value="ils">Israeli shekel (ILS)</option>
+                            <option id="inr" value="inr">Indian rupee (INR)</option>
+                            <option id="jpy" value="jpy">Japanese yen (JPY)</option>
+                            <option id="krw" value="krw">South Korean won (KRW)</option>
+                            <option id="mxn" value="mxn">Mexican peso (MXN)</option>
+                            <option id="myr" value="myr">Malaysian ringgit (MYR)</option>
+                            <option id="nok" value="nok">Norwegian krone (NOK)</option>
+                            <option id="nzd" value="nzd">New Zealand dollar (NZD)</option>
+                            <option id="php" value="php">Philippine piso (PHP)</option>
+                            <option id="pln" value="pln">Polish zloty (PLN)</option>
+                            <option id="ron" value="ron">Romanian leu (RON)</option>
+                            <option id="rub" value="rub">Russian rouble (RUB)</option>
+                            <option id="sek" value="sek">Swedish krona (SEK)</option>
+                            <option id="sgd" value="sgd">Singapore dollar (SGD)</option>
+                            <option id="thb" value="thb">Thai baht (THB)</option>
+                            <option id="try" value="try">Turkish lira (TRY)</option>
+                            <option id="zar" value="zar">South African rand (ZAR)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="panel panel-default card-view">
+                        <div class="panel-heading">
+                            <div class="pull-left">
+                                <h6 class="panel-title txt-dark">Crypto Ticker</h6>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel-wrapper">
+                            <div class="panel-body row pt-10 pb-15 bitcoin-wdgt">
+                                <div class="tickercontainer-main">
+                                    <ul id="webTicker">
+                                        <li><i><img src="../favicon.png" style="width:14px;margin-bottom: -1px;"></i> ACED $<span class="coin-value top-acedcoin"> $0.411216</span></li>
+                                        <li><i class="mdi mdi-bitcoin text-warning"></i> BTC $<span class="coin-value top-bitcoin"> $6,095.46</span></li>
+                                        <li><i><img src="plugins/assets/img/dash.png" style="width:14px;margin-bottom: -3px;"></i> DASH $<span class="coin-value top-dash"> $228.7990</span></li>
+                                        <!--<li><i class="mdi mdi-currency-eth text-primary"></i> ETH $<span class="coin-value top-eth"> $427.58</span></li>
+                                       <!--<li><i class="mdi mdi-currency-gbp text-default"></i> GBP <span class="coin-value"> $1.315461</span></li>-->
+                                        <!--<li><i class="mdi mdi-currency-eur text-danger"></i> EUR <span class="coin-value"> $1.1561556</span></li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Row -->
+            <!--table-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="cointable" class="panel panel-default card-view panel-refresh">
+                        <div class="refresh-container">
+                            <div class="preloader">
+                                <div class="circles-1">
+                                    <div class="circles-1-center"></div>
+                                    <div class="circles-1"></div>
+                                    <div class="circles-1"></div>
+                                    <div class="circles-1"></div>
+                                    <div class="circles-1"></div>
+                                    <div class="circles-1"></div>
+                                    <div class="circles-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-heading">
+                            <div class="pull-left">
+                                <h6 class="panel-title txt-dark">Stats</h6>
+                            </div>
+                            <div class="pull-right float-right">
+                                <a href="#" class="pull-left inline-block refresh mr-15"> <i class="mdi mdi-replay"></i> </a>
+                                <a href="#" class="pull-left inline-block full-screen mr-15"> <i class="mdi mdi-fullscreen"></i> </a></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body pt-0">
+                                <div class="datatable-responsive table-responsive">
+                                    <table id="compact" class="table compact table-striped table-bordered nowrap">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Coin/Detail</th>
+                                            <th>Price</th>
+                                            <th>Change</th>
+                                            <th>Volume</th>
+                                            <th>Marketcap</th>
+                                            <th>ROI</th>
+                                            <th>Nodes</th>
+                                            <th>#Required</th>
+                                            <th>Mn worth</th>
+                                        </tr>
+                                        </thead>
+                                        <!--<tbody>
+                                        <tr>
+                                          <td><div class="coinaced"></div></td>
+                                          <td><a href="/dashboard/stats/aced.html">AceD (ACED)</a></td>
+                                          <td>$0.4398	</td>
+                                          <td>-6.73 %</td>
+                                          <td>$13,393	</td>
+                                          <td>$865,342</td>
+                                          <td>508.21%	</td>
+                                          <td>786</td>
+                                          <td>1,000</td>
+                                          <td>$440</td>
+                                        </tr>
+
+                                        <!--<tr>-->
+                                        <!--<td><div class="coinbtc"></div></td>-->
+                                        <!--<td><a href="#">Bitcoin (BTC)</a></td>-->
+                                        <!--<td>$6,176.1845</td>-->
+                                        <!--<td>1.60%</td>-->
+                                        <!--<td>$108,027,742.28</td>-->
+                                        <!--<td>$105,768,513,036</td>-->
+                                        <!--<td>7.00%</td>-->
+                                        <!--<td>4,676	</td>-->
+                                        <!--<td>1,000</td>-->
+                                        <!--<td>$226,757</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr>
+                                          <td><div class="coindash"></div></td>
+                                          <td><a href="#">Dash (DASH)</a></td>
+                                          <td>$226.7570</td>
+                                          <td>-2.84%</td>
+                                          <td>$160,947,000</td>
+                                          <td>$1,849,612,791</td>
+                                          <td>7.00%</td>
+                                          <td>4,676	</td>
+                                          <td>1,000</td>
+                                          <td>$226,757</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinxzc"></div></td>
+                                          <td> <a href="#">Zcoin (XZC)</a></td>
+                                          <td>$14.4901</td>
+                                          <td>-8.68 %</td>
+                                          <td>$1,263,360</td>
+                                          <td>$73,318,582</td>
+                                          <td>29.05%	</td>
+                                          <td>3,185	</td>
+                                          <td>1,000	</td>
+                                          <td>$14,490</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinsmart"></div></td>
+                                          <td>  <a href="#">SmartCash (SMART)</a></td>
+                                          <td>$0.0704	</td>
+                                          <td>3.09 %</td>
+                                          <td>$2,027,460</td>
+                                          <td>$74,163,810</td>
+                                          <td>58.05%	</td>
+                                          <td>12,837	</td>
+                                          <td>10,000</td>
+                                          <td>$704</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinpivx"></div></td>
+                                          <td><a href="#">PIVX (PIVX)</a></td>
+                                          <td>$1.9391	</td>
+                                          <td>3.33 %	</td>
+                                          <td>$908,898	</td>
+                                          <td>$109,732,167	</td>
+                                          <td>6.55%	</td>
+                                          <td>1,971	</td>
+                                          <td>10,000	</td>
+                                          <td>$19,391</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinsys"></div></td>
+                                          <td><a href="#">  SysCoin (SYS)</a></td>
+                                          <td>$0.1725	</td>
+                                          <td>-6.75 %	</td>
+                                          <td>$660,170</td>
+                                          <td>$92,464,655	</td>
+                                          <td>11.82%	</td>
+                                          <td>1,098	</td>
+                                          <td>100,000</td>
+                                          <td>$17,254</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinphr"></div></td>
+                                          <td><a href="#">  PHORE (PHR)</a></td>
+                                          <td>$1.2247</td>
+                                          <td>-1.32 %	</td>
+                                          <td>$583,460	</td>
+                                          <td>$16,673,193</td>
+                                          <td>38.10%	</td>
+                                          <td>571</td>
+                                          <td>10,000</td>
+                                          <td>$12,247</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinlpc"></div></td>
+                                          <td><a href="#">  LightPayCoin (LPC)</a></td>
+                                          <td>$7.2424</td>
+                                          <td>0.00 %</td>
+                                          <td>$507,897</td>
+                                          <td>$2,175,589</td>
+                                          <td>1,451.92%	</td>
+                                          <td>208</td>
+                                          <td>1,000</td>
+                                          <td>$7,242</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinhxx"></div></td>
+                                          <td><a href="#">HexxCoin (HXX)</a></td>
+                                          <td>$3.9647</td>
+                                          <td>12.52 %</td>
+                                          <td>$292,932</td>
+                                          <td>$6,613,926</td>
+                                          <td>67.66%</td>
+                                          <td>118</td>
+                                          <td>2,000</td>
+                                          <td>$7,929</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinphr"></div></td>
+                                          <td><a href="#">ION (ION)</a></td>
+                                          <td>$0.8763</td>
+                                          <td>-2.76 %</td>
+                                          <td>$152,861</td>
+                                          <td>$18,716,185</td>
+                                          <td>26.47%</td>
+                                          <td>561</td>
+                                          <td>20,000</td>
+                                          <td>$17,527</td>
+                                        </tr>
+                                        <tr>
+                                          <td><div class="coinxsn"></div></td>
+                                          <td> <a href="#">StakeNet (XSN)</a> </td>
+                                          <td>$0.5145	</td>
+                                          <td>-5.69 %	</td>
+                                          <td>$341,242	</td>
+                                          <td>$35,246,606	</td>
+                                          <td>38.16%</td>
+                                          <td>1,419	</td>
+                                          <td>15,000	</td>
+                                          <td>$7,717</td>
+                                        </tr>
+                                        </tbody>-->
+                                        <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th>Coin/Detail</th>
+                                            <th>Price</th>
+                                            <th>Change</th>
+                                            <th>Volume</th>
+                                            <th>Marketcap</th>
+                                            <th>ROI</th>
+                                            <th>Nodes</th>
+                                            <th>#Required</th>
+                                            <th>Mn worth</th>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/table-->
+            <!--Row-->
+            <div class="row" style="margin: 3% 0;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="padding: 1%;">
+                    <a href="https://masternodes.online/currencies/ACED/" target="_blank">
+                        <img src="plugins/assets/img/aced.gif" style="width: 100%;">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"  style="padding: 1%;">
+                    <a href="https://www.acedcoin.com" target="_blank">
+                        <img src="plugins/assets/img/Aced11.gif" style="width: 100%;">
+                    </a>
+                </div>
+            </div>
+            <!--Row-->
+            <div class="clearfix"></div>
+            <!-- Row -->
+            <!-- Footer -->
+            <footer class="footer container-fluid pt-10 pb-10  pl-30 pr-30">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="pull-left text-dark pt-5 small">Copyright @ 2018  Aced Coin. All Rights Reserved</div>
+                        <div class="pull-right">Created with by <img src="plugins/assets/img/heartbeat.svg" alt="srgit" class="heart"> <a href="https://www.acedcoin.com/" target="_blank">ACED</a></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /Footer -->
+        </div>
+    </div>
+    <!-- /Main Content -->
+</div>
+<!-- /#wrapper -->
+<!-- JavaScript -->
+<!-- jQuery -->
+
+<script src="plugins/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="plugins/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Data table JavaScript -->
+<!--<script src="plugins/vendors/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>-->
+
+
+<script src="plugins/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<!--<script src="plugins/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components//data-table/js/jszip.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components//data-table/js/pdfmake.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components//data-table/js/vfs_fonts.js"></script>-->
+<!--<script src="plugins/vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>-->
+<!--<script src="plugins/vendors/bower_components/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>-->
+<script src="plugins/vendors/bower_components/data-table/js/data-table-custom.js"></script>
+
+
+<!-- Slimscroll JavaScript -->
+<script src="plugins/assets/js/jquery.slimscroll.js"></script>
+<!-- Owl JavaScript -->
+<script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- Progressbar Animation JavaScript -->
+<script src="plugins/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+<!-- Fancy Dropdown JS -->
+<script src="plugins/assets/js/dropdown-bootstrap-extended.js"></script>
+<!-- FlotChart JavaScript -->
+<script src="plugins/vendors/bower_components/flot/jquery.flot.js"></script>
+<script src="plugins/assets/js/flot-data-dashboard.js"></script>
+<script src="plugins/vendors/bower_components/skycons/skycons.js"></script>
+<!-- Sparkline JavaScript -->
+<script src="plugins/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- Switchery JavaScript -->
+<script src="plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script>
+<!-- EChartJS JavaScript -->
+<script src="plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
+
+<!-- Select2 JavaScript -->
+<script src="plugins/vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- Toast JavaScript -->
+<!--<script src="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
+<!-- Webticker Javascript -->
+<script src="plugins/vendors/bower_components/web-ticker/jquery.webticker.min.js"></script>
+<!-- Amcharts charts JavaScript -->
+<script src="plugins/vendors/bower_components/amcharts/amcharts.js"></script>
+<script src="plugins/vendors/bower_components/amcharts/serial.js"></script>
+<script src="plugins/vendors/bower_components/amcharts/amstock.js"></script>
+
+<!-- Piety JavaScript -->
+<script src="plugins/vendors/bower_components/peity/jquery.peity.min.js"></script>
+<script src="plugins/assets/js/peity-data.js"></script>
+<!-- Init JavaScript -->
+<script src="plugins/assets/js/init.js"></script>
+<!--<script src="plugins/assets/js/random-class.js"></script>
+<!-- Form Advance Init JavaScript -->
+<!--
+<script src="plugins/assets/js/form-advance-data.js"></script>
+<script src="plugins/assets/js/stock-chart.init.js"></script>
+<script src="plugins/assets/js/bitcoin-init.js"></script>
+<script src="plugins/assets/js/dashboard-dark.init.js"></script>
+-->
+
+
+
+</body>
+</html>

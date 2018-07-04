@@ -79,11 +79,19 @@ var $wrapper = $(".wrapper");
 var AdminUX = function(){
 	
 	/*Counter Animation*/
-	var counterAnim = $('.counter-anim');
-	if( counterAnim.length > 0 ){
-		counterAnim.counterUp({ delay: 10,
-        time: 1000});
-	}
+
+    $.getJSON("https://autosector.com/get_coin_data.php?type=etc", function(data) {
+        //alert(data.data.btc);
+        $(".top-bitcoin").html(data.data.btc);
+        $(".top-acedcoin").html(data.data.ACED);
+        $(".top-dash").html(data.data.DASH);
+        $(".top-dash").html(data.data.ETH);
+		var counterAnim = $('.counter-anim');
+		/*if( counterAnim.length > 0 ){
+			counterAnim.counterUp({ delay: 10,
+			time: 1000});
+		}*/
+    });
 	
 	/*Tooltip*/
 	if( $('[data-toggle="tooltip"]').length > 0 )
@@ -365,8 +373,6 @@ $(window).on("resize", function () {
 	chatApp();
 }).resize();
 /***** Resize function end *****/
-
-
 
 /* Switchery Init*/
 var elems = Array.prototype.slice.call(document.querySelectorAll('.switch-setting-bar'));

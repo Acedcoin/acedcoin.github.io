@@ -160,7 +160,14 @@
       <li><a class="active-page" href="https://www.acedcoin.com/dashboard/" >
         <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Dashboard</span></div>
         <div class="clearfix"></div>
-        </a></li>
+      </a></li>
+
+      <li><hr class="light-grey-hr mb-10"/></li>
+
+      <li><a href="monitoring.html" >
+        <div class="pull-left"><i class="mdi mdi-apps mr-20"></i><span class="right-nav-text">Monitoring</span></div>
+        <div class="clearfix"></div>
+      </a></li>
 
       <li><hr class="light-grey-hr mb-10"/></li>
 
@@ -586,7 +593,7 @@
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">0.411216</span><i class="mdi mdi-arrow-down text-danger"></i></span> <span class="weight-500 uppercase-font block">Acedcoin (ACED)</span> </div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-acedcoin">0.411216</span><i class="mdi mdi-arrow-down text-danger"></i></span> <span class="weight-500 uppercase-font block">Acedcoin (ACED)</span> </div>
                       <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
                         <div id="sparkline_1"  class="sparkline-w-100-h-50"></div>
                       </div>
@@ -604,7 +611,7 @@
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">6,095.46</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Bitcoin (BTC)</span> </div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-bitcoin">6,095.46</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Bitcoin (BTC)</span> </div>
                       <div class="col-xs-6 text-center  pl-0 pr-0 pt-30 data-wrap-right">
                         <div id="sparkline_1_20" class="sparkline-w-100-h-50"></div>
                       </div>
@@ -622,7 +629,7 @@
                 <div class="sm-data-box">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim">228.7990</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Dash (DASH)</span> </div>
+                      <div class="col-xs-6 pl-20 pr-0 data-wrap-left"> <span class="txt-dark block counter"><i class="mdi mdi-currency-usd"></i><span class="counter-anim top-dash">228.7990</span><i class="mdi mdi-arrow-up text-success"></i></span> <span class="weight-500 uppercase-font block">Dash (DASH)</span> </div>
                       <div class="col-xs-6 text-center  pl-0 pr-0  pt-30 data-wrap-right">
                         <div id="sparkline_4" class="sparkline-w-100-h-50"></div>
                       </div>
@@ -668,39 +675,39 @@
           <div class="form-group co_currency">
             <label for="currency1">Select base currency:</label>
             <select class="form-control" id="currency1">
-              <option id="usd">US dollar (USD)</option>
-              <option id="btc">Bitcoin (BTC)</option>
-              <option id="aud">Australian dollar (AUD)</option>
-              <option id="bgn">Bulgarian lev (BGN)</option>
-              <option id="brl">Brazilian real (BRL)</option>
-              <option id="cad">Canadian dollar (CAD)</option>
-              <option id="chf">Swiss franc (CHF)</option>
-              <option id="cny">Chinese yuan renminbi (CNY)</option>
-              <option id="czk">Czech koruna (CZK)</option>
-              <option id="dkk">Danish krone (DKK)</option>
-              <option id="eur">Euro (EUR)</option>
-              <option id="gbp">Pound sterling (GBP)</option>
-              <option id="hkd">Hong Kong dollar (HKD)</option>
-              <option id="hrk">Croatian kuna (HRK)</option>
-              <option id="huf">Hungarian forint (HUF)</option>
-              <option id="idr">Indonesian rupiah (IDR)</option>
-              <option id="ils">Israeli shekel (ILS)</option>
-              <option id="inr">Indian rupee (INR)</option>
-              <option id="jpy">Japanese yen (JPY)</option>
-              <option id="krw">South Korean won (KRW)</option>
-              <option id="mxn">Mexican peso (MXN)</option>
-              <option id="myr">Malaysian ringgit (MYR)</option>
-              <option id="nok">Norwegian krone (NOK)</option>
-              <option id="nzd">New Zealand dollar (NZD)</option>
-              <option id="php">Philippine piso (PHP)</option>
-              <option id="pln">Polish zloty (PLN)</option>
-              <option id="ron">Romanian leu (RON)</option>
-              <option id="rub">Russian rouble (RUB)</option>
-              <option id="sek">Swedish krona (SEK)</option>
-              <option id="sgd">Singapore dollar (SGD)</option>
-              <option id="thb">Thai baht (THB)</option>
-              <option id="try">Turkish lira (TRY)</option>
-              <option id="zar">South African rand (ZAR)</option>
+              <option id="usd" value="usd">US dollar (USD)</option>
+              <!--<option id="btc" value="btc">Bitcoin (BTC)</option>-->
+              <option id="aud" value="aud">Australian dollar (AUD)</option>
+              <option id="bgn" value="bgn">Bulgarian lev (BGN)</option>
+              <option id="brl" value="brl">Brazilian real (BRL)</option>
+              <option id="cad" value="cad">Canadian dollar (CAD)</option>
+              <option id="chf" value="chf">Swiss franc (CHF)</option>
+              <option id="cny" value="cny">Chinese yuan renminbi (CNY)</option>
+              <option id="czk" value="czk">Czech koruna (CZK)</option>
+              <option id="dkk" value="dkk">Danish krone (DKK)</option>
+              <option id="eur" value="eur">Euro (EUR)</option>
+              <option id="gbp" value="gbp">Pound sterling (GBP)</option>
+              <option id="hkd" value="hkd">Hong Kong dollar (HKD)</option>
+              <option id="hrk" value="hrk">Croatian kuna (HRK)</option>
+              <option id="huf" value="huf">Hungarian forint (HUF)</option>
+              <option id="idr" value="idr">Indonesian rupiah (IDR)</option>
+              <option id="ils" value="ils">Israeli shekel (ILS)</option>
+              <option id="inr" value="inr">Indian rupee (INR)</option>
+              <option id="jpy" value="jpy">Japanese yen (JPY)</option>
+              <option id="krw" value="krw">South Korean won (KRW)</option>
+              <option id="mxn" value="mxn">Mexican peso (MXN)</option>
+              <option id="myr" value="myr">Malaysian ringgit (MYR)</option>
+              <option id="nok" value="nok">Norwegian krone (NOK)</option>
+              <option id="nzd" value="nzd">New Zealand dollar (NZD)</option>
+              <option id="php" value="php">Philippine piso (PHP)</option>
+              <option id="pln" value="pln">Polish zloty (PLN)</option>
+              <option id="ron" value="ron">Romanian leu (RON)</option>
+              <option id="rub" value="rub">Russian rouble (RUB)</option>
+              <option id="sek" value="sek">Swedish krona (SEK)</option>
+              <option id="sgd" value="sgd">Singapore dollar (SGD)</option>
+              <option id="thb" value="thb">Thai baht (THB)</option>
+              <option id="try" value="try">Turkish lira (TRY)</option>
+              <option id="zar" value="zar">South African rand (ZAR)</option>
             </select>
           </div>
         </div>
@@ -719,11 +726,11 @@
               <div class="panel-body row pt-10 pb-15 bitcoin-wdgt">
                 <div class="tickercontainer-main">
                   <ul id="webTicker">
-                    <li><i><img src="../favicon.png" style="width:14px;margin-bottom: -1px;"></i> ACED <span class="coin-value"> $0.411216</span></li>
-                    <li><i class="mdi mdi-bitcoin text-warning"></i> BTC <span class="coin-value"> $6,095.46</span></li>
-                    <li><i><img src="plugins/assets/img/dash.png" style="width:14px;margin-bottom: -3px;"></i> DASH <span class="coin-value"> $228.7990</span></li>
-                    <li><i class="mdi mdi-currency-eth text-primary"></i> ETH <span class="coin-value"> $427.58</span></li>
-                    <!--<li><i class="mdi mdi-currency-gbp text-default"></i> GBP <span class="coin-value"> $1.315461</span></li>-->
+                    <li><i><img src="../favicon.png" style="width:14px;margin-bottom: -1px;"></i> ACED $<span class="coin-value top-acedcoin"> $0.411216</span></li>
+                    <li><i class="mdi mdi-bitcoin text-warning"></i> BTC $<span class="coin-value top-bitcoin"> $6,095.46</span></li>
+                    <li><i><img src="plugins/assets/img/dash.png" style="width:14px;margin-bottom: -3px;"></i> DASH $<span class="coin-value top-dash"> $228.7990</span></li>
+                    <!--<li><i class="mdi mdi-currency-eth text-primary"></i> ETH $<span class="coin-value top-eth"> $427.58</span></li>
+                   <!--<li><i class="mdi mdi-currency-gbp text-default"></i> GBP <span class="coin-value"> $1.315461</span></li>-->
                     <!--<li><i class="mdi mdi-currency-eur text-danger"></i> EUR <span class="coin-value"> $1.1561556</span></li>-->
                   </ul>
                 </div>
@@ -736,7 +743,7 @@
       <!--table-->
       <div class="row">
         <div class="col-xs-12">
-          <div class="panel panel-default card-view panel-refresh">
+          <div id="cointable" class="panel panel-default card-view panel-refresh">
             <div class="refresh-container">
               <div class="preloader">
                 <div class="circles-1">
@@ -777,7 +784,7 @@
                       <th>Mn worth</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <!--<tbody>
                     <tr>
                       <td><div class="coinaced"></div></td>
                       <td><a href="/dashboard/stats/aced.html">AceD (ACED)</a></td>
@@ -790,6 +797,7 @@
                       <td>1,000</td>
                       <td>$440</td>
                     </tr>
+
                     <!--<tr>-->
                       <!--<td><div class="coinbtc"></div></td>-->
                       <!--<td><a href="#">Bitcoin (BTC)</a></td>-->
@@ -802,7 +810,7 @@
                       <!--<td>1,000</td>-->
                       <!--<td>$226,757</td>-->
                     <!--</tr>-->
-                    <tr>
+                    <!--<tr>
                       <td><div class="coindash"></div></td>
                       <td><a href="#">Dash (DASH)</a></td>
                       <td>$226.7570</td>
@@ -922,7 +930,7 @@
                       <td>15,000	</td>
                       <td>$7,717</td>
                     </tr>
-                    </tbody>
+                    </tbody>-->
                     <tfoot>
                     <tr>
                       <th></th>
@@ -1006,20 +1014,19 @@
 <script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> 
 <script src="plugins/vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script> 
 <!-- Progressbar Animation JavaScript --> 
-<script src="plugins/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script> 
-<script src="plugins/vendors/bower_components/jquery.counterup/jquery.counterup.min.js"></script> 
+<script src="plugins/vendors/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
 <!-- Fancy Dropdown JS --> 
 <script src="plugins/assets/js/dropdown-bootstrap-extended.js"></script> 
 <!-- FlotChart JavaScript --> 
 <script src="plugins/vendors/bower_components/flot/jquery.flot.js"></script> 
 <script src="plugins/assets/js/flot-data-dashboard.js"></script> 
 <script src="plugins/vendors/bower_components/skycons/skycons.js"></script> 
-<!-- Sparkline JavaScript --> 
+<!-- Sparkline JavaScript -->
 <script src="plugins/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script> 
 <!-- Switchery JavaScript --> 
 <script src="plugins/vendors/bower_components/switchery/dist/switchery.min.js"></script> 
 <!-- EChartJS JavaScript --> 
-<script src="plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script> 
+<script src="plugins/vendors/bower_components/echarts/dist/echarts-en.min.js"></script>
 
 <!-- Select2 JavaScript --> 
 <script src="plugins/vendors/bower_components/select2/dist/js/select2.full.min.js"></script> 
@@ -1027,23 +1034,25 @@
 <!--<script src="plugins/vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.js"></script> -->
 <!-- Webticker Javascript --> 
 <script src="plugins/vendors/bower_components/web-ticker/jquery.webticker.min.js"></script> 
-<!-- Amcharts charts JavaScript --> 
+<!-- Amcharts charts JavaScript -->
 <script src="plugins/vendors/bower_components/amcharts/amcharts.js"></script> 
 <script src="plugins/vendors/bower_components/amcharts/serial.js"></script> 
 <script src="plugins/vendors/bower_components/amcharts/amstock.js"></script> 
 
-<!-- Piety JavaScript --> 
+<!-- Piety JavaScript -->
 <script src="plugins/vendors/bower_components/peity/jquery.peity.min.js"></script> 
 <script src="plugins/assets/js/peity-data.js"></script> 
-<!-- Init JavaScript --> 
-<script src="plugins/assets/js/init.js"></script> 
-<script src="plugins/assets/js/random-class.js"></script> 
-<!-- Form Advance Init JavaScript --> 
+<!-- Init JavaScript -->
+<script src="plugins/assets/js/init.js"></script>
+<script src="plugins/assets/js/live_price.js"></script>
+<!--<script src="plugins/assets/js/random-class.js"></script>
+<!-- Form Advance Init JavaScript -->
+<!--
 <script src="plugins/assets/js/form-advance-data.js"></script> 
 <script src="plugins/assets/js/stock-chart.init.js"></script> 
 <script src="plugins/assets/js/bitcoin-init.js"></script> 
 <script src="plugins/assets/js/dashboard-dark.init.js"></script>
-
+-->
 
 
 

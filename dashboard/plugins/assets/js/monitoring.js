@@ -33,13 +33,9 @@ $(document).ready(function(){
     }
     $(document).on("change","#change-currency",(function(e){
         e.preventDefault();
-        //get_login_data("https://autosector.com/get_coin_data.php?type=login_data&currency="+$(this).val());
+        get_login_data("https://autosector.com/get_coin_data.php?type=login_data&currency="+$(this).val());
     }));
 
-    $(document).on("click","#my_content form button",(function(e){
-        e.preventDefault();
-        //get_login_data("https://autosector.com/get_coin_data.php?type=login_data&address="+$("#my_content form #input").val());
-    }));
 
     $(document).on("click","#my_content div:first-child div:last-child>strong, #back_login",(function(e){
         e.preventDefault();

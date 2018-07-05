@@ -15,7 +15,7 @@ $(document).ready(function(){
                         wrapped.find("footer").remove();
                         html = wrapped.find(".container").html();
                         $("#my_content").html(html);
-                        $("#my_content a").attr("href","");
+                        //$("#my_content a").attr("href","");
                         $("#my_content #banner, #my_content img,#my_content #seednr, #masternodes_table_length, #masternodes_table_filter, #masternodes_table_info, #masternodes_table_paginate").remove();
                         $(".form-horizontal button").attr("type", "button");
                         $("#my_content #masternodes_table").DataTable();
@@ -36,6 +36,14 @@ $(document).ready(function(){
         var c=$(this).val().split("(");
         var currency=c[1].split(")");
         get_login_data("https://autosector.com/get_coin_data.php?type=login_data&currency="+currency[0]);
+    }));
+
+    $(document).on("click","#masternodes_table tr td:last-child a",(function(e){
+        e.preventDefault();
+        var add=$(this).attr("href").split("=");
+        var coin=$(this).closest("tr").find("td:nth-child(3)").text();
+        get_login_data("https://autosector.com/get_coin_data.php?type=login_data&add="+add[1]+"&coin="+coin);
+        location.reload();
     }));
 
     $(document).on("click","#my_content form button",(function(e){
